@@ -1,0 +1,14 @@
+{
+  "name": "logkaptain",
+  "version": "1.0.0",
+  "description": "ECRI 42 OSP 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
+}
