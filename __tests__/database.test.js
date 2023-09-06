@@ -1,25 +1,27 @@
-const fs = require('fs');
-const path = require('path');
-const db = require('../server/connections/db.js') // require where the information for pool is
+const db = require('../server/models/models.js') // require where the information for pool is
 
-// test json file
-const testJsonFile = path.resolve(__dirname, './test.json') // location of test json file 
+describe('Testing SQL Database', () => {
 
-describe('Testing Database', () => {
-  
-  beforeAll((done) => {
-    fs.writeFile(testJsonFile, JSON.stringify([]), () => {
-      db.reset(); 
-      done(); 
-    })
+  let client;
+
+  // afterAll(() => {
+  //   client.release(); 
+  // })
+
+
+  it('should successfully connect to the database', async () => {
+    client = await db.query('SELECT NOW()');
+    expect(client.rowCount).toBeGreaterThan(0);
+    // client.release(); 
   })
 
-  afterAll((done) => {
-    fs.writeFile(testJsonFile, JSON.stringify({}), done); 
+  it('should handle database errors', async () => {
+    try {
+      await db.query('Select * FROM non_existent_table'); 
+    } catch (err) {
+      expect(err).toBeDefined(); 
+    }
   })
-
-  describe('test function 1', () => {
-    // test function 1;
-  })
-
 });
+
+//testing connection to kubernetes API? 
