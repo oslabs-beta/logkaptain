@@ -1,0 +1,82 @@
+/* STYLING FOR THE ROOT DIV (PAGE BACKGROUND) */ 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #e4e4e4;
+  border: 1px solid;
+  border-color: #161616;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+
+/* TEMP CODE FOR TESTING */
+.mocktitle {
+    font-size: 75px;
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    line-height: 1.1;
+}
+
+/* STYLING FOR DASHBOARD MAIN CARD */
+#dashcard {
+
+    border: 5px solid blue;
+    display: flex;
+    
+    flex-direction: column;
+    box-sizing: border-box;
+
+    /* justify-self:flex-start;
+    place-items: center; */
+    min-width: 320px;
+    min-height: 99.5vh;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 99.5vh;
+  }
+
+/* NAVBAR CSS */
+
+  .navbar {
+   position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  }
+  
+  .navbar .navbox {
+    background-color: #f5efef;
+    border: 1px solid;
+    border-color: #000000;
+    box-shadow: inset 0px 4px 4px #00000040;
+    height: 935px;
+    left: 0;
+    mix-blend-mode: screen;
+    position: absolute;
+    top: 0px;
+    right: 680px;
+    bottom: 0px;
+    left: 0px;
+  }

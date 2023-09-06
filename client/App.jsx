@@ -1,13 +1,25 @@
 import { useState } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './ReferenceFiles/App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+// IMPORT CONTAINER FILES HERE
+import Dashboard from './containers/Dash/Dashboard';
 
-  return (
-    <>
+const App = () => {
+  const [count, setCount] = useState(0) // THIS IS JUST FOR TESTING (THE VITE SETUP)
+
+  const router = createBrowserRouter([
+    {
+      path: '/dashboard',
+      element: <Dashboard />,
+    },
+
+    {
+      path: '/', // RIGHT NOW THIS IS JUST FOR FE TESTING/KNOWLEDGE (USING THE SETUP FOR THIS PAGE AS CSS GUIDANCE)
+      element:     
+      <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -28,8 +40,34 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
-  )
-}
+    </>,
+    },
+
+    ]);
+
+  return (
+    <div className='dashcard'>
+      <RouterProvider router={router} />
+    </div>
+  );
+};
+
+
+/* List of FE Routes:
+  //     {
+//       path: '/Login',
+//       element: <LogIn />,
+//     },
+//     {
+//       path: '/SignUp',
+//       element: <SignUp />,
+//     },
+//     {
+//       path: '/PodConnect',
+//       element: <SignUp />,
+//     },
+*/
+
+
 
 export default App
