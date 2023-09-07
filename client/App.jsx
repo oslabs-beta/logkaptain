@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import {Login} from './components/Login.jsx'
-import {SignUp} from './components/SignUp.jsx'
+import {Login} from './components/Auth/Login.jsx'
+import {SignUp} from './components/Auth/SignUp.jsx'
 
 
 const App = () => {
