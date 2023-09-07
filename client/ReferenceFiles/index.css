@@ -1,6 +1,6 @@
 
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -16,9 +16,9 @@ body {
   display: flex;
   place-items: center;
   /* min-width: 320px;
-  min-height: 99.5vh; */
-} */
+  min-height: 99.5vh; } */
 
+/*
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -54,4 +54,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-} 
+}  */

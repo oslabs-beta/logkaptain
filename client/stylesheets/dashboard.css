@@ -1,38 +1,29 @@
 /* STYLING FOR PAGE BODY */
 body {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin: 0px;
     height: 100%;
-    margin: 0px; 
-    /* padding: 10px; */
-    /* padding-left: 10px;
-    padding-right: 10px; */
+    width: 100%;
 }
 
 .dashcontent {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0px;
     height: 100%;
-    margin: 0px; 
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #c5c5c5;
 }
 
 /* STYLING FOR THE ROOT DIV (PAGE BACKGROUND) */
-:root,
-body {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-
-    background-color: #d4d4d4;
-
-    display: inline-block;
+:root {
     margin: 0px;
-    height: 100vh;
-    min-height: 100vh;
-    min-width: 100vh;
-  
+    height: 100%;
+    width: 100%;
+    min-height: 100vh
 }
-
 
 
 /* TEMP CODE FOR TESTING */
@@ -55,25 +46,24 @@ body {
 
 /* logcard CSS */
 .logcard {
-    display: flex;
-    justify-self: center;
+    flex-grow: 1;
+    align-self: center;
+    height: 75vh;
 
-    border: #0a0a0a solid;
-    height: 50vh;
-    width: 148vh;
     border-radius: 14px;
-    border: 1px solid rgba(0, 0, 0, 0.00);
+
     background: rgba(255, 255, 255, 0.29);
-    margin-left: 150px;
-    margin-right: 155px;
+    margin-top: 95px;
+    margin-bottom: 10px;
+    margin-left: 270px;
+    margin-right: 0px;
 }
 
 /* NAVBAR CSS */
 .navbar {
-    display: flex;
-    justify-content: flex-start;
+    flex-grow: 1;
     position: absolute;
-    width: 175px;
+    width: 240px;
 
     top: 0px;
     right: 1245px;
@@ -86,11 +76,26 @@ body {
     height: 100vh;
 
     position: absolute;
-    width: 175px;
+    width: 240px;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Adjust font size for smaller screens */
-    }
+/* CONNECT POD BUTTON CSS */
+.connectpod {
+    margin-right: 35px;
+    margin-top: 50px;
+
+    width: 231px;
+    height: 44px;
+    border: none;
+    border-radius: 11px;
+    background: #71D4F3;
+
+    font-size: medium;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    
+}
+
+.connectpod:hover {
+    background: white;
 }

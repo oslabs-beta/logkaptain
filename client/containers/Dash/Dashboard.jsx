@@ -7,11 +7,13 @@ const Dashboard = () => {
     return (
         <>
             <div className="dashcontent">
-            <div className="logcard">
-               <ul></ul> 
+                <NavBar />
+                <div className="logcard">
+                    <ul></ul>
+                </div>
+            <button className="connectpod">CONNECT POD</button>
             </div>
-            <NavBar />
-            </div>
+            
         </>
     )
 }
