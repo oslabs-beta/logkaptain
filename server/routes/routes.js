@@ -5,8 +5,8 @@ const logController = require('../controllers/logControllers');
 const authController = require('../controllers/authController');
 const cookieController = require('../controllers/cookieController');
 
-router.post('/logs', logController.postLogs, (req, res) => {
-  res.status(200).json(res.locals.logs);
+router.post('/logs', logController.createLog, (req, res) => {
+  res.status(200).json(res.locals.createdLog);
 });
 
 router.get('/logs', logController.getLogs, (req, res) => {
