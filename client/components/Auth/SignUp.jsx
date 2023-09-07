@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Backdrop, Container } from './Backdrop';
+import { Backdrop, Button, Container, Form, Input } from './Backdrop';
 
 export const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -32,17 +32,15 @@ export const SignUp = () => {
   return (
     <Container>
       <Backdrop>
-        <form onSubmit={handleSubmit}> 
-        <label htmlFor='name'>Full Name</label>
-        <input value={name} onChange={(e) => setInput('name', e)} name='name' id='name' placeholder='full name'/>
-        <label htmlFor ='email'>email</label>
-        <input value={email} onChange={(e) => setInput('email', e)} type="text" placeholder="youremail@gmail.com" id='email' name='email'/>
-        <label htmlFor ='pasword'>password</label>
-        <input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>
+        <Form onSubmit={handleSubmit}> 
+        <Input value={name} onChange={(e) => setInput('name', e)} name='name' id='name' placeholder='Jane Doe'/>
+        <Input value={email} onChange={(e) => setInput('email', e)} type="text" placeholder="jane.doe@example.com" id='email' name='email'/>
+        <Input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>
         <button type="submit">Sign Up</button>
-      </form>
-      <span>Already have an account? Login</span>
-          <Link to="/"> here.</Link>
+      
+        <span>Already have an account?</span>
+          <Link to="/">Login here</Link>
+        </Form>
       </Backdrop>
     </Container>
     
