@@ -8,6 +8,7 @@ body {
 .dashcontent {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 
     margin: 0px;
     height: 100%;
@@ -46,17 +47,25 @@ body {
 
 /* logcard CSS */
 .logcard {
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    
+
+    position: relative;
+    height: 80vh;
+    width: 1280px;
     align-self: center;
-    height: 75vh;
+    justify-content: center;
+
 
     border-radius: 14px;
-
     background: rgba(255, 255, 255, 0.29);
-    margin-top: 95px;
+    margin-right: 20px;
+    margin-top: 60px;
     margin-bottom: 10px;
-    margin-left: 270px;
-    margin-right: 0px;
+    margin-left: 265px;
+
 }
 
 /* NAVBAR CSS */
@@ -81,21 +90,85 @@ body {
 
 /* CONNECT POD BUTTON CSS */
 .connectpod {
-    margin-right: 35px;
-    margin-top: 50px;
+    position: relative;
+    top: 10px;
+    left: 930px;
+    width: 200px;
+    height: 40px;
 
-    width: 231px;
-    height: 44px;
     border: none;
     border-radius: 11px;
-    background: #71D4F3;
-
+    background: rgb(117, 207, 255);
     font-size: medium;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
-    
+    /* overflow: hidden; */
+    /* text-align: center; */
 }
 
 .connectpod:hover {
     background: white;
+}
+
+/* DASHBOARD NAV BUTTON */
+
+
+ul {
+  list-style-type: none;
+  padding-top: 150px;
+  margin-right: 45px;
+
+  display: flex;
+  flex-direction: column; /* Stack list items vertically */
+  align-items: center; /* Vertically center list items */
+  height: 100%;
+}
+
+li {
+    margin: 20px;
+    margin-right: 10px;
+}
+
+.dashnav {
+    width: 90%;
+    border-top: 2px solid lightblue;
+    
+    padding-top: 30px;
+    padding-left: 36px;
+}
+
+.settingnav {
+    width: 80%;
+    border-top: 2px solid lightblue;
+    
+    padding-top: 30px;
+    padding-left: 46px;
+    margin-top: 330px;
+}
+
+.logoutnav {
+    margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: lightslategray;
+    font-size: x-large;
+    
+}
+
+a:hover {
+    font-weight: bold;
+    color: black;
+}
+
+#pagelogo {
+    width: 100px;
+    height: 100px
+}
+
+.listheader {
+    padding-left: 10px;
+    color: rgb(94, 170, 211);
+    max-width: 200px;
 }
