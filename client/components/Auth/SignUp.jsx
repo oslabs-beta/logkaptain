@@ -41,7 +41,8 @@ export const SignUp = () => {
         <input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>
         <button type="submit">Sign Up</button>
       </form>
-      <Link to="/">Already have an account? Login here.</Link>
+      <span>Already have an account? Login</span>
+          <Link to="/"> here.</Link>
       </Backdrop>
     </Container>
     
