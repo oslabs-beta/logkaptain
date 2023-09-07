@@ -8,11 +8,10 @@ describe('Testing SQL Database', () => {
   //   client.release(); 
   // })
 
-
   it('should successfully connect to the database', async () => {
     client = await db.query('SELECT NOW()');
     expect(client.rowCount).toBeGreaterThan(0);
-    // client.release(); 
+    // client.release(); // I think we need client.release.. however it works without.... client.release() is not a function...
   })
 
   it('should handle database errors', async () => {
