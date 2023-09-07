@@ -31,7 +31,7 @@ export const Form = styled.form`
   border-radius: 10px;
   box-sizing: border-box;
   width: 20%;
-  height: 300px;
+  height: 332px;
   margin: auto;
 `;
 
@@ -45,21 +45,25 @@ export const Input = styled.input`
   width: 220px;
 `;
 
-
 export const Button = styled.button`
-  background-color: ${props => props.variant === "primary" ? "#51FDEF" : "#FFFCDC"};
+  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#FFFCDC"};
   border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;
   border-radius: 10px;
-  color: #000030;
-  cursor: pointer;
+  color: #F0F0F0;
+  cursor: pointer;  
   font-size: 16px;  
   height: 45px;
-  width: 90px;
+  margin: 16px 0;
+  width: 108px;
   &:hover {
-    background-color: ${props => props.variant === "primary" ? "#4BF0E3" : "#EEEABF"};
+    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#EEEABF"};
   }
   &:disabled {
     background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
     cursor: not-allowed;
   }
+`;
+
+export const BrandedHeader = styled.h1`
+  color: #000030;
 `;

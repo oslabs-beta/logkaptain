@@ -36,7 +36,7 @@ export const SignUp = () => {
         <Input value={name} onChange={(e) => setInput('name', e)} name='name' id='name' placeholder='Jane Doe'/>
         <Input value={email} onChange={(e) => setInput('email', e)} type="text" placeholder="jane.doe@example.com" id='email' name='email'/>
         <Input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>
-        <button type="submit">Sign Up</button>
+        <Button type="submit" variant='primary'>Sign Up</Button>
       
         <span>Already have an account?</span>
           <Link to="/">Login here</Link>
