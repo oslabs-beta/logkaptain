@@ -16,10 +16,12 @@ export const Backdrop = styled.div`
   background-repeat: no-repeat;  
   border-radius: 10px;
   box-shadow: 0 0 20px 20px #e0eaf6 inset;
-  display: flex;  
-  height: 1290px;
+  display: block;  
   margin: auto;
-  width: 1509px;  
+  max-height: 1290px;
+  max-width: 1509px;
+  min-height: 968px;
+  min-width: 1132px;
 `;
 
 export const Form = styled.form`
@@ -68,8 +70,15 @@ export const Button = styled.button`
 export const BrandedHeader = styled.h1`
   color: #000030;
   font-family: 'Lobster', cursive;
-  font-size: 150px;
-  left: 35%;
-  position: absolute;
-  top: 10%;
+  font-size: 7em;
+  margin: 5% 0 7% 0;
+  text-align: center;
+`;
+
+export const ErrorMessage = styled.div`
+  color: red;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 18px;
 `;

@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { Backdrop, BrandedHeader, Button, Container, Form, Input } from './Backdrop';
 
 export const Login = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const setInput = (fieldName, event) => {
     const value = event.target.value;
     switch (fieldName) {
-      case 'email':
-        setEmail(value);
+      case 'username':
+        setUsername(value);
         break;
       case 'password':
         setPassword(value);
@@ -20,9 +20,19 @@ export const Login = () => {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(email);
+    const response = await fetch('/api/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password }) //TODO: what should i pass in here?
+    });
+    const data = await response.json();
+    if (data.err) {
+        setError(data.err);//TODO: ask what's the name of the error handler
+    } else {
+        setIsLogin(true);
+    }
   };
 
 
@@ -31,8 +41,8 @@ export const Login = () => {
       <Backdrop>
       <BrandedHeader>LogKaptain</BrandedHeader>
         <Form onSubmit={handleSubmit}> 
-          <Input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder="jane.doe@example.com" id='email' name='email'/>
-          <Input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="**********" id='password' name='password'/>
+          <Input value={username} onChange={(e) => setInput('username', e)} type="text" placeholder="janedoe" id='username' name='username'/>
+          <Input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>
           <Button type="submit" variant='primary'>Login</Button>
           <span>Don't have an account? </span>
           <Link to="/signup"> Register here.</Link>
