@@ -9,7 +9,7 @@ const apiRouter = require('./routes/routes');
 const PORT = 3000;
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); //not sure if I need this
+app.use(express.urlencoded({ extended: true })); //encrypting url
 
 app.use('/api', apiRouter);
 app.use(express.static(path.join(__dirname, '../client')));
