@@ -18,7 +18,7 @@ router.patch('/logs/:id', logController.patchLogs, (req, res) => {
   res.status(200).json(res.locals.updatedLog);
 });
 
-router.delete('/logs/:id', logController.deleteLog, (req, res) => {
+router.delete('/logs/:id', logController.deleteLogs, (req, res) => {
   res.status(200).json(res.locals.deletedLog);
 });
 
