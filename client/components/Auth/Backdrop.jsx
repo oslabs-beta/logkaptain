@@ -15,7 +15,7 @@ export const Backdrop = styled.div`
   background-size: cover;
   background-repeat: no-repeat;  
   border-radius: 10px;
-  box-shadow: 0 0 8px 8px #e0eaf6 inset;
+  box-shadow: 0 0 20px 20px #e0eaf6 inset;
   display: flex;  
   height: 1290px;
   margin: auto;
@@ -31,6 +31,7 @@ export const Form = styled.form`
   border-radius: 10px;
   box-sizing: border-box;
   width: 20%;
+  min-width: 300px;
   height: 332px;
   margin: auto;
 `;
@@ -46,17 +47,17 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#FFFCDC"};
+  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
   border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;
   border-radius: 10px;
-  color: #F0F0F0;
+  color: #000030;
   cursor: pointer;  
   font-size: 16px;  
   height: 45px;
   margin: 16px 0;
   width: 108px;
   &:hover {
-    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#EEEABF"};
+    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF"};
   }
   &:disabled {
     background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
@@ -66,4 +67,9 @@ export const Button = styled.button`
 
 export const BrandedHeader = styled.h1`
   color: #000030;
+  font-family: 'Lobster', cursive;
+  font-size: 150px;
+  left: 35%;
+  position: absolute;
+  top: 10%;
 `;
