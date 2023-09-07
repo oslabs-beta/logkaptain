@@ -60,7 +60,7 @@ body {
 
 
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.29);
+    background: rgba(255, 255, 255, 0.621);
     margin-right: 20px;
     margin-top: 60px;
     margin-bottom: 10px;
@@ -98,7 +98,7 @@ body {
 
     border: none;
     border-radius: 11px;
-    background: rgb(117, 207, 255);
+    background: rgb(127, 201, 250);
     font-size: medium;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
@@ -169,6 +169,6 @@ a:hover {
 
 .listheader {
     padding-left: 10px;
-    color: rgb(94, 170, 211);
+    color: rgb(103, 103, 104);
     max-width: 200px;
 }
