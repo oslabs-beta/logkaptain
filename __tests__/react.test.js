@@ -5,12 +5,13 @@ import App from '../client/App'
 
 describe('Testing React Components', () => {
 
-  let app;
-  beforeAll(() => {
-    render(<App />);
-  });
+  // let app;
+  // beforeAll(() => {
+  //   render(<App />);
+  // });
 
   it('should render the app correctly', () => { //currently tests for base App not the new app. 
+    const { getByText } = render(<App />)
     expect(screen.getByText('Vite + React')).toBeInTheDocument(); 
   })
 });
