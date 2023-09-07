@@ -1,0 +1,174 @@
+/* STYLING FOR PAGE BODY */
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.dashcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: #c5c5c5;
+}
+
+/* STYLING FOR THE ROOT DIV (PAGE BACKGROUND) */
+:root {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh
+}
+
+
+/* TEMP CODE FOR TESTING */
+.mocktitle {
+    font-size: 75px;
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    line-height: 1.1;
+}
+
+/* logcard CSS */
+.logcard {
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    
+
+    position: relative;
+    height: 80vh;
+    width: 1280px;
+    align-self: center;
+    justify-content: center;
+
+
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.621);
+    margin-right: 20px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    margin-left: 265px;
+
+}
+
+/* NAVBAR CSS */
+.navbar {
+    flex-grow: 1;
+    position: absolute;
+    width: 240px;
+
+    top: 0px;
+    right: 1245px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.navbar .navbox {
+    background-color: #faf7f7;
+    height: 100vh;
+
+    position: absolute;
+    width: 240px;
+}
+
+/* CONNECT POD BUTTON CSS */
+.connectpod {
+    position: relative;
+    top: 10px;
+    left: 930px;
+    width: 200px;
+    height: 40px;
+
+    border: none;
+    border-radius: 11px;
+    background: rgb(127, 201, 250);
+    font-size: medium;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+    /* overflow: hidden; */
+    /* text-align: center; */
+}
+
+.connectpod:hover {
+    background: white;
+}
+
+/* DASHBOARD NAV BUTTON */
+
+
+ul {
+  list-style-type: none;
+  padding-top: 150px;
+  margin-right: 45px;
+
+  display: flex;
+  flex-direction: column; /* Stack list items vertically */
+  align-items: center; /* Vertically center list items */
+  height: 100%;
+}
+
+li {
+    margin: 20px;
+    margin-right: 10px;
+}
+
+.dashnav {
+    width: 90%;
+    border-top: 2px solid lightblue;
+    
+    padding-top: 30px;
+    padding-left: 36px;
+}
+
+.settingnav {
+    width: 80%;
+    border-top: 2px solid lightblue;
+    
+    padding-top: 30px;
+    padding-left: 46px;
+    margin-top: 330px;
+}
+
+.logoutnav {
+    margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: lightslategray;
+    font-size: x-large;
+    
+}
+
+a:hover {
+    font-weight: bold;
+    color: black;
+}
+
+#pagelogo {
+    width: 100px;
+    height: 100px
+}
+
+.listheader {
+    padding-left: 10px;
+    color: rgb(103, 103, 104);
+    max-width: 200px;
+}
