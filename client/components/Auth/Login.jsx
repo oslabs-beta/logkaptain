@@ -22,11 +22,20 @@ export const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch('/api/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }) //TODO: what should i pass in here?
-    });
+    // const response = await fetch('/api/login', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ carobonita, 12345 }) //TODO: what should i pass in here?
+    // });
+    // simulating backend
+    const name = 'carobonita';
+    const pass = 123456;
+      if(name === username && pass == password) {
+        alert('success login in')
+      } else {
+        alert('wrong username or password')
+      }
+
     const data = await response.json();
     if (data.err) {
         setError(data.err);//TODO: ask what's the name of the error handler
