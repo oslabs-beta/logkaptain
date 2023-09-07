@@ -12,7 +12,7 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.(js|jsx)$": "babel-jest",
+      "^.+\\.(js|jsx)$": "babel-jest"
     }
   },
   "dependencies": {

@@ -48,39 +48,50 @@ xdescribe('Testing Frontpage', () => {
 
 xdescribe('Testing Dashboard', () => {
   describe('connect to cluster', () => {
-
+    
   });
 
   describe('Getting logs', () => {
     // get request? 
     it('retrieve logs from Kubernetes cluster', () => {
-
+      return request(server)
+        .get('/logs')
+        .expect(200);
     })
   });
 
   describe('Saving logs', () => {
     // patch request? 
     it('save user specified logs from Kubernetes cluster' , () => {
-
+      return request(server)
+        .patch('/logs')
+        .expect(200);
     })
   });
 
   // post request?
   describe('Post Req logs', () => {
     it('perform a post request on logs(?)', () => {
-
+      return request(server)
+      .post('/logs')
+      .expect(200);
     })
   })
 
   describe('Removing logs', () => {
     // delete request? 
+    it('perform a delete request on logs(?)', () => {
+      return request(server)
+      .delete('/logs')
+      .expect(200);
+    })
   });
 
-  describe('Filtering system', () => {
+  xdescribe('Filtering system', () => {
     // get request
   });
 
-  describe('export logs', () => {
+  xdescribe('export logs', () => {
 
   });
 })
