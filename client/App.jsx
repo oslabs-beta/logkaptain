@@ -46,9 +46,9 @@ const App = () => {
     ]);
 
   return (
-    <div className='dashcard'>
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 };
 

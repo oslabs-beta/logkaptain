@@ -6,8 +6,12 @@ import NavBar from "./NavBar";
 const Dashboard = () => {
     return (
         <>
-        <h1 className= "mocktitle">Let's Begin!</h1>
-        <NavBar/>
+            <div className="dashcontent">
+            <div className="logcard">
+               <ul></ul> 
+            </div>
+            <NavBar />
+            </div>
         </>
     )
 }
