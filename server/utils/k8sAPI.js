@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const yaml = require('js-yaml');
 
-const yamlContent = fs.readFileSync(path.join(__dirname, ' ../k8s/bb.yaml'), 'utf8'); // Returns the YAML file content into a string
+const yamlContent = fs.readFileSync(path.join(__dirname, '../k8s/bb.yaml'), 'utf8'); // Returns the YAML file content into a string
 
 const yamlDocuments = yamlContent.split('---'); // Split the YAML content into individual documents 
 
