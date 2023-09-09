@@ -2,7 +2,7 @@ import React from "react";
 import './NavBar'
 import '../../stylesheets/dashboard.css'
 import NavBar from './NavBar';
-import SearchBar from './SearchBar'
+// import SearchBar from './SearchBar'
 import LogCard from './LogCard'
 
 const Dashboard = () => {

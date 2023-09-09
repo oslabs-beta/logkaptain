@@ -8,10 +8,11 @@ import LogTable from './LogTable'
 const LogCard = () => {
 
 // ARRAY FOR ALL LOG DATA //
-const logs = [];
+let logs = [];
 
 // GET ALL LOGS CURRENTLY IN THE DB //
 const gatherLogs = async () => {
+    logs = [];
     try {
         const response = await fetch('/api/logs', {
             headers: { 'Content-Type': 'application/json' },
@@ -28,8 +29,12 @@ const gatherLogs = async () => {
 
 // CHECK FOR NEW LOGS EVERY 2 SECOND (FOR NOW) //
 document.addEventListener('DOMContentLoaded', () => {
-    gatherLogs();
-    setInterval(gatherLogs, 2000);
+    const retrievelogsBTN = document.querySelector('#retrievelogs')
+    retrievelogsBTN.addEventListener('click', () => {
+        gatherLogs();
+        setInterval(gatherLogs, 2000);
+    })
+    
 })
 
 
@@ -39,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <div className="logcard">
             <div className="cardheader">
                 <h2 className="listheader">Log Data</h2>
-                <button className="connectpod">CONNECT POD</button>
+                <button className="connectpod">Retrieve Logs</button>
+                <button className="connectpod" id='retrievelogs'>CONNECT POD</button>
             </div>
             <LogTable />
             {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
