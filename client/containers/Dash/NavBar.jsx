@@ -14,7 +14,6 @@ const NavBar = () => {
                     <li className="logoutnav"><a href="http://localhost:5173/login">logout</a></li>
                 </ul>
             </div>
-
         </div>
     );
 };

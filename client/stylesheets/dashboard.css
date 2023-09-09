@@ -90,9 +90,9 @@ body {
 
 /* CONNECT POD BUTTON CSS */
 .connectpod {
-    position: relative;
+    /* position: relative; */
     top: 10px;
-    left: 930px;
+    /* left: 930px; */
     width: 200px;
     height: 40px;
 
@@ -129,20 +129,23 @@ li {
     margin-right: 10px;
 }
 
+
+/* FORMATTING FOR DASHBOARD LABEL ON NAV BAR */
 .dashnav {
     width: 90%;
     border-top: 2px solid lightblue;
-    
+ 
     padding-top: 30px;
-    padding-left: 36px;
+    padding-left: 55px;
 }
 
+/* FORMATTING FOR SETTINGS LABEL ON NAV BAR */
 .settingnav {
     width: 80%;
     border-top: 2px solid lightblue;
     
     padding-top: 30px;
-    padding-left: 46px;
+    padding-left: 61px;
     margin-top: 330px;
 }
 
@@ -153,8 +156,8 @@ li {
 a {
     text-decoration: none;
     color: lightslategray;
-    font-size: x-large;
-    
+    font-size: large;
+    font-family: 'Inter', sans-serif;
 }
 
 a:hover {
@@ -171,4 +174,36 @@ a:hover {
     padding-left: 10px;
     color: rgb(103, 103, 104);
     max-width: 200px;
+}
+
+.cardheader {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logtable {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* FORMATTING FOR LOG TABLE HEADERS AND ROWS */
+th, td {
+    width: 450px;
+    padding: 8px;
+    text-align: center;
+}
+
+/* FORMATTING FOR LOG TABLE HEADERS */
+th {
+    padding-top: 35px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+td {
+    font-family: 'Inter', sans-serif;
+    color: #4e4d4d;
 }
