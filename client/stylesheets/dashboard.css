@@ -183,10 +183,55 @@ a:hover {
     align-items: center;
 }
 
-.logtable {
+.outerlogcontainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.innerlogcontainer {
+    max-height: 520px;
+    overflow-y: auto;
+}
+
+/* .innerlogcontainer::-webkit-scrollbar {
+    width: 10px !important;
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    
+}
+.innerlogcontainer::-webkit-scrollbar-track-piece {
+    right: 2px; Move the scrollbar to the left side (adjust as needed)
+  } */
+
+/* Move the scrollbar to the left side */
+.innerlogcontainer::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+  
+  /* Style the scrollbar thumb (the draggable part) */
+  .innerlogcontainer::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the color of the thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+  
+  /* Style the scrollbar track when the thumb is being hovered over */
+  .innerlogcontainer::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+  }
+  
+  /* Move the scrollbar to the left side */
+  .innerlogcontainer::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Background color for the track */
+    border-radius: 5px; /* Rounded corners for the track */
+  }
+
+
+
+table {
+    width: 100%;
 }
 
 /* FORMATTING FOR LOG TABLE HEADERS AND ROWS */
