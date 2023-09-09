@@ -2,7 +2,7 @@
   "name": "logkaptain",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,11 +13,17 @@
   "jest": {
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(scss|css)": "identity-obj-proxy"
     }
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-environment-jsdom": "^29.6.4",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "pg": "^8.11.3",
