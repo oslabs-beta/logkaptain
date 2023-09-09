@@ -3,11 +3,10 @@ import '../../stylesheets/dashboard.css'
 
 
 
+// LOG DATA PASSED DOWN INTO PROPS //
+const LogTable = (props) => {
 
-const LogTable = () => {
-
-// FETCH LOG DATA HERE (Create array of table rows)
-
+console.log('PROPS', props);
 
     return (
         <div>
@@ -23,8 +22,11 @@ const LogTable = () => {
                 <tbody>
                     <tr>
                     <td>September 9th 2023</td>
+                    {/* <td>{props.timestamp}</td> date info from BE */}
                     <td>OSP1 Rules</td>
+                    {/* <td>{props.log}</td> log info from BE */}
                     <td>POD1</td>
+                    {/* <td>{props.id}</td> ID info from BE */}
                     </tr>
                 </tbody>
             </table>

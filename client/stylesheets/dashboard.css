@@ -56,7 +56,7 @@ body {
     height: 80vh;
     width: 1280px;
     align-self: center;
-    justify-content: center;
+    justify-content: flex-start;
 
 
     border-radius: 14px;
