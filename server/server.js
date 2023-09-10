@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const cookieParser = require('cookie-parser');
 
-const apiRouter = require('./routes/routes');
+const apiRouter = require('./routes/api');
 
 const PORT = 3000;
 
