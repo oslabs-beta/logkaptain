@@ -39,3 +39,5 @@ authController.verifyUser = async (req, res, next) => {
     return next({ log: 'Error in verifyUser' });
   }
 };
+
+module.exports = authController;
