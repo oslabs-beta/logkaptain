@@ -9,23 +9,52 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom'
 import { App } from '../client/App';
 import { Login } from '../client/components/Auth/Login';
+import { SignUp } from '../client/components/Auth/SignUp';
+import { Dashboard } from '../client/containers/Dash/Dashboard';
 import { BrowserRouter } from 'react-router-dom';
 
 describe('Testing React Components', () => {
 
-  /** Currently deprecated; Does not work */
-  xit('should render the app correctly', () => { 
-    const { getByText } = render(<App />);
-    expect(screen.getByText('Vite + React')).toBeInTheDocument(); 
+  describe('Testing Login Components', () => {
+    beforeAll(() => {
+      render(
+        <Router> 
+          <Login />
+        </Router>
+      )
+    })
+
+    it('should render the login screen', () => {
+      expect(screen.getByText('Register here.')).toBeInTheDocument();
+    })
+  })
+  
+  describe('Testing Signup Components', () => {
+    beforeAll(() => {
+      render(
+        <Router> 
+          <SignUp />
+        </Router>
+      )
+    })
+
+    it('should render the signup page', () => {
+      expect(screen.getByText('Sign Up')).toBeInTheDocument();
+    })
   })
 
-  it('should render the login screen', () => {
-    render(
-      <Router>
-        <Login />
-      </Router>
-    );
+  // will have to reconsider how to test/show this one; 
+  xdescribe('Testing Dashboard Components', () => {
+    beforeAll(() => {
+      render(
+        <Router> 
+          <Dashboard />
+        </Router>
+      )
+    })
 
-    expect(screen.getByText('Register here.')).toBeInTheDocument(); 
+    it('should render the dashboard screen', () => {
+      expect(screen.getByText('Register here.')).toBeInTheDocument();
+    })
   })
 });
