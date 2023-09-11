@@ -72,15 +72,15 @@ describe('Testing React Components', () => {
       });
 
       it('should contain settingnav', () => {
-
+        expect(screen.getByText('Settings')).toBeInTheDocument();
       });
 
       it('should contain logoutnav', () => {
-
+        expect(screen.getByText('logout')).toBeInTheDocument();
       });
     })
 
-    describe('Testing LogCard', () => {
+    xdescribe('Testing LogCard', () => {
       it('should contain Log Data header', () => {
 
       })
