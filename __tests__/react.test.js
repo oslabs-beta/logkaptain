@@ -12,6 +12,7 @@ import { Login } from '../client/components/Auth/Login';
 import { SignUp } from '../client/components/Auth/SignUp';
 import { Dashboard } from '../client/containers/Dash/Dashboard';
 import { BrowserRouter } from 'react-router-dom';
+import NavBar from '../client/containers/Dash/NavBar';
 
 describe('Testing React Components', () => {
 
@@ -22,11 +23,19 @@ describe('Testing React Components', () => {
           <Login />
         </Router>
       )
-    })
+    });
 
     it('should render the login screen', () => {
       expect(screen.getByText('Register here.')).toBeInTheDocument();
-    })
+    });
+
+    xit('should successfully login' , () => {
+
+    });
+
+    xit('should fail at logging in', () => {
+
+    });
   })
   
   describe('Testing Signup Components', () => {
@@ -44,17 +53,41 @@ describe('Testing React Components', () => {
   })
 
   // will have to reconsider how to test/show this one; 
-  xdescribe('Testing Dashboard Components', () => {
-    beforeAll(() => {
-      render(
-        <Router> 
-          <Dashboard />
-        </Router>
-      )
+  describe('Testing Dashboard Components', () => {
+    describe('Testing Nav Bar', () => {
+      beforeAll (() => {
+        render (
+          <Router> 
+            <NavBar /> 
+          </Router> 
+        )
+      })
+
+      it('should contain dashnav', () => {
+        expect(screen.getByText('Dashboard')).toBeInTheDocument();
+      });
+
+      it('should contain teamnav', () => {
+        expect(screen.getByText('Team')).toBeInTheDocument();
+      });
+
+      it('should contain settingnav', () => {
+
+      });
+
+      it('should contain logoutnav', () => {
+
+      });
     })
 
-    it('should render the dashboard screen', () => {
-      expect(screen.getByText('Register here.')).toBeInTheDocument();
+    describe('Testing LogCard', () => {
+      it('should contain Log Data header', () => {
+
+      })
+
+      it('should allow for connecting pods', () => {
+
+      })
     })
   })
 });
