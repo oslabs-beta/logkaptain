@@ -1,0 +1,17 @@
+CREATE TABLE logTable (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    timestamp TEXT,
+    log TEXT
+);
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    name VARCHAR(255)
+);
+
+INSERT INTO users (username, password, name)
+VALUES ('lina', '123', 'Carolina');
+
