@@ -3,12 +3,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
-const apiRouter = require('./routes/routes');
+const apiRouter = require('./routes/api');
 
 const PORT = 3000;
 
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true })); //encrypting url
 
 app.use('/api', apiRouter);
