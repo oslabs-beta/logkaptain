@@ -11,8 +11,8 @@ const LogCard = () => {
 let logs = [];
 
 // GET ALL LOGS CURRENTLY IN THE DB //
-const gatherLogs = async () => {
-    logs = [];
+const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CALLS
+    logs = []; // TRANSFER THIS TO STATE
     try {
         const response = await fetch('/api/logs', {
             headers: { 'Content-Type': 'application/json' },
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         gatherLogs();
         setInterval(gatherLogs, 2000);
     })
-    
 })
 
 
