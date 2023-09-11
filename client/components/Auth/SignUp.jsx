@@ -34,11 +34,21 @@ export const SignUp = () => {
   //function to handle submit
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch('/api/signup', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, username, password }) // TODO: what should i pass in here?
-    });
+    // const response = await fetch('/api/signup', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ name, username, password }) // TODO: what should i pass in here?
+    // });
+
+    const myName = 'Caro';
+    const myUserName = 'carobonita';
+    const pass = 123456;
+    if(name === myName && myUserName ===username && pass == password ) {
+      alert('success login in')
+    } else {
+      alert('choose a different username')
+    }
+
     const data = await response.json();
     if (data.err) {
         setError(data.err); // TODO: ask what's the name of the error handler
@@ -47,6 +57,8 @@ export const SignUp = () => {
     }
   }
 
+  //render the signup form, which has input fields for name, username and password
+  //if the user already has an account, they can click on the link to login
   return (
     <Container>
       <Backdrop>
