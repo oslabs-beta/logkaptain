@@ -17,7 +17,7 @@ describe('Testing Server', () => {
 
 });
 
-xdescribe('Testing Frontpage', () => {
+describe('Testing Frontpage', () => {
 
   describe('Testing Signup', () => {
     it('respond with a 204 status', () => {
