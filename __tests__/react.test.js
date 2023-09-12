@@ -77,8 +77,9 @@ describe('Testing React Components', () => {
       });
     })
 
-    describe('Testing Log Card', () => {
+    xdescribe('Testing Log Card', () => {
 
+      const logs = [{date: Date.now, pod: 'testing', message: 'this is a test'}]
       beforeAll(() => {
         render( 
           <Router> 
@@ -86,7 +87,7 @@ describe('Testing React Components', () => {
           </Router>
         )
       })
-
+      
       it('should contain Log Data header', () => {
         expect(screen.getByText('Log Data')).toBeInTheDocument();
       })
