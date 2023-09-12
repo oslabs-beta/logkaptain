@@ -50,7 +50,6 @@ describe('Testing SQL Database', () => {
       } catch (err) {
         console.log(err); 
       }
-      console.log(client);
       expect(client).toBeDefined();
       expect(client.command).toBe('SELECT');
       expect(client.rowCount).toBeGreaterThan(0); 

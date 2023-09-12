@@ -3,15 +3,12 @@
  */
 
 import React from 'react';
-import userEvent from '@testing-library/user-event';
 import { render, screen, waitFor } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom'
-import { App } from '../client/App';
 import { Login } from '../client/components/Auth/Login';
 import { SignUp } from '../client/components/Auth/SignUp';
-import { Dashboard } from '../client/containers/Dash/Dashboard';
-import { BrowserRouter } from 'react-router-dom';
+import LogCard from '../client/containers/Dash/LogCard';
 import NavBar from '../client/containers/Dash/NavBar';
 
 describe('Testing React Components', () => {
@@ -55,7 +52,7 @@ describe('Testing React Components', () => {
   // will have to reconsider how to test/show this one; 
   describe('Testing Dashboard Components', () => {
     describe('Testing Nav Bar', () => {
-      beforeAll (() => {
+      beforeEach (() => {
         render (
           <Router> 
             <NavBar /> 
@@ -80,13 +77,26 @@ describe('Testing React Components', () => {
       });
     })
 
-    xdescribe('Testing LogCard', () => {
+    describe('Testing Log Card', () => {
+
+      beforeAll(() => {
+        render( 
+          <Router> 
+            <LogCard />
+          </Router>
+        )
+      })
+
       it('should contain Log Data header', () => {
+        expect(screen.getByText('Log Data')).toBeInTheDocument();
+      })
+
+      xit('should allow for connecting pods', () => {
 
       })
 
-      it('should allow for connecting pods', () => {
-
+      it('should have a location to log data', () => {
+        expect(screen.getByText('Message')).toBeInTheDocument();
       })
     })
   })

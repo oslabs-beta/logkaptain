@@ -15,11 +15,11 @@ router.get('/logs', logController.getLogs, (req, res) => {
 
 //:id is a placeholder
 router.patch('/logs/:id', logController.patchLogs, (req, res) => {
-  res.status(200).json(res.locals.updatedLog);
+  return res.status(200).json(res.locals.updatedLog);
 });
 
 router.delete('/logs/:id', logController.deleteLogs, (req, res) => {
-  res.status(200).json(res.locals.deletedLog);
+  return res.status(200).json(res.locals.deletedLog);
 });
 
 module.exports = router;
