@@ -1,7 +1,7 @@
 import {React, useState} from "react";
 import '../../stylesheets/dashboard.css'
 import LogTable from './LogTable'
-import { useState } from 'react';
+
 
 
 
@@ -62,14 +62,17 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
             {/* <LogTable /> */}
             {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
             <div className="outerlogcontainer">
-                <div className="innerlogcontainer">
+                <div className="innerlogcontainerHeader">
                 <h2>Date</h2>
                 <h2>Pod Name</h2>
                 <h2>Message</h2>
                 </div>
                 
-                {logs}
             </div>
+            <div className="innerlogcontainerWrapper">
+                     {logs}
+            </div>    
+            
             
         </div>
     );

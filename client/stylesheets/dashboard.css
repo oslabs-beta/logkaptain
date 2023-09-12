@@ -7,12 +7,12 @@ body {
 
 .dashcontent {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px;
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    /* margin: 0px; */
     /* height: 100%; */
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     background-color: #c4c2c2;
 }
@@ -52,9 +52,10 @@ body {
     
 
     /* position: relative; */
-    /* height: 80vh; */
+    height: 80vh;
     overflow-y: auto;
-  
+    /* max-height: 90vh; */
+
     width: 1280px;
     align-self: center;
     /* justify-content: flex-start; */
@@ -71,7 +72,7 @@ body {
 
 /* NAVBAR CSS */
 .navbar {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     position: absolute;
     width: 240px;
 
@@ -183,17 +184,31 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
 }
 
 .outerlogcontainer {
-    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 100px;
+    padding-top: 50px;
+
     gap: 5px;
     /* width: 100%; */
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+.innerlogcontainerHeader{
+    display: grid;    
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 160px;
+
+}
+.innerlogcontainerWrapper {
+    overflow-y: auto;
 }
 
 .innerlogcontainer {
