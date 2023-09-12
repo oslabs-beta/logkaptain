@@ -3,15 +3,21 @@ const express = require('express');
 const router = express.Router();
 //const logController = require('../controllers/logControllers');
 const userController = require('../controllers/userController');
+const cookieController = require('../controllers/cookieController');
 //const cookieController = require('../controllers/cookieController');
 
 // router.post('/logs', logController.createLog, (req, res) => {
 //   res.status(200).json(res.locals.createdLog);
 // });
 
-router.post('/login', userController.verifyUser, (req, res) => {
-  res.status(200).json(res.locals.successful);
-});
+router.post(
+  '/login',
+  userController.verifyUser,
+  cookieController.setCookie,
+  (req, res) => {
+    res.status(200).json(res.locals.successful);
+  }
+);
 
 router.post('/signup', userController.createUser, (req, res) => {
   res.status(200).json(res.locals.successful);

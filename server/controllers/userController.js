@@ -1,6 +1,7 @@
 const db = require('../models/models.js');
 const bcrypt = require('bcrypt');
 
+//retrieve user by username from DB
 const getUserByUsername = async (username) => {
   const queryString = 'SELECT * FROM users WHERE username = $1';
   const value = [username];
@@ -75,7 +76,7 @@ userController.verifyUser = async (req, res, next) => {
 
     // try catch to compare if user enters the correct password
     try {
-      console.log(password, hashedPassword);
+      //console.log(password, hashedPassword);
       const isPasswordCorrect = await bcrypt.compare(password, hashedPassword);
       // if it doesnt match, return err
       if (!isPasswordCorrect) {
@@ -85,12 +86,15 @@ userController.verifyUser = async (req, res, next) => {
         };
         return next();
       }
-      // if passsword is correct, go to next controller
+
+      // if passsword is correct, set the user id in res.locals
+      res.locals.id = userData.id;
       res.locals.successful = {
         verify: true,
         message: 'user verify',
         username: username,
       };
+
       return next();
     } catch (err) {
       return next({ log: 'bcrypt compare error' });
