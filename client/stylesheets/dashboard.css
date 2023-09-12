@@ -9,13 +9,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     margin: 0px;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     min-height: 100vh;
 
-    background-color: #c5c5c5;
+    background-color: #c4c2c2;
 }
 
 /* STYLING FOR THE ROOT DIV (PAGE BACKGROUND) */
@@ -52,15 +51,17 @@ body {
     flex-direction: column;
     
 
-    position: relative;
-    height: 80vh;
+    /* position: relative; */
+    /* height: 80vh; */
+    overflow-y: auto;
+  
     width: 1280px;
     align-self: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 
 
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.621);
+    background: rgb(230, 230, 230);
     margin-right: 20px;
     margin-top: 60px;
     margin-bottom: 10px;
@@ -88,6 +89,10 @@ body {
     width: 240px;
 }
 
+.navlist {
+    height: 100px;
+}
+
 /* CONNECT POD BUTTON CSS */
 .connectpod {
     /* position: relative; */
@@ -102,8 +107,6 @@ body {
     font-size: medium;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
-    /* overflow: hidden; */
-    /* text-align: center; */
 }
 
 .connectpod:hover {
@@ -177,23 +180,30 @@ a:hover {
 }
 
 .cardheader {
-    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .outerlogcontainer {
+    overflow: scroll;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    gap: 5px;
+    /* width: 100%; */
 }
 
 .innerlogcontainer {
-    max-height: 520px;
-    overflow-y: auto;
+    /* max-height: 520px; */
+    /* overflow-y: auto; */
+    display: grid;    
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 160px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 
 /* .innerlogcontainer::-webkit-scrollbar {
@@ -246,9 +256,34 @@ th {
     padding-top: 35px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
+    position: sticky;
 }
 
 td {
     font-family: 'Inter', sans-serif;
     color: #4e4d4d;
 }
+
+/* STYLING FOR TABLE HEAD */
+thead {
+    position: sticky;
+    top: 0;
+    background: rgb(230, 230, 230);
+}
+
+
+/* TRYING TO CREATE BAR AT TOP OF PAGE */
+
+/* .headbar {
+    overflow: hidden;
+    z-index: 1;
+    height: 50px;
+    justify-self: flex-start;
+
+    align-self: ;
+}
+
+.topbar {
+    border: 2px solid black;
+    width: 50px;
+} */
