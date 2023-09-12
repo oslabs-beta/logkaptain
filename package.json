@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
+    "prod": "concurrently \"vite\" \"nodemon server/server.js\"",
     "dev": "vite",
     "nodemon": "nodemon server/server.js",
     "build": "vite build",
@@ -21,8 +22,9 @@
     }
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^6.1.3",
     "@kubernetes/client-node": "^0.18.1",
+    "@testing-library/jest-dom": "^6.1.3",
+    "concurrently": "^8.2.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.18.2",
