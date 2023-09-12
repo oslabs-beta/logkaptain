@@ -9,13 +9,6 @@ import { useState } from 'react';
 const LogCard = () => {
 
 // ARRAY FOR ALL LOG DATA //
-<<<<<<< HEAD
-const [logs, setLogs] = useState([]);
-
-
-// GET ALL LOGS CURRENTLY IN THE DB //
-const gatherLogs = async () => {
-=======
 //let logs = [];
 const [logs, setLogs] = useState([]);
 
@@ -23,22 +16,11 @@ const [logs, setLogs] = useState([]);
 const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CALLS
     setLogs([])
     const logTableComponents = []; // TRANSFER THIS TO STATE
->>>>>>> dev
     try {
         const response = await fetch('http://localhost:3000/api/logs', {
             headers: { 'Content-Type': 'application/json' },
         });
         const data = await response.json();
-<<<<<<< HEAD
-        const components = [];
-        for (const log of Object.keys(data)) {
-            //console.log(log)
-            components.push( <LogTable key={log} name={log} log={data[log]}/> )
-        }
-        setLogs(components);
-       // console.log('LOGS:', logs)
-        //console.log('data',data['bb-demo-69f7d75fcf-f4zpv'])
-=======
         for (const log of Object.keys(data)) {
             console.log('ici', data[log])
 
@@ -53,7 +35,6 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         //console.log('LOGS:', logs)
         setLogs(logTableComponents);
 
->>>>>>> dev
     } catch (error) {
         console.log(error);
     }
@@ -64,11 +45,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
 //     const retrievelogsBTN = document.querySelector('#retrievelogs')
 //     retrievelogsBTN.addEventListener('click', () => {
 //         gatherLogs();
-<<<<<<< HEAD
-//         //setInterval(gatherLogs, 2000);
-=======
 //         setInterval(gatherLogs, 2000);
->>>>>>> dev
 //     })
 // })
 
@@ -82,11 +59,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
                 <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
                 <button className="connectpod" id='retrievelogs'>CONNECT POD</button>
             </div>
-<<<<<<< HEAD
-            {logs}
-=======
             {/* <LogTable /> */}
->>>>>>> dev
             {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
             <div className="outerlogcontainer">
                 <div className="innerlogcontainer">

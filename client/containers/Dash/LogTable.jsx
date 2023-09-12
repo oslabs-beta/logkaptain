@@ -5,11 +5,7 @@ import '../../stylesheets/dashboard.css'
 
 // LOG DATA PASSED DOWN INTO PROPS //
 const LogTable = (props) => {
-<<<<<<< HEAD
-    const {name, log} = props;
-=======
     const {date, name, log} = props;
->>>>>>> dev
 
 // console.log('PROPS', props);
 
@@ -17,13 +13,6 @@ const LogTable = (props) => {
         <>
         {/* <div className="outerlogcontainer"> */}
             <div className="innerlogcontainer">
-<<<<<<< HEAD
-                <h2>{name}</h2>
-              
-                <div>{log}</div>
-            </div>
-        </div>
-=======
                 {/* <h2>{name}</h2> */}
                 <div>{date}</div>
                 <div>{name}</div>
@@ -48,7 +37,6 @@ const LogTable = (props) => {
                 {/* </tbody> */}
             {/* </table> */} 
             {/* </div> */}
->>>>>>> dev
         </div>
         </>
     );
