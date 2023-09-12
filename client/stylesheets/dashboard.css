@@ -9,9 +9,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     margin: 0px;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     min-height: 100vh;
 
@@ -52,11 +51,13 @@ body {
     flex-direction: column;
     
 
-    position: relative;
-    height: 80vh;
+    /* position: relative; */
+    /* height: 80vh; */
+    overflow-y: auto;
+  
     width: 1280px;
     align-self: center;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 
 
     border-radius: 14px;
@@ -179,23 +180,30 @@ a:hover {
 }
 
 .cardheader {
-    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .outerlogcontainer {
+    overflow: scroll;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    gap: 5px;
+    /* width: 100%; */
 }
 
 .innerlogcontainer {
-    max-height: 520px;
-    overflow-y: auto;
+    /* max-height: 520px; */
+    /* overflow-y: auto; */
+    display: grid;    
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 160px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 
 /* .innerlogcontainer::-webkit-scrollbar {

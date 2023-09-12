@@ -14,7 +14,9 @@ const Dashboard = () => {
                 {/* <SearchBar/> */}
                 {/* <HeadBar/> */}
                 <NavBar />
-                <LogCard/>    
+                <LogCard/> 
+                
+                   
             </div>
             
         </>
