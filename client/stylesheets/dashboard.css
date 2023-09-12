@@ -9,13 +9,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     margin: 0px;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     min-height: 100vh;
 
-    background-color: #c5c5c5;
+    background-color: #c4c2c2;
 }
 
 /* STYLING FOR THE ROOT DIV (PAGE BACKGROUND) */
@@ -52,15 +51,17 @@ body {
     flex-direction: column;
     
 
-    position: relative;
-    height: 80vh;
+    /* position: relative; */
+    /* height: 80vh; */
+    overflow-y: auto;
+  
     width: 1280px;
     align-self: center;
-    justify-content: center;
+    /* justify-content: flex-start; */
 
 
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.621);
+    background: rgb(230, 230, 230);
     margin-right: 20px;
     margin-top: 60px;
     margin-bottom: 10px;
@@ -88,11 +89,15 @@ body {
     width: 240px;
 }
 
+.navlist {
+    height: 100px;
+}
+
 /* CONNECT POD BUTTON CSS */
 .connectpod {
-    position: relative;
+    /* position: relative; */
     top: 10px;
-    left: 930px;
+    /* left: 930px; */
     width: 200px;
     height: 40px;
 
@@ -102,8 +107,6 @@ body {
     font-size: medium;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
-    /* overflow: hidden; */
-    /* text-align: center; */
 }
 
 .connectpod:hover {
@@ -129,20 +132,23 @@ li {
     margin-right: 10px;
 }
 
+
+/* FORMATTING FOR DASHBOARD LABEL ON NAV BAR */
 .dashnav {
     width: 90%;
     border-top: 2px solid lightblue;
-    
+ 
     padding-top: 30px;
-    padding-left: 36px;
+    padding-left: 55px;
 }
 
+/* FORMATTING FOR SETTINGS LABEL ON NAV BAR */
 .settingnav {
     width: 80%;
     border-top: 2px solid lightblue;
     
     padding-top: 30px;
-    padding-left: 46px;
+    padding-left: 61px;
     margin-top: 330px;
 }
 
@@ -153,8 +159,8 @@ li {
 a {
     text-decoration: none;
     color: lightslategray;
-    font-size: x-large;
-    
+    font-size: large;
+    font-family: 'Inter', sans-serif;
 }
 
 a:hover {
@@ -172,3 +178,112 @@ a:hover {
     color: rgb(103, 103, 104);
     max-width: 200px;
 }
+
+.cardheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.outerlogcontainer {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+    gap: 5px;
+    /* width: 100%; */
+}
+
+.innerlogcontainer {
+    /* max-height: 520px; */
+    /* overflow-y: auto; */
+    display: grid;    
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap: 160px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+/* .innerlogcontainer::-webkit-scrollbar {
+    width: 10px !important;
+    background-color: rgb(255, 255, 255);
+    border-radius: 14px;
+    
+}
+.innerlogcontainer::-webkit-scrollbar-track-piece {
+    right: 2px; Move the scrollbar to the left side (adjust as needed)
+  } */
+
+/* Move the scrollbar to the left side */
+.innerlogcontainer::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+  }
+  
+  /* Style the scrollbar thumb (the draggable part) */
+  .innerlogcontainer::-webkit-scrollbar-thumb {
+    background-color: #888; /* Set the color of the thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+  
+  /* Style the scrollbar track when the thumb is being hovered over */
+  .innerlogcontainer::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+  }
+  
+  /* Move the scrollbar to the left side */
+  .innerlogcontainer::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Background color for the track */
+    border-radius: 5px; /* Rounded corners for the track */
+  }
+
+
+
+table {
+    width: 100%;
+}
+
+/* FORMATTING FOR LOG TABLE HEADERS AND ROWS */
+th, td {
+    width: 450px;
+    padding: 8px;
+    text-align: center;
+}
+
+/* FORMATTING FOR LOG TABLE HEADERS */
+th {
+    padding-top: 35px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    position: sticky;
+}
+
+td {
+    font-family: 'Inter', sans-serif;
+    color: #4e4d4d;
+}
+
+/* STYLING FOR TABLE HEAD */
+thead {
+    position: sticky;
+    top: 0;
+    background: rgb(230, 230, 230);
+}
+
+
+/* TRYING TO CREATE BAR AT TOP OF PAGE */
+
+/* .headbar {
+    overflow: hidden;
+    z-index: 1;
+    height: 50px;
+    justify-self: flex-start;
+
+    align-self: ;
+}
+
+.topbar {
+    border: 2px solid black;
+    width: 50px;
+} */
