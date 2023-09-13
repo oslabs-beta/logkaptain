@@ -27,14 +27,14 @@ export const Login = () => {
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const response = await fetch('/api/login', {
+    const response = await fetch('http://localhost:3000/user/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ carobonita: 12345 }) //TODO: what should i pass in here?
+      body: JSON.stringify({ username: username, password: password }) 
     });
     const data = await response.json();
-    if (data.err) { //has to match what's on the server side
-        setError(data.err);//TODO: ask what's the name of the error handler
+    if (data.err) { 
+        setError(data.err);
     } else {
         setIsLogin(true);
     }
