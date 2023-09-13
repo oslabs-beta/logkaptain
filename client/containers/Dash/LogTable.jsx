@@ -11,14 +11,10 @@ const LogTable = (props) => {
 
     return (
         <>
-        {/* <div className="outerlogcontainer"> */}
-            <div className="innerlogcontainer">
-                
-                {/* <h2>{name}</h2> */}
-                <div>{date}</div>
-                <div>{name}</div>
-                <div>{log}</div>
-        </div>
+                <div className="cell log">{date}</div>
+                <div className="cell midlog">{name}</div>
+                <div className="cell log">{log}</div>
+
         </>
     );
 };
