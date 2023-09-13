@@ -8,8 +8,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom'
 import { Login } from '../client/components/Auth/Login';
 import { SignUp } from '../client/components/Auth/SignUp';
-import LogCard from '../client/containers/Dash/LogCard';
-import NavBar from '../client/containers/Dash/NavBar';
+import LogCard from '../client/components/Dash/LogCard';
+import NavBar from '../client/components/Dash/NavBar';
 
 describe('Testing React Components', () => {
 
