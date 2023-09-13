@@ -6,22 +6,17 @@ import LogCard from './LogCard';
 // import HeadBar from './HeadBar';
 // import SearchBar from './SearchBar'
 
-
 const Dashboard = () => {
-    return (
-        <>
-            <div className="dashcontent">
-                {/* <SearchBar/> */}
-                {/* <HeadBar/> */}
-                <NavBar />
-                <LogCard/> 
-                
-                   
-            </div>
-            
-        </>
-    )
+  return (
+    <>
+      <div className="dashcontent">
+        {/* <SearchBar/> */}
+        {/* <HeadBar/> */}
+        <NavBar />
+        <LogCard/> 
+      </div>
+    </>
+  )
 }
-
 
 export default Dashboard;

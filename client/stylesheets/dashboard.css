@@ -1,116 +1,116 @@
 /* STYLING FOR PAGE BODY */
 body {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 .dashcontent {
-    display: flex;
-    width: 100%;
-    /* min-height: 100vh; */
+  display: flex;
+  width: 100%;
+  /* min-height: 100vh; */
 
-    background-color: #c4c2c2;
+  background-color: #c4c2c2;
 }
 
 /* STYLING FOR THE ROOT DIV (PAGE BACKGROUND) */
 :root {
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-    min-height: 100vh
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh
 }
 
 
 /* TEMP CODE FOR TESTING */
 .mocktitle {
-    font-size: 75px;
+  font-size: 75px;
 
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.87);
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 
-    line-height: 1.1;
+  line-height: 1.1;
 }
 
 /* logcard CSS */
 .logcard {
-    /* flex-grow: 1; */
-    display: flex;
-    flex-direction: column;
+  /* flex-grow: 1; */
+  display: flex;
+  flex-direction: column;
 
-    align-items: center;
-    
+  align-items: center;
+  
 
-    /* position: relative; */
-    height: 80vh;
-    /* overflow-y: auto; */
-    /* max-height: 90vh; */
+  /* position: relative; */
+  height: 80vh;
+  /* overflow-y: auto; */
+  /* max-height: 90vh; */
 
-    width: 80%;
-    align-self: center;
-    /* justify-content: flex-start; */
+  width: 80%;
+  align-self: center;
+  /* justify-content: flex-start; */
 
 
-    border-radius: 14px;
-    background: rgb(230, 230, 230);
-    margin-right: 20px;
-    margin-top: 60px;
-    margin-bottom: 10px;
-    margin-left: 265px;
+  border-radius: 14px;
+  background: rgb(230, 230, 230);
+  margin-right: 20px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  margin-left: 265px;
 
 }
 
 /* NAVBAR CSS */
 .navbar {
-    /* flex-grow: 1; */
-    position: absolute;
-    width: 240px;
+  /* flex-grow: 1; */
+  position: absolute;
+  width: 240px;
 
-    top: 0px;
-    right: 1245px;
-    bottom: 0px;
-    left: 0px;
+  top: 0px;
+  right: 1245px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .navbar .navbox {
-    background-color: #faf7f7;
-    height: 100vh;
+  background-color: #faf7f7;
+  height: 100vh;
 
-    position: absolute;
-    width: 240px;
+  position: absolute;
+  width: 240px;
 }
 
 .navlist {
-    height: 100px;
+  height: 100px;
 }
 
 /* CONNECT POD BUTTON CSS */
 .connectpod {
-    /* position: relative; */
-    top: 10px;
-    /* left: 930px; */
-    width: 200px;
-    height: 40px;
+  /* position: relative; */
+  top: 10px;
+  /* left: 930px; */
+  width: 200px;
+  height: 40px;
 
-    border: none;
-    border-radius: 11px;
-    background: rgb(127, 201, 250);
-    font-size: medium;
-    font-family: "Lucida Console", "Courier New", monospace;
-    font-weight: bold;
-    margin-left: 200px;
+  border: none;
+  border-radius: 11px;
+  background: rgb(127, 201, 250);
+  font-size: medium;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+  margin-left: 200px;
 }
 
 .connectpod:hover {
-    background: white;
+  background: white;
 }
 
 /* DASHBOARD NAV BUTTON */
@@ -128,220 +128,219 @@ ul {
 }
 
 li {
-    margin: 20px;
-    margin-right: 10px;
+  margin: 20px;
+  margin-right: 10px;
 }
 
 
 /* FORMATTING FOR DASHBOARD LABEL ON NAV BAR */
 .dashnav {
-    width: 90%;
-    border-top: 2px solid lightblue;
- 
-    padding-top: 30px;
-    padding-left: 55px;
+  width: 90%;
+  border-top: 2px solid lightblue;
+
+  padding-top: 30px;
+  padding-left: 55px;
 }
 
 /* FORMATTING FOR SETTINGS LABEL ON NAV BAR */
 .settingnav {
-    width: 80%;
-    border-top: 2px solid lightblue;
-    
-    padding-top: 30px;
-    padding-left: 61px;
-    margin-top: 330px;
+  width: 80%;
+  border-top: 2px solid lightblue;
+  
+  padding-top: 30px;
+  padding-left: 61px;
+  margin-top: 330px;
 }
 
 .logoutnav {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 a {
-    text-decoration: none;
-    color: lightslategray;
-    font-size: large;
-    font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: lightslategray;
+  font-size: large;
+  font-family: 'Inter', sans-serif;
 }
 
 a:hover {
-    font-weight: bold;
-    color: black;
+  font-weight: bold;
+  color: black;
 }
 
 #pagelogo {
-    width: 100px;
-    height: 100px
+  width: 100px;
+  height: 100px
 }
 
 .listheader {
-    padding-left: 10px;
-    color: rgb(103, 103, 104);
-    max-width: 200px;
+  padding-left: 10px;
+  color: rgb(103, 103, 104);
+  max-width: 200px;
 }
 
 .cardheader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-    width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 90%;
 }
 
 
 .gridHeader {
-    width: 90%;    
-    font-size: larger;
-    font-weight: bolder;
+  width: 90%;    
+  font-size: larger;
+  font-weight: bolder;
 }
 
 .gridLogs {
-    overflow-y: auto;
-    width: 90%;
+  overflow-y: auto;
+  width: 90%;
 }
 
 
 
 .cell {
-    display: flex;
-    /* border: 1px solid black; */
-    /* justify-content: center; */
-    align-items:flex-start;
-    /* width: 250px; */
-    padding: 1em;
-    
-    /* margin-left: 7px; */
+  display: flex;
+  /* border: 1px solid black; */
+  /* justify-content: center; */
+  align-items:flex-start;
+  /* width: 250px; */
+  padding: 1em;
+  
+  /* margin-left: 7px; */
 }
 
 .log:nth-child(even) {
-    background-color: rgb(206, 205, 205); /* Even row color */
-  }
+  background-color: rgb(206, 205, 205); /* Even row color */
+}
 
 .midlog:nth-child(odd) {
-    background-color: rgb(206, 205, 205); /* Even row color */
-  }
+  background-color: rgb(206, 205, 205); /* Even row color */
+}
 
 .outerlogcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 100px;
-    padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;
+  padding-top: 50px;
 
-    gap: 5px;
-    /* width: 100%; */
+  gap: 5px;
+  /* width: 100%; */
 }
 
 h2 {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 .innerlogcontainerHeader{
-    display: grid;    
-    grid-template-columns: 30% 30% 40%;
-    /* grid-gap: 160px; */
-    gap: 160px;
+  display: grid;    
+  grid-template-columns: 30% 30% 40%;
+  /* grid-gap: 160px; */
+  gap: 160px;
 
 }
 .innerlogcontainerWrapper {
-    overflow-y: auto;
+  overflow-y: auto;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   
-    /* gap: 100px; */
- 
-    /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  /* gap: 100px; */
+
+  /* border: 1px solid red; */
 }
 
 .innerlogcontainer {
-    /* max-height: 520px; */
-    /* overflow-y: auto; */
-    display: grid;    
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-gap: 160px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
+  /* max-height: 520px; */
+  /* overflow-y: auto; */
+  display: grid;    
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 160px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid black;
 }
 
 /* .innerlogcontainer::-webkit-scrollbar {
-    width: 10px !important;
-    background-color: rgb(255, 255, 255);
-    border-radius: 14px;
-    
+  width: 10px !important;
+  background-color: rgb(255, 255, 255);
+  border-radius: 14px;
 }
 .innerlogcontainer::-webkit-scrollbar-track-piece {
-    right: 2px; Move the scrollbar to the left side (adjust as needed)
-  } */
+  right: 2px; Move the scrollbar to the left side (adjust as needed)
+} */
 
 /* Move the scrollbar to the left side */
 .gridLogs::-webkit-scrollbar {
-    width: 10px; /* Set the width of the scrollbar */
-  }
-  
-  /* Style the scrollbar thumb (the draggable part) */
-  .gridLogs::-webkit-scrollbar-thumb {
-    background-color: #888; /* Set the color of the thumb */
-    border-radius: 5px; /* Rounded corners for the thumb */
-  }
-  
-  /* Style the scrollbar track when the thumb is being hovered over */
-  .gridLogs::-webkit-scrollbar-thumb:hover {
-    background-color: #555555;
-  }
-  
-  /* Move the scrollbar to the left side */
-  .gridLogs::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Background color for the track */
-    border-radius: 5px; /* Rounded corners for the track */
-  }
+width: 10px; /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+.gridLogs::-webkit-scrollbar-thumb {
+background-color: #888; /* Set the color of the thumb */
+border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+/* Style the scrollbar track when the thumb is being hovered over */
+.gridLogs::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+}
+
+/* Move the scrollbar to the left side */
+.gridLogs::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Background color for the track */
+  border-radius: 5px; /* Rounded corners for the track */
+}
 
 
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
 /* FORMATTING FOR LOG TABLE HEADERS AND ROWS */
 th, td {
-    width: 450px;
-    padding: 8px;
-    text-align: center;
+  width: 450px;
+  padding: 8px;
+  text-align: center;
 }
 
 /* FORMATTING FOR LOG TABLE HEADERS */
 th {
-    padding-top: 35px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    position: sticky;
+  padding-top: 35px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  position: sticky;
 }
 
 td {
-    font-family: 'Inter', sans-serif;
-    color: #4e4d4d;
+  font-family: 'Inter', sans-serif;
+  color: #4e4d4d;
 }
 
 /* STYLING FOR TABLE HEAD */
 thead {
-    position: sticky;
-    top: 0;
-    background: rgb(230, 230, 230);
+  position: sticky;
+  top: 0;
+  background: rgb(230, 230, 230);
 }
 
 
 /* TRYING TO CREATE BAR AT TOP OF PAGE */
 
 /* .headbar {
-    overflow: hidden;
-    z-index: 1;
-    height: 50px;
-    justify-self: flex-start;
+  overflow: hidden;
+  z-index: 1;
+  height: 50px;
+  justify-self: flex-start;
 
-    align-self: ;
+  align-self: ;
 }
 
 .topbar {
-    border: 2px solid black;
-    width: 50px;
+  border: 2px solid black;
+  width: 50px;
 } */
