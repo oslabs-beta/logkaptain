@@ -7,7 +7,7 @@ import Dashboard from './containers/Dash/Dashboard.jsx'
 
 const App = () => {
   const router = createBrowserRouter([
-  { path: '/', element: <Login /> },
+  { path: '/login', element: <Login /> },
   { path: '/signup', element: <SignUp /> },
   {
     path: '/dashboard',

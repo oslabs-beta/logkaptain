@@ -37,7 +37,7 @@ export const SignUp = () => {
     const response = await fetch('http://localhost:3000/user/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, username, password }) 
+      body: JSON.stringify({ username: username, password: password, name: name }) 
     });
 
     // const myName = 'Caro';
@@ -51,7 +51,7 @@ export const SignUp = () => {
 
     const data = await response.json();
     if (data.err) {
-        setError(data.err); // TODO: ask what's the name of the error handler
+        setError(data.err); 
     } else {
         setIsLogin(true);
     }
@@ -63,7 +63,7 @@ export const SignUp = () => {
     <Container>
       <Backdrop>
       <BrandedHeader>LogKaptain</BrandedHeader>
-      {error && <ErrorMessage><span>{error}, check your username and password.</span></ErrorMessage>}
+      {/* // {error && <ErrorMessage><span>{error}, check your username and password.</span></ErrorMessage>} */}
         <Form onSubmit={handleSubmit}> 
         <Input value={name} onChange={(e) => setInput('name', e)} name='name' id='name' placeholder='Jane Doe'/>
         <Input value={username} onChange={(e) => setInput('username', e)} type="text" placeholder="janedoe" id='username' name='username'/>
