@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Backdrop, BrandedHeader, Button, Container, Form, Input } from './Backdrop';
 
 //create useState for username and password and pass and empty string
 export const Login = () => {
+  const [error, setError] = useState('X');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -27,6 +28,7 @@ export const Login = () => {
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
     e.preventDefault()
+    const navigate = useNavigate();
     const response = await fetch('http://localhost:3000/user/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -36,7 +38,7 @@ export const Login = () => {
     if (data.err) { 
         setError(data.err);
     } else {
-        setIsLogin(true);
+      navigate('/dashboard');
     }
   };
 
@@ -51,6 +53,7 @@ export const Login = () => {
         <Form onSubmit={handleSubmit}> 
           <Input value={username} onChange={(e) => setInput('username', e)} type="text" placeholder="janedoe" id='username' name='username'/>
           <Input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>
+          {error && <ErrorMessage><span>{error}, check your username and password.</span></ErrorMessage>}
           <Button type="submit" variant='primary'>Login</Button>
           <span>Don't have an account? </span>
           <Link to="/signup"> Register here.</Link>
