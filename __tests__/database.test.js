@@ -28,50 +28,59 @@ describe('Testing SQL Database', () => {
     //   password VARCHAR(255) NOT NULL
     // );
 
-    const userInfo = {username: OSP1, password: isDaBest123 }
+    // afterAll(async () => {
+    //   await db.end();
+    // })
 
-    //TODO: 
-    xit('should be able to create data', async () => {
+    const userInfo = {username: "OSP1", password: "isDaBest123" };
+
+    it('should be able to create data', async () => {
       try {
-        client = await db.query('INSERT INTO users (username, password) VALUES (`fakeusername`, `fakepassword`'); 
+        client = await db.query(`INSERT INTO users (username, password) VALUES ('${userInfo.username}', '${userInfo.password}')`); 
       } catch (err) {
         console.log(err); 
       }
       expect(client).toBeDefined();
+      expect(client.command).toBe('INSERT');
     });
 
-    //TODO: 
-    xit('should be able to read data', async () => {
+    it('should be able to read data', async () => {
       try {
-        client = await db.query('SELECT * FROM users WHERE username='); 
+        client = await db.query(`SELECT * FROM users WHERE username='${userInfo.username}'`); 
       } catch (err) {
         console.log(err); 
       }
       expect(client).toBeDefined();
+      expect(client.command).toBe('SELECT');
+      expect(client.rowCount).toBeGreaterThan(0); 
+      expect(client.rows[0].username).toBe(`${userInfo.username}`);
+      expect(client.rows[0].password).toBe(`${userInfo.password}`);
     });
 
-    //TODO: 
-    xit('should be able to update data', async () => {
+    it('should be able to update data', async () => {
       try {
-        client = await db.query(); 
+        client = await db.query(`UPDATE users set password='No1CanCompare' WHERE username='${userInfo.username}'`); 
       } catch (err) {
         console.log(err); 
       }
       expect(client).toBeDefined();
+      expect(client.command).toBe('UPDATE');
+      expect(client.rowCount).toBeGreaterThan(0); 
     });
 
-    //TODO:
-    xit('should be able to delete data', async () => {
+    it('should be able to delete data', async () => {
       try {
-        client = await db.query(); 
+        client = await db.query(`DELETE FROM users WHERE username='${userInfo.username}'`); 
       } catch (err) {
         console.log(err); 
       }
       expect(client).toBeDefined();
+      expect(client.command).toBe('DELETE');
+      expect(client.rowCount).toBeGreaterThan(0); 
     })
   })
 
-  describe('Testing Log Database', () => {
+  xdescribe('Testing Log Database', () => {
 
     // CREATE TABLE logTable (
     //   id SERIAL PRIMARY KEY,
