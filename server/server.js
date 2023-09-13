@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true })); //encrypting url
 
-//app.use('/api', apiRouter);
+app.use('/api', apiRouter);
 app.use(express.static(path.join(__dirname, '../client')));
 
 app.use('/user', routes);
