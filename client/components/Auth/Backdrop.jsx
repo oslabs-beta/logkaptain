@@ -18,10 +18,10 @@ export const Backdrop = styled.div`
   box-shadow: 0 0 20px 20px #e0eaf6 inset;
   display: block;  
   margin: auto;
-  max-height: 1290px;
-  max-width: 1509px;
+  max-height: 1390px;
+  max-width: 1809px;
   min-height: 968px;
-  min-width: 1132px;
+  min-width: 1332px;
 `;
 
 export const Form = styled.form`

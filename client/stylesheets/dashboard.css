@@ -7,12 +7,8 @@ body {
 
 .dashcontent {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0px;
-    /* height: 100%; */
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
     background-color: #c4c2c2;
 }
@@ -49,13 +45,16 @@ body {
     /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
+
+    align-items: center;
     
 
     /* position: relative; */
-    /* height: 80vh; */
-    overflow-y: auto;
-  
-    width: 1280px;
+    height: 80vh;
+    /* overflow-y: auto; */
+    /* max-height: 90vh; */
+
+    width: 80%;
     align-self: center;
     /* justify-content: flex-start; */
 
@@ -71,7 +70,7 @@ body {
 
 /* NAVBAR CSS */
 .navbar {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     position: absolute;
     width: 240px;
 
@@ -107,6 +106,7 @@ body {
     font-size: medium;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
+    margin-left: 200px;
 }
 
 .connectpod:hover {
@@ -183,17 +183,75 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 25px;
+    width: 90%;
 }
 
+
+.gridHeader {
+    width: 90%;    
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.gridLogs {
+    overflow-y: auto;
+    width: 90%;
+}
+
+
+
+.cell {
+    display: flex;
+    /* border: 1px solid black; */
+    /* justify-content: center; */
+    align-items:flex-start;
+    /* width: 250px; */
+    padding: 1em;
+    
+    /* margin-left: 7px; */
+}
+
+.log:nth-child(even) {
+    background-color: rgb(206, 205, 205); /* Even row color */
+  }
+
+.midlog:nth-child(odd) {
+    background-color: rgb(206, 205, 205); /* Even row color */
+  }
+
 .outerlogcontainer {
-    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 100px;
+    padding-top: 50px;
+
     gap: 5px;
     /* width: 100%; */
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+.innerlogcontainerHeader{
+    display: grid;    
+    grid-template-columns: 30% 30% 40%;
+    /* grid-gap: 160px; */
+    gap: 160px;
+
+}
+.innerlogcontainerWrapper {
+    overflow-y: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+    /* gap: 100px; */
+ 
+    /* border: 1px solid red; */
 }
 
 .innerlogcontainer {
@@ -217,23 +275,23 @@ a:hover {
   } */
 
 /* Move the scrollbar to the left side */
-.innerlogcontainer::-webkit-scrollbar {
+.gridLogs::-webkit-scrollbar {
     width: 10px; /* Set the width of the scrollbar */
   }
   
   /* Style the scrollbar thumb (the draggable part) */
-  .innerlogcontainer::-webkit-scrollbar-thumb {
+  .gridLogs::-webkit-scrollbar-thumb {
     background-color: #888; /* Set the color of the thumb */
     border-radius: 5px; /* Rounded corners for the thumb */
   }
   
   /* Style the scrollbar track when the thumb is being hovered over */
-  .innerlogcontainer::-webkit-scrollbar-thumb:hover {
+  .gridLogs::-webkit-scrollbar-thumb:hover {
     background-color: #555555;
   }
   
   /* Move the scrollbar to the left side */
-  .innerlogcontainer::-webkit-scrollbar-track {
+  .gridLogs::-webkit-scrollbar-track {
     background-color: #f1f1f1; /* Background color for the track */
     border-radius: 5px; /* Rounded corners for the track */
   }

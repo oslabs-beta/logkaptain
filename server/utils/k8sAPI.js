@@ -5,7 +5,7 @@ const yaml = require('js-yaml');
 
 const yamlContent = fs.readFileSync(path.join(__dirname, '../k8s/bb.yaml'), 'utf8'); // Returns the YAML file content into a string
 
-const yamlDocuments = yamlContent.split('---'); // Split the YAML content into individual documents 
+const yamlDocuments = yamlContent.split('---'); // Split the YAML content into individual documents
 
 /**
  * In this Kubernetes YAML file (bb.yaml), we have two objects, separated by the `---`:

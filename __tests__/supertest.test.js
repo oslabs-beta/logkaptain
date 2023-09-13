@@ -2,27 +2,27 @@ const fs = require('fs');
 const path = require('path'); 
 const request = require('supertest'); 
 
-const server = 'http://localhost:5173'; // double check the port
+const server = 'http://localhost:3000'; // double check the port
 
-xdescribe('Testing Server', () => {
+describe('Testing Server', () => {
 
-  describe('Starting server', () => {
-    it('responds with 200 status with text/html content type', () => {
+  describe('Starting backend server', () => {
+    it('Get / responds with 404 status with text/html content type', () => {
       return request(server)
         .get('/')
-        .expect('Content-type', /text\/html/)
-        .expect(200); 
+        .expect('Content-Type', /text\/html/)
+        .expect(404); 
     }) 
   })
-
 });
 
-xdescribe('Testing Frontpage', () => {
+
+xdescribe('Testing Routers', () => {
 
   describe('Testing Signup', () => {
     it('respond with a 204 status', () => {
       return request(server)
-        .post('/signup')
+        .post('user/signup')
         .expect(204); 
     });
   });
@@ -30,24 +30,24 @@ xdescribe('Testing Frontpage', () => {
   describe('Testing Login', () => {
     it('respond with a 200 status', () => {
       return request(server)
-        .post('/login')
+        .post('user/login')
         .expect(200); 
     });
   });
 
-  describe('Testing Forgot Password', () => {
+  xdescribe('Testing Forgot Password', () => {
     describe('Testing Login', () => {
       it('respond with a 200 status', () => {
         return request(server)
-          .patch('/login')
+          .patch('user/login')
           .expect(200); 
       });
     });
   });
 });
 
-xdescribe('Testing Dashboard', () => {
-  describe('connect to cluster', () => {
+describe('Testing Dashboard', () => {
+  xdescribe('connect to cluster', () => {
     
   });
 
@@ -60,7 +60,7 @@ xdescribe('Testing Dashboard', () => {
     })
   });
 
-  describe('Saving logs', () => {
+  xdescribe('Saving logs', () => {
     // patch request? 
     it('save user specified logs from Kubernetes cluster' , () => {
       return request(server)
@@ -78,7 +78,7 @@ xdescribe('Testing Dashboard', () => {
     })
   })
 
-  describe('Removing logs', () => {
+  xdescribe('Removing logs', () => {
     // delete request? 
     it('perform a delete request on logs(?)', () => {
       return request(server)
