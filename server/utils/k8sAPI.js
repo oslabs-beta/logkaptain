@@ -20,7 +20,7 @@ const selectedYamlDocument = yaml.load(yamlDocuments[documentIndex]); // Parsing
 const kubeConfigPath = path.join(process.env.HOME, '.kube/config'); // Loading the Kubernetes configuration from ~/.kube/config. Assuming it's in the home directory
 
 const kc = new k8s.KubeConfig(); //creating a new instance of the KubeConfig class. This instance is used to configure and manage a Kubernetes cluster access from a Node.js application.
-kc.loadFromFile(kubeConfigPath); // Loading configuration from the ~/.kube/config file
+//kc.loadFromFile(kubeConfigPath); // Loading configuration from the ~/.kube/config file
 
 // Creating Kubernetes API client instances for our cluster
 const coreV1Api = kc.makeApiClient(k8s.CoreV1Api); //  Kubernetes Core. Methods for working with core Kubernetes resources like Pods, Services, ConfigMaps...

@@ -134,13 +134,6 @@ li {
 
 
 /* FORMATTING FOR DASHBOARD LABEL ON NAV BAR */
-.dashnav {
-    width: 90%;
-    border-top: 2px solid lightblue;
- 
-    padding-top: 30px;
-    padding-left: 55px;
-}
 
 /* FORMATTING FOR SETTINGS LABEL ON NAV BAR */
 .settingnav {
