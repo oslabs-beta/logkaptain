@@ -1,13 +1,13 @@
 import React from "react";
-import '../../stylesheets/dashboard.css'
-import { LogOutput } from "concurrently";
+import '../../stylesheets/dashboard.css';
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navbox">
-        {<img src="../../../public/logo.png" id="pagelogo" ></img> }
+
         <ul className="navlist">
+          <img src="../../../public/logo.png" id="pagelogo" ></img> 
           <li className="dashnav"><a href="http://localhost:5173/dashboard">Dashboard</a></li>
           <li className="teamnav"><a href="http://localhost:5173/dashboard">Team</a></li>
           <li className="settingnav"><a href="http://localhost:5173/dashboard">Settings</a></li>
