@@ -34,20 +34,20 @@ export const SignUp = () => {
   //function to handle submit
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // const response = await fetch('/api/signup', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ name, username, password }) // TODO: what should i pass in here?
-    // });
+    const response = await fetch('http://localhost:3000/user/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, username, password }) 
+    });
 
-    const myName = 'Caro';
-    const myUserName = 'carobonita';
-    const pass = 123456;
-    if(name === myName && myUserName ===username && pass == password ) {
-      alert('success login in')
-    } else {
-      alert('choose a different username')
-    }
+    // const myName = 'Caro';
+    // const myUserName = 'carobonita';
+    // const pass = 123456;
+    // if(name === myName && myUserName ===username && pass == password ) {
+    //   alert('success login in')
+    // } else {
+    //   alert('choose a different username')
+    // }
 
     const data = await response.json();
     if (data.err) {
