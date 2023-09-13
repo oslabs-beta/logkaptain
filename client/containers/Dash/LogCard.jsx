@@ -4,6 +4,7 @@ import LogTable from './LogTable'
 
 
 
+
 // RENDER THE LOG CARD // 
 const LogCard = () => {
 
@@ -56,19 +57,40 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
             <div className="cardheader">
                 <h2 className="listheader">Log Data</h2>
                 <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
-                <button className="connectpod" id='retrievelogs'>CONNECT POD</button>
+                <button className="connectpod" id='retrievelogs'>Connect Pod</button>
             </div>
             {/* <LogTable /> */}
             {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
-            <div className="outerlogcontainer">
-                <div className="innerlogcontainer">
+
+            <div className="gridHeader grid-container">
+                <div className="cell">
+                    Date (UTC)
+                </div>
+                <div className="cell">
+                Pod Name
+                </div >
+                <div className="cell">
+                Message
+                </div>
+            </div>
+
+            <div className="gridLogs grid-container">
+                {logs}
+            </div>
+            
+            
+            {/* <div className="outerlogcontainer">
+                <div className="innerlogcontainerHeader">
                 <h2>Date</h2>
                 <h2>Pod Name</h2>
                 <h2>Message</h2>
                 </div>
                 
-                {logs}
-            </div>
+            </div> */}
+            {/* <div className="innerlogcontainerWrapper">
+                     {logs}
+            </div>     */}
+            
             
         </div>
     );
