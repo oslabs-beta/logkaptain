@@ -1,11 +1,12 @@
 import React from "react";
 import '../../stylesheets/dashboard.css'
+import { LogOutput } from "concurrently";
 
 const NavBar = () => {
   return (
     <div className="navbar">
       <div className="navbox">
-        {/* <img src="..assets/lglogo.png" id="pagelogo" ></img> */}
+        {<img src="../../../public/logo.png" id="pagelogo" ></img> }
         <ul className="navlist">
           <li className="dashnav"><a href="http://localhost:5173/dashboard">Dashboard</a></li>
           <li className="teamnav"><a href="http://localhost:5173/dashboard">Team</a></li>
