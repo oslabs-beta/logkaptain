@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Backdrop, BrandedHeader, Button, Container, Form, Input } from './Backdrop';
+import { Backdrop, BrandedHeader, Button, Container, Form, Input, ErrorMessage } from './Backdrop';
+import Cookies from 'js-cookie';
 
 //create useState for username and password and pass and empty string
 export const Login = () => {
-  const [error, setError] = useState('X');
+  const [error, setError] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   //the setInput function will update the state of the username and password input
   const setInput = (fieldName, event) => {
@@ -27,16 +30,17 @@ export const Login = () => {
   }
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const navigate = useNavigate();
+    e.preventDefault()    
     const response = await fetch('http://localhost:3000/user/login', {
       method: 'POST',
+      mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username: username, password: password }) 
+      credentials: 'include',
+      body: JSON.stringify({ username: username, password: password }), 
     });
     const data = await response.json();
-    if (data.err) { 
-        setError(data.err);
+    if (data.verify === false) { 
+      setError(data.message);
     } else {
       navigate('/dashboard');
     }
