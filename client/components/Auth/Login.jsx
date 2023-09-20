@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Backdrop, BrandedHeader, Button, Container, Form, Input, ErrorMessage } from './Backdrop';
 import Cookies from 'js-cookie';
@@ -34,13 +35,12 @@ export const Login = () => {
       method: 'POST',
       mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({ username: username, password: password }), 
-      // credentials: 'include'
     });
     const data = await response.json();
-    //console.log(data);
     if (data.verify === false) { 
-      setError(data.err);
+      setError(data.message);
     } else {
       navigate('/dashboard');
     }

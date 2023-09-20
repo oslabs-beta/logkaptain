@@ -5,10 +5,11 @@ import { Backdrop, BrandedHeader, Button, Container, ErrorMessage, Form, Input }
 
 //create useState for name, email, password and pass and empty string
 export const SignUp = () => {
-  const [error, setError] = useState('X');
+  const [error, setError] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const navigate = useNavigate();
   
   //create a function that takes in a field name and event
   //set the value to the event.target.value
@@ -32,8 +33,7 @@ export const SignUp = () => {
 
   //function to handle submit
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const navigate = useNavigate();
+    e.preventDefault()    
     const response = await fetch('http://localhost:3000/user/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
