@@ -118,7 +118,7 @@ body {
 
 ul {
   list-style-type: none;
-  padding-top: 150px;
+  padding-top: 0px;
   margin-right: 45px;
 
   display: flex;
