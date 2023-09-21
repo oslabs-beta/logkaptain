@@ -1,4 +1,4 @@
-web: npm run dev
+web: npm run prod
 server:
   port: 5173
   
