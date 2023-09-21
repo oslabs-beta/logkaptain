@@ -13,6 +13,7 @@ import NavBar from '../client/components/Dash/NavBar';
 
 describe('Testing React Components', () => {
 
+	// renders the login components
   describe('Testing Login Components', () => {
     beforeAll(() => {
       render(
@@ -22,20 +23,26 @@ describe('Testing React Components', () => {
       )
     });
 
+		// tests to see if the text 'Register here' which is part of the login screen is rendered
     it('should render the login screen', () => {
       expect(screen.getByText('Register here.')).toBeInTheDocument();
     });
 
+		// tests to see if we login and reroute to /dashboard
+		// TODO:
     xit('should successfully login' , () => {
 
     });
 
+		// tests to see if we fail at logging in 
+		// TODO:
     xit('should fail at logging in', () => {
 
     });
   })
   
   describe('Testing Signup Components', () => {
+		// renders the sign up page/component
     beforeAll(() => {
       render(
         <Router> 
@@ -44,14 +51,16 @@ describe('Testing React Components', () => {
       )
     })
 
+		// tests to see if the text 'Sign Up' which is part of the signup page is rendered
     it('should render the signup page', () => {
       expect(screen.getByText('Sign Up')).toBeInTheDocument();
     })
   })
 
-  // will have to reconsider how to test/show this one; 
+ 
   describe('Testing Dashboard Components', () => {
-    describe('Testing Nav Bar', () => {
+	//renders nav bar
+		describe('Testing Nav Bar', () => {
       beforeEach (() => {
         render (
           <Router> 
@@ -60,25 +69,31 @@ describe('Testing React Components', () => {
         )
       })
 
+			// checks to see if texts are rendered ('Dashboard')
       it('should contain dashnav', () => {
         expect(screen.getByText('Dashboard')).toBeInTheDocument();
       });
 
+			// tests to see if 'Team' is rendered
       it('should contain teamnav', () => {
         expect(screen.getByText('Team')).toBeInTheDocument();
       });
 
+			// tests to see if 'Settings' is rendered
       it('should contain settingnav', () => {
         expect(screen.getByText('Settings')).toBeInTheDocument();
       });
 
+			// tests to see if 'logout is rendered' 
       it('should contain logoutnav', () => {
         expect(screen.getByText('logout')).toBeInTheDocument();
       });
     })
 
+		// currently not working
     xdescribe('Testing Log Card', () => {
 
+			// renders the log cards 
       const logs = [{date: Date.now, pod: 'testing', message: 'this is a test'}]
       beforeAll(() => {
         render( 
@@ -88,6 +103,7 @@ describe('Testing React Components', () => {
         )
       })
       
+			// tests to see if the log panel is functioning
       it('should contain Log Data header', () => {
         expect(screen.getByText('Log Data')).toBeInTheDocument();
       })
