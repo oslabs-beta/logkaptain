@@ -31,7 +31,9 @@ export const Login = () => {
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
     e.preventDefault()    
-    const response = await fetch(`http://localhost:${process.env.PORT}/user/login`, {
+    // const response = await fetch(`http://localhost:${process.env.PORT}/user/login`, {
+    const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/user/login`, {
+
       method: 'POST',
       mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
