@@ -40,6 +40,8 @@
     "node-forge": "^1.3.1",
     "nodemon": "^3.0.1",
     "oauth-1.0a": "^2.2.6",
+    "oauth2-client": "^0.0.4",
+    "oauth2-server": "^3.1.1",
     "pg": "^8.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
