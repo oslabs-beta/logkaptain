@@ -26,7 +26,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.use('/api', apiRouter);
-app.use(express.static(path.join(__dirname, '../client')));
+// app.use(express.static(path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 app.use('/user', routes);
 
