@@ -1,7 +1,6 @@
 // routes
 const express = require('express');
 const router = express.Router();
-const logController = require('../controllers/logControllers');
 const authController = require('../controllers/authController');
 const cookieController = require('../controllers/cookieController');
 
