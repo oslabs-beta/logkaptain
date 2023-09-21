@@ -9,12 +9,15 @@ router.use(bodyParser.urlencoded({extended: true}));
 const JIRA_INSTANCE = 'https://mnelson98.atlassian.net';  // Replace with your Jira instance URL
 const CLIENT_ID = 'LogKaptain';  // Replace with your OAuth consumer client ID
 const CLIENT_SECRET = 'LogKaptain';  // Replace with your OAuth consumer client secret
-const CALLBACK_URL = 'LogKaptain';
+const CALLBACK_URL = 'http://localhost:3000/oauth/callback/';
 
 
 let requestToken = '';
 
 router.get('/', async (req, res) => {
+
+  console.log('GETTING THE REQUEST TOKEN')
+
   try {
     // Step 1: Obtain a request token
     const response = await axios.post(`${JIRA_INSTANCE}/plugins/servlet/oauth/request-token`, null, {
@@ -37,6 +40,9 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/callback', async (req, res) => {
+
+  console.log('CALLBACK HAS BEEN HIT')
+
   const { oauth_token, oauth_verifier } = req.query;
 
   try {
