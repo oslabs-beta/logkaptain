@@ -14,7 +14,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
   setLogs([])
   const logTableComponents = []; // TRANSFER THIS TO STATE
   try {
-    const response = await fetch('http://localhost:3000/api/logs', {
+    const response = await fetch(`http://localhost:${process.env.PORT}/api/logs`, {
       headers: { 'Content-Type': 'application/json' },
     });
 
