@@ -1,3 +1,3 @@
-web: npm run prod
+web: npm start
 server:
   port: 5173
