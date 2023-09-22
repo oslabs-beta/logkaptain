@@ -1,6 +1,7 @@
 import {React, useState} from "react";
 import '../../stylesheets/dashboard.css'
 import LogTable from './LogTable'
+import SearchBar from "./SearchBar";
 
 // RENDER THE LOG CARD // 
 const LogCard = () => {
@@ -51,6 +52,9 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         <h2 className="listheader">Log Data</h2>
         <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
         <button className="connectpod" id='retrievelogs'>Connect Pod</button>
+      </div>
+      <div classname="searchbar"> 
+        <SearchBar /> 
       </div>
       {/* <LogTable /> */}
       {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}

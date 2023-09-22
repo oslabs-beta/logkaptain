@@ -9,6 +9,8 @@ const App = () => {
     { path: '/', element: <Login /> },
     { path: '/signup', element: <SignUp /> },
     { path: '/dashboard', element: <Dashboard /> },
+    { path: '/team', element: <Dashboard /> },
+    { path: '/settings', element: <Dashboard /> }
   ]);
 
   return (
