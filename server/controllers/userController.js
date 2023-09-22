@@ -69,7 +69,7 @@ userController.verifyUser = async (req, res, next) => {
     // if username not in DB, return error
     if (userData === undefined) {
       console.log('userData', userData);
-      res.locals.successful = { verify: false, message: 'username not found' };
+      res.locals.successful = { verify: false, message: 'Failed to login' };
       return next();
     }
 
@@ -84,7 +84,7 @@ userController.verifyUser = async (req, res, next) => {
       if (!isPasswordCorrect) {
         res.locals.successful = {
           verify: false,
-          message: 'username and/or password incorrect',
+          message: 'Failed to login',
         };
         return next();
       }

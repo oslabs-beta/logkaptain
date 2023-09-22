@@ -1,5 +1,6 @@
 import React from "react";
 import '../../stylesheets/dashboard.css'
+import { Backdrop, BrandedHeader, Button, Container, Form, Input, ErrorMessage } from '../Auth/Backdrop.jsx';
 
 // LOG DATA PASSED DOWN INTO PROPS //
 const LogTable = (props) => {

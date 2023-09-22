@@ -1,6 +1,9 @@
 import {React, useState} from "react";
 import '../../stylesheets/dashboard.css'
 import LogTable from './LogTable'
+import { Backdrop, BrandedHeader, Button, ButtonCSV, ButtonDash, Container, Form, Input, ErrorMessage } from '../Auth/Backdrop.jsx';
+import SearchBar from "./SearchBar";
+
 
 // RENDER THE LOG CARD // 
 const LogCard = () => {
@@ -14,7 +17,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
   setLogs([])
   const logTableComponents = []; // TRANSFER THIS TO STATE
   try {
-    // const response = await fetch(`http://localhost:${process.env.PORT}/api/logs`, {
+    //const response = await fetch(`http://localhost:3000/api/logs`, {
     const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/api/logs`, {
       headers: { 'Content-Type': 'application/json' },
     });
@@ -49,8 +52,13 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
     <div className="logcard">
       <div className="cardheader">
         <h2 className="listheader">Log Data</h2>
-        <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
-        <button className="connectpod" id='retrievelogs'>Connect Pod</button>
+        <ButtonDash onClick={gatherLogs}>Retrieve Logs</ButtonDash>
+        <ButtonDash>Connect Pod</ButtonDash>     
+        {/* <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
+        <button className="connectpod" id='retrievelogs'>Connect Pod</button>      */}
+      </div>
+      <div className="searchbar"> 
+        <SearchBar /> 
       </div>
       {/* <LogTable /> */}
       {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
@@ -71,6 +79,9 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         {logs}
       </div>
 
+      <ButtonCSV as="button" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</ButtonCSV>
+      
+
       {/* <div className="outerlogcontainer">
           <div className="innerlogcontainerHeader">
           <h2>Date</h2>
@@ -80,9 +91,10 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         </div> */}
       {/* <div className="innerlogcontainerWrapper">
         {logs}
-      </div>     */}
+      </div>     */}      
+      
     </div>
   );
 };
 
-export default LogCard
+export default LogCard;
