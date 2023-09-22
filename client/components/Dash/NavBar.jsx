@@ -15,10 +15,10 @@ const NavBar = () => {
       <div className="navbox">
         <ul className="navlist">
           <img src="logo.png" id="pagelogo" ></img> 
-          <li className="dashnav"><button onClick={() => handleClick('/dashboard')}>Dashboard</button></li>
-          <li className="teamnav"><button onClick={() => handleClick('/dashboard')}>Team</button></li>
-          <li className="settingnav"><button onClick={() => handleClick('/dashboard')}>Settings</button></li>
-          <li className="logoutnav"><button onClick={() => handleClick('/login')}>Logout</button></li>
+          <li className="dashnav"><a onClick={() => handleClick('/dashboard')}>Dashboard</a></li>
+          <li className="teamnav"><a onClick={() => handleClick('/dashboard')}>Team</a></li>
+          <li className="settingnav"><a onClick={() => handleClick('/dashboard')}>Settings</a></li>
+          <li className="logoutnav"><a onClick={() => handleClick('/login')}>Logout</a></li>
         </ul>
       </div>
     </div>
