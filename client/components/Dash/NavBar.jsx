@@ -1,7 +1,7 @@
 import React from "react";
 import '../../stylesheets/dashboard.css';
 import '../../assets/logo.png'; 
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const NavBar = () => {
   const navigate = useNavigate(); 
