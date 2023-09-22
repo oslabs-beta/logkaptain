@@ -73,7 +73,7 @@ describe('Testing React Components', () => {
       });
 
       it('should contain logoutnav', () => {
-        expect(screen.getByText('logout')).toBeInTheDocument();
+        expect(screen.getByText('Logout')).toBeInTheDocument();
       });
     })
 
