@@ -70,7 +70,7 @@ export const Button = styled.button`
 
 export const BrandedHeader = styled.h1`
   color: #000030;
-  font-family: 'Lobster', cursive;
+  font-family: 'Alegreya', serif;
   font-size: 7em;
   margin: 5% 0 7% 0;
   text-align: center;
@@ -87,9 +87,9 @@ export const ErrorMessage = styled.div`
 
 export const ButtonCSV = styled.a`
   align-self: end;  
-  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
-  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid  
-  border-radius: 11px;
+  background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
+  border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;  
+  border-radius: 7px;
   color: #000030;
   cursor: pointer;  
   display: flex;
@@ -98,9 +98,10 @@ export const ButtonCSV = styled.a`
   justify-content: center;
   margin: inherit;
   position: right;
+  padding: 7px;
   width: 158px;
   &:hover {
-    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF"};
+    background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF "};
   }
   &:disabled {
     background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
@@ -110,9 +111,9 @@ export const ButtonCSV = styled.a`
 // ;
 
 export const ButtonDash = styled.button`
-  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
-  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid
-  border-radius: 10px;
+  background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
+  border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+  border-radius: 7px;
   color: #000030;
   cursor: pointer;  
   font-size: 16px;  
@@ -120,7 +121,7 @@ export const ButtonDash = styled.button`
   margin: 16px 0;
   width: 158px;
   &:hover {
-    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF"};
+    background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
   }
   &:disabled {
     background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
