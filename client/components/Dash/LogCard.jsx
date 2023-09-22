@@ -21,7 +21,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
 
     const data = await response.json();
     for (const log of Object.keys(data)) {
-      console.log('ici', data[log])
+      //console.log('ici', data[log])
       logTableComponents.push(...data[log].map(logObject=>{
         return < LogTable key={logObject.date} date={logObject.date} name={log} log={logObject.message} /> 
       }));
