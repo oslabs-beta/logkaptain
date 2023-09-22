@@ -361,6 +361,12 @@ thead {
 
 .searchbar {
   display: flex;
-  flex-direction: column;
-  width: 100vw;
+  align-items: left;
+  width: 45vw;
+  height: 2vw;
 }
+
+/* .header {
+  position: relative;
+  align-items: center;
+} */

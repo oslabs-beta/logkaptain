@@ -3,7 +3,7 @@ import '../../stylesheets/dashboard.css'
 import LogTable from './LogTable'
 import { Backdrop, BrandedHeader, Button, ButtonCSV, ButtonDash, Container, Form, Input, ErrorMessage } from '../Auth/Backdrop.jsx';
 import SearchBar from "./SearchBar";
-
+import '../../assets/logKaptainLogo.png'
 
 // RENDER THE LOG CARD // 
 const LogCard = () => {
@@ -51,14 +51,11 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
   return (
     <div className="logcard">
       <div className="cardheader">
-        <h2 className="listheader">Log Data</h2>
+        <ButtonDash>Connect Pod</ButtonDash> 
         <ButtonDash onClick={gatherLogs}>Retrieve Logs</ButtonDash>
-        <ButtonDash>Connect Pod</ButtonDash>     
+        <SearchBar /> 
         {/* <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
         <button className="connectpod" id='retrievelogs'>Connect Pod</button>      */}
-      </div>
-      <div className="searchbar"> 
-        <SearchBar /> 
       </div>
       {/* <LogTable /> */}
       {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
