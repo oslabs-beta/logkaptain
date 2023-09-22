@@ -11,14 +11,10 @@ const NavBar = () => {
       <div className="navbox">
         <ul className="navlist">
           <img src="logo.png" id="pagelogo" ></img> 
-          {/* <li className="dashnav"><a href="/dashboard">Dashboard</a></li>
-          <li className="teamnav"><a href="/dashboard">Team</a></li>
-          <li className="settingnav"><a href="/dashboard">Settings</a></li>
-          <li className="logoutnav"><a href="/login">Logout</a></li> */}
-          <li className="dashnav" onClick={navigate("/dashboard")}>Dashboard</li>
-          <li className="teamnav" onClick={navigate("/dashboard")}>Team</li>
-          <li className="settingnav" onClick={navigate("/dashboard")}>Settings</li>
-          <li className="logoutnav" onClick={navigate("/login")}>Logout</li>
+          <li className="dashnav"><a href={navigate("/dashboard")}>Dashboard</a></li>
+          <li className="teamnav"><a href={navigate("/dashboard")}>Team</a></li>
+          <li className="settingnav"><a href={navigate("/dashboard")}>Settings</a></li>
+          <li className="logoutnav"><a href={navigate("/login")}>Logout</a></li>
         </ul>
       </div>
     </div>
