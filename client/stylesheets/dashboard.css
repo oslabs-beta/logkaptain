@@ -43,6 +43,7 @@ body {
 /* logcard CSS */
 .logcard {
   /* flex-grow: 1; */
+
   display: flex;
   flex-direction: column;
 
@@ -179,6 +180,7 @@ a:hover {
   padding-left: 10px;
   color: rgb(103, 103, 104);
   max-width: 200px;
+  font-family: 'Inter', sans-serif;
 }
 
 .cardheader {
