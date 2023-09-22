@@ -14,13 +14,14 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
   setLogs([])
   const logTableComponents = []; // TRANSFER THIS TO STATE
   try {
-    const response = await fetch('http://localhost:3000/api/logs', {
+    // const response = await fetch(`http://localhost:${process.env.PORT}/api/logs`, {
+    const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/api/logs`, {
       headers: { 'Content-Type': 'application/json' },
     });
 
     const data = await response.json();
     for (const log of Object.keys(data)) {
-      console.log('ici', data[log])
+      //console.log('ici', data[log])
       logTableComponents.push(...data[log].map(logObject=>{
         return < LogTable key={logObject.date} date={logObject.date} name={log} log={logObject.message} /> 
       }));

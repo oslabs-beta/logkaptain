@@ -26,4 +26,5 @@
 // const coreV1Api = kc.makeApiClient(k8s.CoreV1Api); //  Kubernetes Core. Methods for working with core Kubernetes resources like Pods, Services, ConfigMaps...
 // const appsV1Api = kc.makeApiClient(k8s.AppsV1Api); // Kubernetes APPs. Methods for working with higher-level Kubernetes resources related to application deployments.
 
+
 // module.exports = { coreV1Api, appsV1Api };

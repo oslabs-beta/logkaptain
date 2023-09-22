@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
+    "start": "concurrently \"vite\" \"node server/server.js\"",
     "prod": "concurrently \"vite\" \"nodemon server/server.js\"",
     "dev": "vite",
     "nodemon": "nodemon server/server.js",
