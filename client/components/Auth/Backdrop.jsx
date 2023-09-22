@@ -36,6 +36,7 @@ export const Form = styled.form`
   min-width: 300px;
   height: 332px;
   margin: auto;
+  text-align: center;
 `;
 
 export const Input = styled.input`
@@ -51,7 +52,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
   border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;
-  border-radius: 10px;
+  border-radius: 11px;
   color: #000030;
   cursor: pointer;  
   font-size: 16px;  
@@ -76,9 +77,53 @@ export const BrandedHeader = styled.h1`
 `;
 
 export const ErrorMessage = styled.div`
+  align-self: center;
   color: red;
   display: flex;
   font-size: 16px;
   justify-content: center;
   margin-top: 18px;
 `;
+
+export const ButtonCSV = styled.a`
+  align-self: end;  
+  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
+  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid  
+  border-radius: 11px;
+  color: #000030;
+  cursor: pointer;  
+  display: flex;
+  font-size: 16px;  
+  height: 40px;
+  justify-content: center;
+  margin: inherit;
+  position: right;
+  width: 158px;
+  &:hover {
+    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF"};
+  }
+  &:disabled {
+    background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
+    cursor: not-allowed;
+  }
+`
+// ;
+
+export const ButtonDash = styled.button`
+  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
+  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid
+  border-radius: 10px;
+  color: #000030;
+  cursor: pointer;  
+  font-size: 16px;  
+  height: 40px;
+  margin: 16px 0;
+  width: 158px;
+  &:hover {
+    background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF"};
+  }
+  &:disabled {
+    background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
+    cursor: not-allowed;
+  }
+`

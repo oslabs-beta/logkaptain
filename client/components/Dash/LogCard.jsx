@@ -1,6 +1,8 @@
 import {React, useState} from "react";
 import '../../stylesheets/dashboard.css'
 import LogTable from './LogTable'
+// import { Button } from '../Auth/Backdrop.jsx'
+import { Backdrop, BrandedHeader, Button, ButtonCSV, ButtonDash, Container, Form, Input, ErrorMessage } from '../Auth/Backdrop.jsx';
 
 // RENDER THE LOG CARD // 
 const LogCard = () => {
@@ -48,8 +50,10 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
     <div className="logcard">
       <div className="cardheader">
         <h2 className="listheader">Log Data</h2>
-        <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
-        <button className="connectpod" id='retrievelogs'>Connect Pod</button>        
+        <ButtonDash onClick={gatherLogs}>Retrieve Logs</ButtonDash>
+        <ButtonDash>Connect Pod</ButtonDash>     
+        {/* <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
+        <button className="connectpod" id='retrievelogs'>Connect Pod</button>      */}
       </div>
       {/* <LogTable /> */}
       {/* {logs} ARRAY OF LOG INFO TO BE DISPLAYED */}
@@ -68,7 +72,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
 
       <div className="gridLogs grid-container">
         {logs}
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, alias sed commodi corrupti consectetur reprehenderit libero qui autem et a officiis dolor! Iure velit odit cumque maxime reiciendis, obcaecati non!</div>
+        {/* <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, alias sed commodi corrupti consectetur reprehenderit libero qui autem et a officiis dolor! Iure velit odit cumque maxime reiciendis, obcaecati non!</div>
         <div>Quam libero iure quaerat ipsam placeat laboriosam, inventore doloremque tempora ab nam, ea delectus consequuntur explicabo enim aut, alias sequi. Ad omnis magni atque nemo cupiditate aliquid eum rerum amet!</div>
         <div>Consequuntur placeat dolorem doloremque sit animi facere dolor eius officiis incidunt. Cupiditate illo, tenetur et ullam quasi consequuntur voluptate modi dicta odio ducimus labore impedit asperiores ex quaerat doloremque iure?</div>
         <div>Ullam, autem quasi vitae at facere enim! Ut aliquam debitis expedita veritatis numquam dicta. Labore est suscipit, tempora laboriosam consequuntur dicta fuga sed quis nemo libero assumenda nam. Eius, sapiente!</div>
@@ -92,11 +96,11 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         <div>Impedit aut provident sint laborum assumenda eaque, voluptatum, beatae eum tempora, corrupti similique veritatis molestiae veniam et! Eaque pariatur nemo ex, odit, doloribus dolorum nisi, corporis odio praesentium reprehenderit omnis?</div>
         <div>Voluptas, a reprehenderit culpa, blanditiis excepturi velit est sequi exercitationem laborum aliquam libero distinctio officia itaque asperiores. Harum, ullam accusantium, repellat, sunt voluptas non cumque delectus unde voluptatum debitis provident.</div>
         <div>Facilis in perspiciatis assumenda placeat, fugit magnam ut facere accusamus explicabo fugiat illo eligendi minima perferendis delectus doloribus quis commodi, ipsam quasi ab iure distinctio quidem dicta at. Nam, enim?</div>
-        <div>Numquam eum doloribus, excepturi est, possimus distinctio perspiciatis expedita totam iste sed laudantium ipsa velit ex deserunt impedit quibusdam! Officia ex animi nam repudiandae totam ut ea magni sunt rerum?</div>
+        <div>Numquam eum doloribus, excepturi est, possimus distinctio perspiciatis expedita totam iste sed laudantium ipsa velit ex deserunt impedit quibusdam! Officia ex animi nam repudiandae totam ut ea magni sunt rerum?</div> */}
         
       </div>
 
-      <a as="button" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</a>
+      <ButtonCSV as="button" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</ButtonCSV>
       
 
       {/* <div className="outerlogcontainer">
