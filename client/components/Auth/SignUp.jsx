@@ -34,7 +34,7 @@ export const SignUp = () => {
   //function to handle submit
   const handleSubmit = async (e) => {
     e.preventDefault()    
-    // const response = await fetch(`http://localhost:${process.env.PORT}/user/signup`, {
+    //const response = await fetch(`http://localhost:3000/user/signup`, {
     const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/user/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

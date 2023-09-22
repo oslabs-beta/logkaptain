@@ -15,7 +15,7 @@ const SearchBar = () => {
     //   <button type="submit">Search</button>
     //   <input type="text" name="q" placeholder="Search..."></input>
     // </form>
-    <input classname="searchbar" type = "search" placeholder="Search" onChange={handleInput} value={searchInput} />
+    <input className="searchbar" type = "search" placeholder="Search" onChange={handleInput} value={searchInput} />
 
   );
 };
