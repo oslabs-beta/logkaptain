@@ -53,7 +53,7 @@ export const SignUp = () => {
   return (
     <Container>
       <Backdrop>
-      <BrandedHeader>LogKaptain</BrandedHeader>
+      <BrandedHeader>LOGKAPTAIN</BrandedHeader>
         <Form onSubmit={handleSubmit}> 
         <Input value={name} onChange={(e) => setInput('name', e)} name='name' id='name' placeholder='Jane Doe'/>
         <Input value={username} onChange={(e) => setInput('username', e)} type="text" placeholder="janedoe" id='username' name='username'/>

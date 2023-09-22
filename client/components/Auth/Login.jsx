@@ -55,7 +55,7 @@ export const Login = () => {
   return (
     <Container>
       <Backdrop>
-      <BrandedHeader>LogKaptain</BrandedHeader>
+      <BrandedHeader>LOGKAPTAIN</BrandedHeader>
         <Form onSubmit={handleSubmit}> 
           <Input value={username} onChange={(e) => setInput('username', e)} type="text" placeholder="janedoe" id='username' name='username'/>
           <Input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>

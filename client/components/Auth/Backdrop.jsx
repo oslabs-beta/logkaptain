@@ -70,7 +70,7 @@ export const Button = styled.button`
 
 export const BrandedHeader = styled.h1`
   color: #000030;
-  font-family: 'Lobster', cursive;
+  font-family: 'Alegreya', serif;
   font-size: 7em;
   margin: 5% 0 7% 0;
   text-align: center;
@@ -88,7 +88,7 @@ export const ErrorMessage = styled.div`
 export const ButtonCSV = styled.a`
   align-self: end;  
   background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
-  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;  
+  border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;  
   border-radius: 7px;
   color: #000030;
   cursor: pointer;  
@@ -98,7 +98,7 @@ export const ButtonCSV = styled.a`
   justify-content: center;
   margin: inherit;
   position: right;
-  padding-top: 5px;
+  padding: 7px;
   width: 158px;
   &:hover {
     background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF "};
@@ -112,7 +112,7 @@ export const ButtonCSV = styled.a`
 
 export const ButtonDash = styled.button`
   background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
-  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+  border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
   border-radius: 7px;
   color: #000030;
   cursor: pointer;  
