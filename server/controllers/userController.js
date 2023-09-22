@@ -64,10 +64,12 @@ userController.verifyUser = async (req, res, next) => {
 
   try {
     const userData = await getUserByUsername(username);
+    console.log(userData);
 
     // if username not in DB, return error
     if (userData === undefined) {
-      res.locals.sucessful = { verify: false, message: 'username not found' };
+      console.log('userData', userData);
+      res.locals.successful = { verify: false, message: 'username not found' };
       return next();
     }
 
@@ -89,6 +91,7 @@ userController.verifyUser = async (req, res, next) => {
 
       // if passsword is correct, set the user id in res.locals
       res.locals.id = userData.id;
+      console.log('res.locals.id', res.locals.id);
       res.locals.successful = {
         verify: true,
         message: 'user verify',
@@ -97,13 +100,13 @@ userController.verifyUser = async (req, res, next) => {
 
       return next();
     } catch (err) {
+      console.log('a');
       return next({ log: 'bcrypt compare error' });
     }
   } catch (err) {
+    console.log('b');
     return next({ log: 'Error in verifyUser' });
   }
 };
-
-// salt will be "junkomanjiko"
 
 module.exports = userController;
