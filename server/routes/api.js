@@ -33,4 +33,10 @@ router.get(
   }
 );
 
+router.post('/issue', k8sControllers.getLogs, (req, res) =>
+  res.status(200).json(res.locals.aggregatedPodsLogs)
+);
+
+
+
 module.exports = router;
