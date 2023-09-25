@@ -1,11 +1,12 @@
 const issueController = {};
 
 issueController.createIssue = async (req, res, next) => {
-// Jira API endpoint and authentication credentials
-//const jiraApiUrl ='https://sharmarke.atlassian.net/rest/api/3/issue'
-const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
 
+  const {summary, description} = req.body
+// Jira API endpoint and authentication credentials
+const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
 const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
+//Atlassian API token 
 const jiraPassword = 'ATATT3xFfGF0UDil9MbxEviI-1e-4oheaE-e8URSU5g81otq7SOzUzqDEK8_NgIACy9Fhdk02MSyA84zLBbXv33OzEflJ0ip8elqUpKTD8eNx_TvZEnmGdgLKpCwufBmjqj9hbQtb7OwJoz4hyseRP0TzhTlcUNMllvdVDswjznJjdqHnl3hLGQ=C449B612'; // You can generate an API token in Jira
 
 // Jira issue data (We can customize this based on our requirements)
@@ -14,26 +15,14 @@ const issueData = {
     project: {
       key: 'LOGKAPTAIN', 
     },
-    summary: 'Bug Title test',
-    description: 'Bug Description test',
+    summary: summary,
+    description: description,
     issuetype: {
       name: 'Bug',
     },
   },
 };
 
-
-const bodyData = {
-  "fields": {
-    "project": {
-      "key": "LOGKAPTAIN" // Replace with your project's key
-    },
-    "summary": "Issue Summary",
-    "issuetype": {
-      "name": "Task" // Replace with the appropriate issue type
-    }
-  }
-};
 
   const requestOptions = {
     method: 'POST',
@@ -48,20 +37,17 @@ const bodyData = {
   try {
     const response = await fetch(jiraApiUrl, requestOptions);
 
-    console.log("la rep",response);
-   
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
     const data = await response.json();
-    console.log('Jira bug ticket created successfully:', data.key);
-
+    console.log('Jira bug ticket created successfully:', data.key); // "LOGKAPTAIN-#"
     res.locals.key = {key: data.key}
    return next();
-  } catch (error) {
-    console.error('Error creating Jira bug ticket:', error);
+  } catch (err) {
+    return next({
+      log: `issueController.createIssue ERROR: ${err}`,
+      message:
+        'Error occurred in issueController.createIssue. Check server logs for more details.',
+      status: 500,
+    });
   }
 }
 
