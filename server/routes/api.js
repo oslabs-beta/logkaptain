@@ -34,7 +34,7 @@ router.get(
   }
 );
 
-router.get('/issue',issueController.createIssue, (req, res) =>
+router.post('/issue',issueController.createIssue, (req, res) =>
   res.status(200).json(res.locals.key)
 );
 
