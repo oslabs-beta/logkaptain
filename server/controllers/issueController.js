@@ -1,16 +1,18 @@
 const issueController = {};
 
-issueController.createIssue = (req, res, next) => {
+issueController.createIssue = async (req, res, next) => {
 // Jira API endpoint and authentication credentials
-const jiraApiUrl ='https://sharmarke.atlassian.net/jira/software/projects/LOGKAPTAIN/boards/3/backlog'
-const jiraUsername = 'sharmarke';
+//const jiraApiUrl ='https://sharmarke.atlassian.net/rest/api/3/issue'
+const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
+
+const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
 const jiraPassword = 'ATATT3xFfGF0UDil9MbxEviI-1e-4oheaE-e8URSU5g81otq7SOzUzqDEK8_NgIACy9Fhdk02MSyA84zLBbXv33OzEflJ0ip8elqUpKTD8eNx_TvZEnmGdgLKpCwufBmjqj9hbQtb7OwJoz4hyseRP0TzhTlcUNMllvdVDswjznJjdqHnl3hLGQ=C449B612'; // You can generate an API token in Jira
 
 // Jira issue data (We can customize this based on our requirements)
 const issueData = {
   fields: {
     project: {
-      key: 'LOGKAPTAIN-75', 
+      key: 'LOGKAPTAIN', 
     },
     summary: 'Bug Title test',
     description: 'Bug Description test',
@@ -18,6 +20,19 @@ const issueData = {
       name: 'Bug',
     },
   },
+};
+
+
+const bodyData = {
+  "fields": {
+    "project": {
+      "key": "LOGKAPTAIN" // Replace with your project's key
+    },
+    "summary": "Issue Summary",
+    "issuetype": {
+      "name": "Task" // Replace with the appropriate issue type
+    }
+  }
 };
 
   const requestOptions = {
@@ -30,25 +45,25 @@ const issueData = {
   };
   
   //POST request to create the issue
-  fetch(jiraApiUrl, requestOptions)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      console.log('Jira bug ticket created successfully:', data.key);
-    })
-    .catch(error => {
-      console.error('Error creating Jira bug ticket:', error);
-    });
+  try {
+    const response = await fetch(jiraApiUrl, requestOptions);
 
-    next();
+    console.log("la rep",response);
+   
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
 
+    const data = await response.json();
+    console.log('Jira bug ticket created successfully:', data.key);
+
+    res.locals.key = {key: data.key}
+   return next();
+  } catch (error) {
+    console.error('Error creating Jira bug ticket:', error);
+  }
 }
-
-
 
 
 
