@@ -31,7 +31,9 @@ const LogCard = () => {
     if (summary === '' || description === '') alert('Summary and Descrition required')
     try {
 
-      const response = await fetch(`http://localhost:3000/api/issue`, {
+
+      // const response = await fetch(`http://localhost:3000/api/issue`, {
+      const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/api/issue`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', 
@@ -152,8 +154,8 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         </div>
       )}
 
-      <ButtonCSV as="button" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</ButtonCSV> 
-      
+      {/* <ButtonCSV as="button" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</ButtonCSV>  */}
+      <ButtonCSV as="button" href="https://log-kaptain-d63e4fff3d60.herokuapp.com/api/download" id='downloadlogs'>Download Logs</ButtonCSV> 
     </div>
   );
 };
