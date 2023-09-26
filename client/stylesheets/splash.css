@@ -1,10 +1,9 @@
+body {
+  height: 100vh;
+}
 #splash-logo {
   margin-top: 8px;
   margin-left: 10px;
   height: 80px;
   width: 80px;
-}
-
-#splash-page {
-  height: 100%;
 }

@@ -48,7 +48,7 @@ export const Button = styled.button`
 `;
 
 export const IntroContainer = styled.div` 
-background-color: lightgray;
+background-color: lightblue;
 display: flex;   
 justify-content: flex-end
 height: 2000px;
