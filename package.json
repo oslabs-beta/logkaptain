@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "concurrently \"vite\" \"node server/server.js\"",
-    "prod": "concurrently \"vite\" \"nodemon server/server.js\"",
+    "start": "NODE_ENV=https://log-kaptain-d63e4fff3d60.herokuapp.com concurrently \"vite\" \"node server/server.js\"",
+    "prod": "NODE_ENV=http://localhost:3000/ concurrently \"vite\" \"nodemon server/server.js\"",
     "dev": "vite",
     "nodemon": "nodemon server/server.js",
     "build": "vite build",
