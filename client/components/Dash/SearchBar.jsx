@@ -2,8 +2,8 @@ import React from "react";
 import '../../stylesheets/dashboard.css'
 import { useState } from "react";
 
-const SearchBar = () => {
-  const [searchInput, setSearchInput] = useState(""); 
+const SearchBar = (props) => {
+  const { setSearchInput } = props;
 
   const handleInput = (e) => {
     e.preventDefault(); 
@@ -15,7 +15,7 @@ const SearchBar = () => {
     //   <button type="submit">Search</button>
     //   <input type="text" name="q" placeholder="Search..."></input>
     // </form>
-    <input className="searchbar" type = "search" placeholder="Search" onChange={handleInput} value={searchInput} />
+    <input className="searchbar" type = "search" placeholder="Search" onChange={handleInput} /*value={searchInput}*/ />
 
   );
 };
