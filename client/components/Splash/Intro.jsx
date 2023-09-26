@@ -5,7 +5,14 @@ import { IntroContainer } from './SplashStyled.jsx';
 function Intro() {
   return (
     <IntroContainer>
-    <h1>Hello There</h1>
+    <div> 
+    <p id='feature-par'>
+      Feature 1
+    </p>
+    </div>
+    <div>
+    <img src="test.gif" id="feature-demo"></img> 
+    </div>
     </IntroContainer>
   );
 }

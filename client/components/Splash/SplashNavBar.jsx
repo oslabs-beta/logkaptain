@@ -5,9 +5,14 @@ import { SplashNavBar, NavBarItem, Button, Container } from './SplashStyled.jsx'
 
 function Splash() {
   return (
-    <div>
+    
       <Container>
+        
+        <div>
         <img src="logo.png" id="splash-logo"></img> 
+        </div>
+
+        <div>
         <SplashNavBar>
           <NavBarItem href='/features' className='navbar-item'>
             Features
@@ -22,8 +27,10 @@ function Splash() {
             Github
           </Button>
         </SplashNavBar>
+        </div>
+
       </Container>
-    </div>
+    
   );
 }
 

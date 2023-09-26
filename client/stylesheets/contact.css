@@ -50,8 +50,6 @@
     .card-img {
       margin-top: 20%;
       margin-bottom: 10px;
-      //width: 80%;
-      //height: 45%;
       min-height: 45%;
       min-width: 45%;
       padding: 5px;
@@ -80,7 +78,7 @@
         align-items: center;
         margin-top: 17%;
         margin-bottom: 30px;
-        //transform: translateY(-2px);
+
       }
 
       .fa-cog {

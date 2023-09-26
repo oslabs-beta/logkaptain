@@ -2,8 +2,27 @@ body {
   height: 100vh;
 }
 #splash-logo {
-  margin-top: 8px;
+  margin-top: 12px;
   margin-left: 10px;
   height: 80px;
   width: 80px;
+}
+
+#splash-page {
+  height: 100%;
+  width: 100%;
+}
+
+#feature-demo{
+  display: flex;
+  margin-top: 35px;
+  margin-left: 520px;
+  height: 400px;
+  width: 600px;
+}
+
+#feature-par{
+  margin-left: 25px;
+  margin-top: 100px;
+  font-size: 35px;
 }
