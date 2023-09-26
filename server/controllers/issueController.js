@@ -24,6 +24,27 @@ const issueData = {
 };
 
 
+// // Jira API endpoint and authentication credentials
+// const jiraApiUrl = 'https://yourDomain.atlassian.net/rest/api/2/issue';
+// const jiraUsername = 'your atlassian email adress';
+// //Atlassian API token 
+// const jiraPassword = 'your api token'; // You can generate an API token in Jira
+
+// // Jira issue data (We can customize this based on our requirements)
+// const issueData = {
+//   fields: {
+//     project: {
+//       key: 'your project key on Jira', 
+//     },
+//     summary: summary,
+//     description: description,
+//     issuetype: {
+//       name: 'Bug',
+//     },
+//   },
+// };
+
+
   const requestOptions = {
     method: 'POST',
     headers: {
