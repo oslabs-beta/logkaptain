@@ -15,17 +15,36 @@ router.get(
     // replaced with data from the logs when i'm able to connect with kube.config
     // const jsonLogs = res.locals.aggregatedPodsLogs;
     // TODO: remove this sample array with jsonLogs when connected to k8s
-    const jsonLogs = [
-      { name: 'Smith', age: 23, city: 'Paris' },
-      { name: 'Smith', age: 23, city: 'Paris' },
-      { name: 'Jane', age: 20, city: 'New York' },
-    ];
+    // const jsonLogs = [
+    //   { name: 'Smith', age: 23, city: 'Paris' },
+    //   { name: 'Smith', age: 23, city: 'Paris' },
+    //   { name: 'Jane', age: 20, city: 'New York' },
+    // ];
+
+    const jsonLogs = {
+      pod1: [
+        { date: Date.now(), message: 'Chris was here' },
+        { date: Date.now(), message: 'Micah was here' },
+        { date: Date.now(), message: 'Sharmarke was here' },
+      ],
+    };
+
+    const transformedLogs = [];
+    for (const [pod, logs] of Object.entries(jsonLogs)) {
+      for (const log of logs) {
+        transformedLogs.push({
+          ...log,
+          pod,
+          date: new Date(log.date).toISOString(),
+        });
+      }
+    }
 
     // parse the json data into csv format
     // abstract the keys from the first object in the array
-    const fields = Object.keys(jsonLogs[0]);
+    const fields = Object.keys(transformedLogs[0]);
     // create an instance of the json2csv parser to convert the jsonLogs array into csv format
-    const csvData = new json2csv({ fields }).parse(jsonLogs);
+    const csvData = new json2csv({ fields }).parse(transformedLogs);
 
     // send back as an attachment, which the browser will handle as a download
     res.header('Content-Type', 'text/csv');
@@ -34,7 +53,7 @@ router.get(
   }
 );
 
-router.post('/issue',issueController.createIssue, (req, res) =>
+router.post('/issue', issueController.createIssue, (req, res) =>
   res.status(200).json(res.locals.key)
 );
 
