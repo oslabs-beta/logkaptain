@@ -1,6 +1,7 @@
 import React from "react";
-import NavBar from "./SplashNavBar.jsx";
+import SplashNavBar from "./SplashNavBar.jsx";
 import Team from "./Team.jsx";
+import SplashStyled from './SplashStyled.jsx'
 
 
 
