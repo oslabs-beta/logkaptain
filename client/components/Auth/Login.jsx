@@ -31,7 +31,9 @@ export const Login = () => {
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
     e.preventDefault()    
-    const response = await fetch('http://localhost:3000/user/login', {
+    //const response = await fetch(`http://localhost:3000/user/login`, {
+    const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/user/login`, {
+
       method: 'POST',
       mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
@@ -53,7 +55,7 @@ export const Login = () => {
   return (
     <Container>
       <Backdrop>
-      <BrandedHeader>LogKaptain</BrandedHeader>
+      <BrandedHeader>LOGKAPTAIN</BrandedHeader>
         <Form onSubmit={handleSubmit}> 
           <Input value={username} onChange={(e) => setInput('username', e)} type="text" placeholder="janedoe" id='username' name='username'/>
           <Input value={password} onChange={(e) => setInput('password', e)} type="password" placeholder="**********" id='password' name='password'/>

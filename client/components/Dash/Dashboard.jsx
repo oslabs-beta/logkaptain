@@ -3,16 +3,19 @@ import './NavBar'
 import '../../stylesheets/dashboard.css'
 import NavBar from './NavBar';
 import LogCard from './LogCard';
-// import HeadBar from './HeadBar';
-// import SearchBar from './SearchBar'
+import SearchBar from './SearchBar'
+import '../../assets/logKaptainLogo.png'
+import '../../assets/logo.png'
 
 const Dashboard = () => {
   return (
     <>
       <div className="dashcontent">
-        {/* <SearchBar/> */}
-        {/* <HeadBar/> */}
         <NavBar />
+        {/* <div className = "header"> 
+          <img src="logo.png" id="pagelogo" ></img>
+          <img src='logKaptainLogo.png' id='logKaptainLogo'></img>
+        </div> */}
         <LogCard/> 
       </div>
     </>
