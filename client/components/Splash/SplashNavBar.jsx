@@ -1,15 +1,16 @@
 import React from 'react';
-import Logo from '../../assets/logo.png';
-import { SplashNavBar, NavBarItem, Button } from './SplashStyled.jsx';
+// import Logo from '../../assets/logo.png';
+import '../../stylesheets/splash.css'
+import { SplashNavBar, NavBarItem, Button, Container } from './SplashStyled.jsx';
 
-function SplashNavBar() {
+function Splash() {
   return (
     <div>
       <Container>
         <div className='logo'>
-          <a href='/' className='logo' THIS IS THE LOGO></a>
-        </div>
+        <img src="logo.png" id="splash-logo"></img> 
 
+        </div>
         <SplashNavBar>
           <NavBarItem href='/features' className='navbar-item'>
             Features
@@ -29,4 +30,4 @@ function SplashNavBar() {
   );
 }
 
-export default SplashNavBar;
+export default Splash;
