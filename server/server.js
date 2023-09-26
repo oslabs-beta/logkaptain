@@ -19,7 +19,11 @@ app.use(cookieParser());
 //using the frontend point
 //need to set credentials to true
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://log-kaptain-d63e4fff3d60.herokuapp.com',
+    'http://logkaptain.com',
+  ],
   credentials: true, // Allow credentials (cookies, etc.)
 };
 // Invoking the cors method passing in our desired configurations (lines 21-24)
