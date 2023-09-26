@@ -16,7 +16,7 @@ router.get(
     // const jsonLogs = res.locals.aggregatedPodsLogs;
     // TODO: remove this sample array with jsonLogs when connected to k8s
     const jsonLogs = [
-      { name: 'John', age: 21, city: 'London' },
+      { name: 'Smith', age: 23, city: 'Paris' },
       { name: 'Smith', age: 23, city: 'Paris' },
       { name: 'Jane', age: 20, city: 'New York' },
     ];

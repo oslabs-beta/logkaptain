@@ -52,6 +52,7 @@ const LogCard = () => {
 // ARRAY FOR ALL LOG DATA //
 //let logs = [];
 const [logs, setLogs] = useState([]);
+const [searchInput, setSearchInput] = useState(""); 
 
 // GET ALL LOGS CURRENTLY IN THE DB //
 const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CALLS
@@ -63,10 +64,17 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
       headers: { 'Content-Type': 'application/json' },
     });
 
-    const data = await response.json();
-    
+    // const data = await response.json();
+
+    // key date name log
+  // sample log data [{}, {}]
+    const data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
+                    {date: Date.now()+1, message: "Micah was here"}, 
+                    {date: Date.now()+2, message: "Sharmarke was here"}], 
+                  pod2: [{date: Date.now()+3, message: "Gabby was here"},
+                    {date: Date.now()+4, message: "Caro was here"}]};
     for (const log of Object.keys(data)) {
-    
+      console.log('ici', log, data[log])
       logTableComponents.push(...data[log].map(logObject=>{
         return < LogTable 
                   key={logObject.date} 
@@ -79,7 +87,14 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
     }
 
     //console.log('LOGS:', logs)
-    setLogs(logTableComponents);
+    console.log(logTableComponents);
+    setLogs(searchInput === "" ? 
+      logTableComponents : 
+      logTableComponents.filter(el => 
+        `${el.key}`.includes(searchInput) || 
+        `${el.props.date}`.includes(searchInput) || 
+        `${el.props.name}`.includes(searchInput) || 
+        `${el.props.log}`.includes(searchInput)));
 
   } catch (error) {
     console.log(error);
@@ -100,7 +115,9 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
       <div className="cardheader">
         <ButtonDash>Connect Pod</ButtonDash> 
         <ButtonDash onClick={gatherLogs}>Retrieve Logs</ButtonDash>
-        <SearchBar /> 
+        <SearchBar setSearchInput={setSearchInput}/> 
+        {/* <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
+        <button className="connectpod" id='retrievelogs'>Connect Pod</button>      */}
       </div>
 
       <div className="gridHeader grid-container">

@@ -85,7 +85,7 @@ export const ErrorMessage = styled.div`
   margin-top: 18px;
 `;
 
-export const ButtonCSV = styled.a`
+export const ButtonCSV = styled.button`
   align-self: end;  
   background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
   border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;  
@@ -94,11 +94,11 @@ export const ButtonCSV = styled.a`
   cursor: pointer;  
   display: flex;
   font-size: 16px;  
-  height: 40px;
+  height: 35px;
   justify-content: center;
   margin: inherit;
   position: right;
-  padding: 7px;
+  padding-top: 7px;
   width: 158px;
   &:hover {
     background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF "};
