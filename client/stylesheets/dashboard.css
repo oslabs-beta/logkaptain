@@ -372,3 +372,73 @@ thead {
   position: relative;
   align-items: center;
 } */
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 25%;
+}
+
+/* Styling for the close button */
+.modal-content button {
+  cursor: pointer;
+  text-align: center;
+}
+
+.modal-content button:hover {
+  cursor: pointer;
+  text-align: center;
+  background-color: #279EFF;;
+}
+
+
+.flex-modal-content {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+
+}
+
+.modal label {
+  width: 20%;
+}
+
+.close {
+  align-self: flex-end;
+
+}
+
+.modal .submit {
+  width: 20%;
+  padding: 1em;
+  align-self: center;
+  background-color: #337CCF ;
+  border-radius: 7px;
+
+}
+
+.modal textarea {
+  padding: 0.5em;
+}
+

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const json2csv = require('json2csv').Parser;
 const k8sControllers = require('../controllers/k8sControllers');
+const issueController = require('../controllers/issueController');
 
 router.get('/logs', k8sControllers.getLogs, (req, res) =>
   res.status(200).json(res.locals.aggregatedPodsLogs)
@@ -31,6 +32,10 @@ router.get(
     res.attachment(`logkaptain__${new Date().toISOString()}.csv`);
     return res.send(csvData);
   }
+);
+
+router.post('/issue',issueController.createIssue, (req, res) =>
+  res.status(200).json(res.locals.key)
 );
 
 module.exports = router;
