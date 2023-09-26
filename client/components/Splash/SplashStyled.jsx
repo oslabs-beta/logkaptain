@@ -2,21 +2,24 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: #e0eaf6;  
-  display: flex;    
-  height: 100vh;
-  width: 100vw;
+  display: flex;   
+  justify-content: flex-end
+  height: 100%;
+  width: 100%;
 `;
 
 export const SplashNavBar = styled.div` 
   display: flex;    
-  flex-direction: row;
+  align-items: end
+  justify-content: center;
+  padding-left: 925px
 `;
 
 export const NavBarItem = styled.a` 
   display: flex;    
-  justify-content: center;
+  justify-self: flex-end;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 25px;
   text-decoration:inherit;
   text-transform: uppercase;
   outline: none;
@@ -31,8 +34,10 @@ export const Button = styled.button`
   cursor: pointer;  
   font-size: 16px;  
   height: 45px;
-  margin: 16px 0;
+  margin: 20px;
   width: 108px;
+  position: absolute;
+  margin-left: 295px;
   &:hover {
     background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF"};
   }
@@ -40,4 +45,12 @@ export const Button = styled.button`
     background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
     cursor: not-allowed;
   }
+`;
+
+export const IntroContainer = styled.div` 
+background-color: lightgray;
+display: flex;   
+justify-content: flex-end
+height: 2000px;
+width: 100%;
 `;

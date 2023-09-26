@@ -7,10 +7,7 @@ function Splash() {
   return (
     <div>
       <Container>
-        <div className='logo'>
         <img src="logo.png" id="splash-logo"></img> 
-
-        </div>
         <SplashNavBar>
           <NavBarItem href='/features' className='navbar-item'>
             Features
