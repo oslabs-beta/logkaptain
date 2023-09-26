@@ -23,7 +23,8 @@ const corsOptions = {
   credentials: true, // Allow credentials (cookies, etc.)
 };
 // Invoking the cors method passing in our desired configurations (lines 21-24)
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors());
 
 app.use('/api', apiRouter);
 // app.use(express.static(path.join(__dirname, '../client')));

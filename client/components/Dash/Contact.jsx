@@ -6,13 +6,34 @@ import Chris from '../../Images/Chris.png';
 import Gabby from '../../Images/Gabby.png';
 import Nelson from '../../Images/Nelson.png';
 import Sharmarke from '../../Images/Sharmarke.png';
+import styled from 'styled-components';
 
+const DashButton = styled.button`
+margin-top: 12px;
+margin-left: 12px;
+background-color: ${props => props.variant === "primary" ? "#279EFF" : "#9FC8EE"};
+border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+border-radius: 11px;
+color: #000030;
+cursor: pointer;  
+font-size: 14px;  
+height: 50px;
+padding: 1em;
+width: 160px;
+&:hover {
+  background-color: ${props => props.variant === "primary" ? "#9FC8EE" : "#279EFF"};
+}
+`
 
 function Contact() {
 
   return (
-    <div>
+    <div className="Contact-background">
+      <div>
+      <DashButton>Return to Dashboard</DashButton>
+      </div>
       <div className="Contact">
+       
         <h1 className="header">Meet The Team</h1>
         <ContactCard
           imgSource={Caro}
@@ -50,6 +71,8 @@ function Contact() {
           github="https://github.com/sharmarkeGit"
         />
       </div>
+      
+      
     </div>
   )
 }

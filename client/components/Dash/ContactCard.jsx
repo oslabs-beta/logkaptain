@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import '../../stylesheets/_contact.css'
 
+
 export const ContactCard = ({
     imgSource,
     imgAlt,
@@ -13,9 +14,6 @@ export const ContactCard = ({
 
     const newStyle = {};
 
-    // if (name === 'Cameron Kirksey' || 'Eric Rennie' || 'Richard Dao') {
-    //     newStyle.marginTop = '4.5%';
-    // }
     const [first, last] = name.split(' ')
     return (
         

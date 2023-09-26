@@ -16,7 +16,7 @@ const NavBar = () => {
         <ul className="navlist">
           <img src="logo.png" id="pagelogo" ></img> 
           <li className="dashnav"><a onClick={() => handleClick('/dashboard')}>Dashboard</a></li>
-          <li className="teamnav"><a onClick={() => handleClick('/contact')}>Team</a></li>
+          <li className="teamnav"><a onClick={() => handleClick('/contact')}>Contact Us</a></li>
           <li className="settingnav"><a onClick={() => handleClick('/settings')}>Settings</a></li>
           <li className="logoutnav"><a onClick={() => handleClick('/')}>Logout</a></li>
         </ul>
