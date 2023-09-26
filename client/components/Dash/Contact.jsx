@@ -1,5 +1,6 @@
 import React from 'react';
 import { ContactCard } from './ContactCard';
+import { Link } from 'react-router-dom';
 import '../../stylesheets/_contact.css';
 import Caro from '../../Images/Caro.png';
 import Chris from '../../Images/Chris.png';
@@ -16,10 +17,9 @@ border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
 border-radius: 11px;
 color: #000030;
 cursor: pointer;  
+position: absolute;
 font-size: 14px;  
-height: 50px;
 padding: 1em;
-width: 160px;
 &:hover {
   background-color: ${props => props.variant === "primary" ? "#9FC8EE" : "#279EFF"};
 }
@@ -30,7 +30,8 @@ function Contact() {
   return (
     <div className="Contact-background">
       <div>
-      <DashButton>Return to Dashboard</DashButton>
+      <DashButton as={Link} to="/dashboard">Return to Dashboard</DashButton>
+      {/* <DashButton onClick={() => handleClick('/dashboard')}>Return to Dashboard</DashButton> */}
       </div>
       <div className="Contact">
        
