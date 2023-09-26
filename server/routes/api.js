@@ -28,7 +28,10 @@ router.get(
         { date: Date.now(), message: 'Sharmarke was here' },
       ],
     };
-
+    // loop through the jsonLogs object
+    // assign key and value to variables pod and logs
+    // loop through the logs array
+    // add properties to each log object to the array
     const transformedLogs = [];
     for (const [pod, logs] of Object.entries(jsonLogs)) {
       for (const log of logs) {
