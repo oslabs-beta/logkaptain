@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "commonjs",
   "scripts": {
-    "start": "API_URL=https://log-kaptain-d63e4fff3d60.herokuapp.com K8_ENABLED=false concurrently \"vite\" \"node server/server.js\"",
+    "start": "API_URL=https://log-kaptain-d63e4fff3d60.herokuapp.com/ K8_ENABLED=false concurrently \"vite\" \"node server/server.js\"",
     "prod": "API_URL=http://localhost:3000/ K8_ENABLED=false concurrently \"vite\" \"nodemon server/server.js\"",
     "dev": "API_URL=http://localhost:3000/ K8_ENABLED=true concurrently \"vite\" \"nodemon server/server.js\"",
     "nodemon": "nodemon server/server.js",
