@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Backdrop, BrandedHeader, Button, Container, Form, Input, ErrorMessage } from './Backdrop';
 import Cookies from 'js-cookie';
 
+
 //create useState for username and password and pass and empty string
 export const Login = () => {
   const [error, setError] = useState('');
@@ -31,8 +32,7 @@ export const Login = () => {
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
     e.preventDefault()    
-
-    const response = await fetch(`${process.env.NODE_ENV}user/login`, {
+    const response = await fetch(`${apiUrl}user/login`, {
       method: 'POST',
       mode: 'cors',
       headers: { 'Content-Type': 'application/json' },
