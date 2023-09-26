@@ -64,15 +64,15 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
       headers: { 'Content-Type': 'application/json' },
     });
 
-    // const data = await response.json();
+    const data = await response.json();
 
     // key date name log
   // sample log data [{}, {}]
-    const data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
-                    {date: Date.now()+1, message: "Micah was here"}, 
-                    {date: Date.now()+2, message: "Sharmarke was here"}], 
-                  pod2: [{date: Date.now()+3, message: "Gabby was here"},
-                    {date: Date.now()+4, message: "Caro was here"}]};
+    // const data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
+    //                 {date: Date.now()+1, message: "Micah was here"}, 
+    //                 {date: Date.now()+2, message: "Sharmarke was here"}], 
+    //               pod2: [{date: Date.now()+3, message: "Gabby was here"},
+    //                 {date: Date.now()+4, message: "Caro was here"}]};
     for (const log of Object.keys(data)) {
       console.log('ici', log, data[log])
       logTableComponents.push(...data[log].map(logObject=>{
