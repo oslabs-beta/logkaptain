@@ -1,4 +1,4 @@
-# ![logo](./client/assets/logKaptainLogo.png)
+# ![logo](/assets-readme/logKaptain%20Logo.png)
 
 Locating errors in Kubernetes pods can be challenging, as developers are required to sift through extensive log data from all pods in the terminal, especially when an application is running on many pods.
 
@@ -144,8 +144,8 @@ Create a Jira ticket from LogKaptain to streamline issue tracking, promote impro
 
 ![Creating Jira Tickets](/assets-readme/Jira.gif)
 
-## Team:  
-ECRI 42 OSP 1: Carolina Bonitatis, Chris Le, Gabriela Passentino, Micah Nelson, Sharmarke Youssouf
+## Team
+ECRI 42 OSP 1: [Carolina Bonitatis](https://www.linkedin.com/in/carolina-bonitatis), [Christopher Le](https://www.linkedin.com/in/chrisle96), [Gabriela Passentino](https://www.linkedin.com/in/gabriela-passentino/), [Micah Nelson](https://www.linkedin.com/in/micahanelson), [Sharmarke Youssouf](https://www.linkedin.com/in/sharmarkeyoussouf/)
 
 ## Mentor
-Hazel Bolivar
+[Hazel Bolivar](https://www.linkedin.com/in/hazelbolivar)
