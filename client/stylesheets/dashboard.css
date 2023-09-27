@@ -8,8 +8,8 @@ body {
 .dashcontent {
   display: flex;
   width: 100%;
-  /* min-height: 100vh; */
-
+  height: 100vh;
+  font-family: 'Alegreya', serif;
   background-color: #c4c2c2;
 }
 
@@ -43,11 +43,12 @@ body {
 /* logcard CSS */
 .logcard {
   /* flex-grow: 1; */
+
   display: flex;
   flex-direction: column;
 
   align-items: center;
-  
+
 
   /* position: relative; */
   height: 80vh;
@@ -95,23 +96,23 @@ body {
 /* CONNECT POD BUTTON CSS */
 .connectpod {
   /* position: relative; */
-  top: 10px;
+  /* top: 10px; */
   /* left: 930px; */
-  width: 200px;
-  height: 40px;
+  /* width: 200px; */
+  /* height: 40px; */
 
-  border: none;
-  border-radius: 11px;
-  background: rgb(127, 201, 250);
+  /* border: none; */
+  /* border-radius: 11px; */
+  /* background: rgb(127, 201, 250); */
   font-size: medium;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-weight: bold;
-  margin-left: 200px;
+  /* font-family: "Lucida Console", "Courier New", monospace; */
+  /* font-weight: bold; */
+  /* margin-left: 200px; */
 }
 
-.connectpod:hover {
+/* .connectpod:hover {
   background: white;
-}
+} */
 
 /* DASHBOARD NAV BUTTON */
 
@@ -122,8 +123,10 @@ ul {
   margin-right: 45px;
 
   display: flex;
-  flex-direction: column; /* Stack list items vertically */
-  align-items: center; /* Vertically center list items */
+  flex-direction: column;
+  /* Stack list items vertically */
+  align-items: center;
+  /* Vertically center list items */
   height: 100%;
 }
 
@@ -136,7 +139,7 @@ li {
 /* FORMATTING FOR DASHBOARD LABEL ON NAV BAR */
 .dashnav {
   width: 90%;
-  border-top: 2px solid lightblue;
+  border-top: 2px solid #add8e6;
 
   padding-top: 30px;
   padding-left: 55px;
@@ -146,7 +149,7 @@ li {
 .settingnav {
   width: 80%;
   border-top: 2px solid lightblue;
-  
+
   padding-top: 30px;
   padding-left: 61px;
   margin-top: 330px;
@@ -177,19 +180,26 @@ a:hover {
   padding-left: 10px;
   color: rgb(103, 103, 104);
   max-width: 200px;
+  font-family: 'Inter', sans-serif;
 }
 
 .cardheader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  gap: 0.3em;
+  /* margin-bottom: 25px; */
   width: 90%;
+}
+
+.searchBar {
+  display: flex;
+  width: 80%;
 }
 
 
 .gridHeader {
-  width: 90%;    
+  width: 90%;
   font-size: larger;
   font-weight: bolder;
 }
@@ -197,6 +207,7 @@ a:hover {
 .gridLogs {
   overflow-y: auto;
   width: 90%;
+  height: 47em;
 }
 
 
@@ -205,19 +216,21 @@ a:hover {
   display: flex;
   /* border: 1px solid black; */
   /* justify-content: center; */
-  align-items:flex-start;
+  align-items: flex-start;
   /* width: 250px; */
   padding: 1em;
-  
+
   /* margin-left: 7px; */
 }
 
 .log:nth-child(even) {
-  background-color: rgb(206, 205, 205); /* Even row color */
+  background-color: rgb(206, 205, 205);
+  /* Even row color */
 }
 
 .midlog:nth-child(odd) {
-  background-color: rgb(206, 205, 205); /* Even row color */
+  background-color: rgb(206, 205, 205);
+  /* Even row color */
 }
 
 .outerlogcontainer {
@@ -234,13 +247,15 @@ a:hover {
 h2 {
   margin-bottom: 50px;
 }
-.innerlogcontainerHeader{
-  display: grid;    
+
+.innerlogcontainerHeader {
+  display: grid;
   grid-template-columns: 30% 30% 40%;
   /* grid-gap: 160px; */
   gap: 160px;
 
 }
+
 .innerlogcontainerWrapper {
   overflow-y: auto;
 }
@@ -248,7 +263,8 @@ h2 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  
+
+
   /* gap: 100px; */
 
   /* border: 1px solid red; */
@@ -257,7 +273,7 @@ h2 {
 .innerlogcontainer {
   /* max-height: 520px; */
   /* overflow-y: auto; */
-  display: grid;    
+  display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   grid-gap: 160px;
   margin-bottom: 20px;
@@ -275,13 +291,16 @@ h2 {
 
 /* Move the scrollbar to the left side */
 .gridLogs::-webkit-scrollbar {
-width: 10px; /* Set the width of the scrollbar */
+  width: 10px;
+  /* Set the width of the scrollbar */
 }
 
 /* Style the scrollbar thumb (the draggable part) */
 .gridLogs::-webkit-scrollbar-thumb {
-background-color: #888; /* Set the color of the thumb */
-border-radius: 5px; /* Rounded corners for the thumb */
+  background-color: #888;
+  /* Set the color of the thumb */
+  border-radius: 5px;
+  /* Rounded corners for the thumb */
 }
 
 /* Style the scrollbar track when the thumb is being hovered over */
@@ -291,8 +310,10 @@ border-radius: 5px; /* Rounded corners for the thumb */
 
 /* Move the scrollbar to the left side */
 .gridLogs::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Background color for the track */
-  border-radius: 5px; /* Rounded corners for the track */
+  background-color: #f1f1f1;
+  /* Background color for the track */
+  border-radius: 5px;
+  /* Rounded corners for the track */
 }
 
 
@@ -302,7 +323,8 @@ table {
 }
 
 /* FORMATTING FOR LOG TABLE HEADERS AND ROWS */
-th, td {
+th,
+td {
   width: 450px;
   padding: 8px;
   text-align: center;
@@ -344,3 +366,85 @@ thead {
   border: 2px solid black;
   width: 50px;
 } */
+
+.searchbar {
+  display: flex;
+  align-items: left;
+  width: 45vw;
+  height: 2vw;
+}
+
+/* .header {
+  position: relative;
+  align-items: center;
+} */
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 25%;
+}
+
+/* Styling for the close button */
+.modal-content button {
+  cursor: pointer;
+  text-align: center;
+}
+
+.modal-content button:hover {
+  cursor: pointer;
+  text-align: center;
+  background-color: #279EFF;;
+}
+
+
+.flex-modal-content {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+
+}
+
+.modal label {
+  width: 20%;
+}
+
+.close {
+  align-self: flex-end;
+
+}
+
+.modal .submit {
+  width: 20%;
+  padding: 1em;
+  align-self: center;
+  background-color: #337CCF ;
+  border-radius: 7px;
+
+}
+
+.modal textarea {
+  padding: 0.5em;
+}
+

@@ -36,6 +36,7 @@ export const Form = styled.form`
   min-width: 300px;
   height: 332px;
   margin: auto;
+  text-align: center;
 `;
 
 export const Input = styled.input`
@@ -51,7 +52,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
   border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;
-  border-radius: 10px;
+  border-radius: 11px;
   color: #000030;
   cursor: pointer;  
   font-size: 16px;  
@@ -69,16 +70,61 @@ export const Button = styled.button`
 
 export const BrandedHeader = styled.h1`
   color: #000030;
-  font-family: 'Lobster', cursive;
+  font-family: 'Alegreya', serif;
   font-size: 7em;
   margin: 5% 0 7% 0;
   text-align: center;
 `;
 
 export const ErrorMessage = styled.div`
+  align-self: center;
   color: red;
   display: flex;
   font-size: 16px;
   justify-content: center;
   margin-top: 18px;
 `;
+
+export const ButtonCSV = styled.button`
+  align-self: end;  
+  background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
+  border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;  
+  border-radius: 7px;
+  color: #000030;
+  cursor: pointer;  
+  display: flex;
+  font-size: 16px;  
+  height: 35px;
+  justify-content: center;
+  margin: inherit;
+  position: right;
+  padding-top: 7px;
+  width: 158px;
+  &:hover {
+    background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF "};
+  }
+  &:disabled {
+    background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
+    cursor: not-allowed;
+  }
+`
+// ;
+
+export const ButtonDash = styled.button`
+  background-color: ${props => props.variant === "primary" ? "#279EFF" : "#337CCF "};
+  border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+  border-radius: 7px;
+  color: #000030;
+  cursor: pointer;  
+  font-size: 16px;  
+  height: 40px;
+  margin: 16px 0;
+  width: 158px;
+  &:hover {
+    background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
+  }
+  &:disabled {
+    background-color: ${props => props.variant === "primary" ? "#AFEDE7" : "#CDCBB1"};
+    cursor: not-allowed;
+  }
+`

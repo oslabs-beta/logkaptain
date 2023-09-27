@@ -1,5 +1,6 @@
 const k8sControllers = {};
 const { coreV1Api } = require('../utils/k8sAPI');
+const json2csv = require('json2csv').Parser;
 
 k8sControllers.getLogs = async (req, res, next) => {
   try {
@@ -23,10 +24,10 @@ k8sControllers.getLogs = async (req, res, next) => {
       aggregatedPodsLogs[podName] = [];
       for (const log of logsArr) {
         const logObject = parseLogEntryB(log);
-        console.log('logObject', logObject);
+       
         if (logObject) aggregatedPodsLogs[podName].push(logObject);
       }
-      console.log('aggregatedPodsLogs', aggregatedPodsLogs);
+     
     }
 
     res.locals.aggregatedPodsLogs = aggregatedPodsLogs;
@@ -52,7 +53,7 @@ function trimLogsForPres(log) {
 }
 
 function parseLogEntryA(logEntry) {
-  console.log('type', logEntry);
+  
   //const regex = /^\[(.*?)\] (.*)$/; // Regular expression to capture date and message
   const regex = new RegExp(/^\[(.*?)\] (.*)$/);
   const match = logEntry.match(regex);
@@ -73,6 +74,38 @@ function parseLogEntryB(logEntry) {
     date: logEntry.slice(1, index),
     message: logEntry.slice(index + 1).trim(),
   };
+}
+
+
+k8sControllers.downloadLogs = async (req, res, next) => {
+
+
+  const aggregatedPodsLogs = res.locals.aggregatedPodsLogs
+
+  const transformedLogs = [];
+  for (const [pod, logs] of Object.entries(aggregatedPodsLogs)) {
+    for (const log of logs) {
+
+      transformedLogs.push({
+        ...log,
+        pod,
+        date: log.date,
+      });
+    }
+  }
+
+
+  const fields = Object.keys(transformedLogs[0]);
+  console.log('fields', fields)
+  // create an instance of the json2csv parser to convert the jsonLogs array into csv format
+  const csvData = new json2csv({ fields }).parse(transformedLogs);
+
+  // send back as an attachment, which the browser will handle as a download
+  res.header('Content-Type', 'text/csv');
+  res.attachment(`logkaptain__${new Date().toISOString()}.csv`);
+  res.locals.csvData = csvData
+  return next();
+
 }
 
 module.exports = k8sControllers;
