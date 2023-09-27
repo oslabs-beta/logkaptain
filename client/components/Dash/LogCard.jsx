@@ -156,7 +156,7 @@ const filterLogs = () => {
         </div>
       )}
 
-      <ButtonCSV as="button" href={`${apiUrl}api/download`} id='downloadlogs'>Download Logs</ButtonCSV> 
+      <ButtonCSV as="a" href={`${apiUrl}api/download`} id='downloadlogs'>Download .CSV</ButtonCSV> 
     </div>
   );
 };
