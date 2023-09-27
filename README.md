@@ -145,7 +145,7 @@ Utilize the search bar to quickly and efficiently find specific log information 
   <img src="./assets-readme/Search.gif" />
 </p>
 
-Obtain a portable version of your logs by clicking the Download Logs button to to export your logs as a CSV. 
+Obtain a portable version of your logs by clicking the Download Logs button to export your logs as a CSV. 
 
 <p align="center">
   <img src="./assets-readme/CSV.gif" />
