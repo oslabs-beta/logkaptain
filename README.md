@@ -1,4 +1,4 @@
-# [LogKaptain](www.logkaptain.com)
+# ![logo](./client/assets/logKaptainLogo.png)
 
 Locating errors in Kubernetes pods can be challenging, as developers are required to sift through extensive log data from all pods in the terminal, especially when an application is running on many pods.
 
