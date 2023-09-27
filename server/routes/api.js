@@ -8,33 +8,15 @@ router.get('/logs', k8sControllers.getLogs, (req, res) =>
   res.status(200).json(res.locals.aggregatedPodsLogs)
 );
 
-//middleware to get the logs from json to csv
+
 router.get(
-  '/download',
+  '/download', k8sControllers.getLogs, k8sControllers.downloadLogs,
   /*k8sControllers.getLogs,*/ (req, res) => {
-    // replaced with data from the logs when i'm able to connect with kube.config
-    // const jsonLogs = res.locals.aggregatedPodsLogs;
-    // TODO: remove this sample array with jsonLogs when connected to k8s
-    const jsonLogs = [
-      { name: 'Smith', age: 23, city: 'Paris' },
-      { name: 'Smith', age: 23, city: 'Paris' },
-      { name: 'Jane', age: 20, city: 'New York' },
-    ];
-
-    // parse the json data into csv format
-    // abstract the keys from the first object in the array
-    const fields = Object.keys(jsonLogs[0]);
-    // create an instance of the json2csv parser to convert the jsonLogs array into csv format
-    const csvData = new json2csv({ fields }).parse(jsonLogs);
-
-    // send back as an attachment, which the browser will handle as a download
-    res.header('Content-Type', 'text/csv');
-    res.attachment(`logkaptain__${new Date().toISOString()}.csv`);
-    return res.send(csvData);
+    return res.send(res.locals.csvData);
   }
 );
 
-router.post('/issue',issueController.createIssue, (req, res) =>
+router.post('/issue', issueController.createIssue, (req, res) =>
   res.status(200).json(res.locals.key)
 );
 

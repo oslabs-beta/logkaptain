@@ -30,8 +30,7 @@ const LogCard = () => {
     setDescription(description.trim())
     if (summary === '' || description === '') alert('Summary and Descrition required')
     try {
-
-      const response = await fetch(`http://localhost:3000/api/issue`, {
+      const response = await fetch(`${apiUrl}api/issue`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', 
@@ -53,31 +52,30 @@ const LogCard = () => {
 //let logs = [];
 const [logs, setLogs] = useState([]);
 const [searchInput, setSearchInput] = useState(""); 
-
 // GET ALL LOGS CURRENTLY IN THE DB //
 const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CALLS
   setLogs([])
   const logTableComponents = []; // TRANSFER THIS TO STATE
+  let data; 
   try {
-    const response = await fetch(`http://localhost:3000/api/logs`, {
-    //const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/api/logs`, {
-      headers: { 'Content-Type': 'application/json' },
-    });
+    if(k8Enabled==='true') {
+      const response = await fetch(`${apiUrl}api/logs`, {
+        headers: { 'Content-Type': 'application/json' },
+      });
+      data = await response.json();
+    } else {
+      // sample log data [{}, {}] key date name log
+      data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
+                    {date: Date.now()+1, message: "Micah was here"}, 
+                    {date: Date.now()+2, message: "Sharmarke was here"}], 
+                  pod2: [{date: Date.now()+3, message: "Gabby was here"},
+                    {date: Date.now()+4, message: "Caro was here"}]};
+    }
 
-    const data = await response.json();
-
-    // key date name log
-  // sample log data [{}, {}]
-    // const data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
-    //                 {date: Date.now()+1, message: "Micah was here"}, 
-    //                 {date: Date.now()+2, message: "Sharmarke was here"}], 
-    //               pod2: [{date: Date.now()+3, message: "Gabby was here"},
-    //                 {date: Date.now()+4, message: "Caro was here"}]};
     for (const log of Object.keys(data)) {
-      console.log('ici', log, data[log])
       logTableComponents.push(...data[log].map(logObject=>{
         return < LogTable 
-                  key={logObject.date} 
+                  key={logObject.date + ' ' + log} 
                   date={logObject.date} 
                   name={log} 
                   log={logObject.message} 
@@ -86,19 +84,23 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
       //logTableComponents.push( < LogTable key={log} name={log} log={data[log]} /> )
     }
 
-    //console.log('LOGS:', logs)
-    console.log(logTableComponents);
-    setLogs(searchInput === "" ? 
-      logTableComponents : 
-      logTableComponents.filter(el => 
-        `${el.key}`.includes(searchInput) || 
-        `${el.props.date}`.includes(searchInput) || 
-        `${el.props.name}`.includes(searchInput) || 
-        `${el.props.log}`.includes(searchInput)));
+    setLogs(logTableComponents)
 
   } catch (error) {
     console.log(error);
   }
+}
+
+const filterLogs = () => {
+
+  const arr = logs.filter(el => 
+    `${el.key}`.includes(searchInput) || 
+    `${el.props.date}`.includes(searchInput) || 
+    `${el.props.name}`.includes(searchInput) || 
+    `${el.props.log}`.includes(searchInput)).slice();
+
+    setLogs([]);
+    setLogs(arr);
 }
 
 // CHECK FOR NEW LOGS EVERY 2 SECOND (FOR NOW) //
@@ -114,10 +116,12 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
     <div className="logcard">
       <div className="cardheader">
         <ButtonDash>Connect Pod</ButtonDash> 
+          {/* <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
+          <button className="connectpod" id='retrievelogs'>Connect Pod</button>      */}
         <ButtonDash onClick={gatherLogs}>Retrieve Logs</ButtonDash>
-        <SearchBar setSearchInput={setSearchInput}/> 
-        {/* <button className="connectpod" onClick={gatherLogs}>Retrieve Logs</button>
-        <button className="connectpod" id='retrievelogs'>Connect Pod</button>      */}
+        <div className="searchBar"><SearchBar setSearchInput={setSearchInput}/> <button onClick={filterLogs}>Search</button></div>
+        
+
       </div>
 
       <div className="gridHeader grid-container">
@@ -152,8 +156,7 @@ const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CAL
         </div>
       )}
 
-      <ButtonCSV as="button" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</ButtonCSV> 
-      
+      <ButtonCSV as="a" href={`${apiUrl}api/download`} id='downloadlogs'>Download .CSV</ButtonCSV> 
     </div>
   );
 };

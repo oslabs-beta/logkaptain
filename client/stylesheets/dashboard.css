@@ -187,8 +187,14 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.3em;
   /* margin-bottom: 25px; */
   width: 90%;
+}
+
+.searchBar {
+  display: flex;
+  width: 80%;
 }
 
 
