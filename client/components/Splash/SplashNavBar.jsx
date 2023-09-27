@@ -24,7 +24,7 @@ function Splash() {
           Blog
         </Blog>
 
-        <Button href='/github' classname='navbar-item'>
+        <Button href='/github' className='navbar-item'>
           Github
         </Button>
 
