@@ -17,10 +17,10 @@ export const SplashTeam = ({
     const [first, last] = name.split(' ')
     return (
         
-        <div className='card-container'>
+        <div className='card-container2'>
             <img src={imgSource}
             alt={imgAlt}
-            className="card-img"/>
+            className="card-img2"/>
 
             <div className="name-and-social">
 

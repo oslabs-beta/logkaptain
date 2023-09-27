@@ -23,7 +23,7 @@ export const SplashLogo = styled.img`
 export const Container = styled.div`
   display: flex; 
   flex direction: row;
-  background-color: rgb(255, 255, 255); 
+  background-color: rgb(31, 32, 33); 
   justify-content: flex-start; 
   width: 100%;
   height: 98px;
@@ -44,6 +44,10 @@ export const Features = styled.a`
   align-self: center;
   margin-left: 13%;
   font-size: 30px;
+  color: white;
+  &:hover {
+    color: rgb(159, 200, 238)
+  }
 `;
 
 export const Team = styled.a` 
@@ -51,6 +55,10 @@ export const Team = styled.a`
   margin-left: 30%;
   align-self: center;
   font-size: 30px;
+  color: white;
+  &:hover {
+    color: rgb(159, 200, 238)
+  }
 `;
 
 export const Blog = styled.a` 
@@ -58,6 +66,10 @@ export const Blog = styled.a`
   margin-left: 43%;
   align-self: center;
   font-size: 30px;
+  color: white;
+  &:hover {
+    color: rgb(159, 200, 238)
+  }
 `;
 
 export const NavBarItem = styled.a` 
@@ -72,10 +84,10 @@ export const NavBarItem = styled.a`
 `;
 
 export const Button = styled.button`
-  background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
+  background-color: ${props => props.variant === "primary" ? "#F4F7FA" : "#279EFF"};
   border: #64B0F7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
   border-radius: 11px;
-  color: #000030;
+  color: white;
   cursor: pointer;  
   font-size: 16px;  
   height: 45px;
@@ -94,7 +106,7 @@ export const Button = styled.button`
 
 // SPLASH PAGE INTRO 
 export const IntroContainer = styled.div` 
-background-color: rgb(202, 243, 255);
+background: offwhite;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -120,10 +132,10 @@ export const Introduction = styled.p`
 export const IntroButton = styled.button`
 margin-top: .25%;
 
-background-color: ${props => props.variant === "primary" ? "#279EFF" : "#9FC8EE"};
-border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+background-color: ${props => props.variant === "primary" ? "#9FC8EE" : "#279EFF"};
+border: #64B0F7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
 border-radius: 11px;
-color: #000030;
+color: white;
 cursor: pointer; 
 font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; 
 font-size: 16px;  
@@ -137,18 +149,14 @@ width: 175px;
 export const FlexRow = styled.div`
   display: flex;
   align-items: center;
-  padding: 2px;
+  padding: 2em;
   margin-top: 1%;
-  box-shadow: 0px 1px 2px 0px,
-  border: 1px solid red;
-  background-color: pink;
 `;
 
 export const ContentFlexContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items:center;
-  border: 1px solid black;
   background: radial-gradient(circle at 50.1% 40.8%,
     rgb(159, 200, 238) 0%,
     rgb(10, 74, 133) 99.4%);

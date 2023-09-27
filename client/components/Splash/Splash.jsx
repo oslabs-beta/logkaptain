@@ -27,7 +27,7 @@ const Splash = () => {
       <div className="gif-text">
           <h2>Secure Login</h2>
           <p>
-          Your credentials will be safe with proper authentication
+          Your credentials will be safe with proper authentication.
           </p>
           </div>
           <div className="gif"><img src="../client/assets/Signup.gif"></img></div>
@@ -35,10 +35,10 @@ const Splash = () => {
         <FlexRow>
           <div className="gif"><img src="../client/assets/RetrieveLogs.gif"></img></div>
             <div className="gif-text">
-          <h2>Retrive Logs</h2>
+          <h2>Retrieve Logs</h2>
           <p>
           Access the latest logs
-            from all your Kubernetes pods
+            from all your Kubernetes pods.
           </p>
           </div>
         </FlexRow>
@@ -74,8 +74,8 @@ const Splash = () => {
         </FlexRow>
       </ContentFlexContainer>
 
-      <ContentFlexContainer>
-        <h2>The Team</h2>
+      <ContentFlexContainer >
+        <h2 id="teamRow" >The Team</h2>
         <div className="teamPics">
        
         <SplashTeam
