@@ -33,9 +33,12 @@ function Contact() {
       <DashButton as={Link} to="/dashboard">Return to Dashboard</DashButton>
       {/* <DashButton onClick={() => handleClick('/dashboard')}>Return to Dashboard</DashButton> */}
       </div>
-      <div className="Contact">
-       
-        <h1 className="header">Meet The Team</h1>
+
+      <div className='container'>
+        <div className="header"><h1 >Meet The Team</h1></div>
+        
+      
+        <div className="Contact">
         <ContactCard
           imgSource={Caro}
           imgAlt="Picture"
@@ -71,7 +74,10 @@ function Contact() {
           linkedin="https://www.linkedin.com/in/sharmarkeyoussouf/"
           github="https://github.com/sharmarkeGit"
         />
+    
       </div>
+      </div>
+      
       
       
     </div>
