@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Backdrop, BrandedHeader, Button, Container, ErrorMessage, Form, Input } from './Backdrop';
 
 
+
 //create useState for name, email, password and pass and empty string
 export const SignUp = () => {
   const [error, setError] = useState('');
@@ -34,8 +35,8 @@ export const SignUp = () => {
   //function to handle submit
   const handleSubmit = async (e) => {
     e.preventDefault()    
-    //const response = await fetch(`http://localhost:3000/user/signup`, {
-    const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/user/signup`, {
+  
+    const response = await fetch(`${apiUrl}user/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username, password, name }) 
