@@ -7,10 +7,10 @@ Locating errors in Kubernetes pods can be challenging, as developers are require
 Now, developers can use LogKaptain, an open source web application, that offers a dashboard view of all logs from each pod, allowing developers to locate and handle pod errors in a timely manner. Developers can search for keywords to filter log messages, export the log data as a CSV, and connect to a Jira account to create tickets.
 
 With LogKaptain, developers can streamline the error location process, ensuring efficient troubleshooting and smoother application management.
-## How it Works
+## How It Works
 ### Prerequisites
 This application requires you to have [Docker](https://www.docker.com/products/docker-desktop/) and [Kubectl](https://kubernetes.io/docs/tasks/tools/) installed in order to view your local kubernetes cluster. Please download based on your operating system from the official website.
-#### Step 1: Containerize Your App
+#### Step 1: Containerize your App
 _You can read detailed instructions [here](https://docs.docker.com/get-started/02_our_app/)._
 
 Create your Dockerfile
@@ -30,12 +30,12 @@ Build the app’s image
 $ docker build -t getting-started .
 ```
 
-#### Step 2: Orchestration
+#### Step 2: Orchestrate your Kubernetes Cluster
 _You can read detailed instructions [here](https://docs.docker.com/get-started/kube-deploy/)._
 	
 Turn on Kubernetes in Docker Desktop
 
-#### Step 3: Deploy your containerized app to Kubernetes
+#### Step 3: Deploy your Containerized App to Kubernetes
 _You can read detailed instructions [here](https://docs.docker.com/get-started/kube-deploy/)._ 
 
 Create a Kubernetes YAML file 
@@ -99,7 +99,7 @@ $ npm run dev
 
 The app will run on `http://localhost:5173`
 
-## Sign up
+## Sign Up
 For first-time users, a quick registration is required. Go to www.logkaptain.com and click the sign up button. If you’re already a user, proceed with logging in.
 
 <p align="center">
