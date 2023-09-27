@@ -8,6 +8,8 @@
       rgb(50, 50, 50) 0%,
       rgb(0, 0, 0) 99.4%);
 
+}
+
 
   .header {
     color: white;
@@ -37,16 +39,16 @@
     overflow: hidden;
     background-color: #1f1f1f;
     border-radius: 1rem;
-    box-shadow: $primary 0px 1px 2px 0px,
-      $primary 0px 2px 6px 2px;
+    /* box-shadow: $primary 0px 1px 2px 0px,
+      $primary 0px 2px 6px 2px; */ 
 
-    @include mobile {
+    /* @include mobile {
       display: flex;
       flex-direction: column;
       height: 100%;
       max-width: 100%;
-    }
-
+    } */
+  }
     .card-img {
       margin-top: 20%;
       margin-bottom: 10px;
@@ -65,45 +67,61 @@
 
     .name-and-social {
       text-align: center;
-
       padding: 10px;
-
-      .name {
+    }
+      /* .name {
         font-size: 30px;
-      }
+      } */
 
       .social-container {
+      text-align: center;
+      padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 17%;
         margin-bottom: 30px;
-
       }
 
       .fa-cog {
-        color: $primary;
+        text-align: center;
+      padding: 10px;
+        /* color: $primary; */
+        color: white;
       }
 
       .component-1 {
+        text-align: center;
+      padding: 10px;
         margin-top: 10%;
         margin-right: 50px;
 
-        &:hover {
+        /* &:hover {
           transform: translateY(-6px);
           cursor: pointer;
-        }
+        } */
+      }
+
+      .component-1 :hover {
+        text-align: center;
+      padding: 10px;
+        transform: translateY(-6px);
+        cursor: pointer;
       }
 
       .component-2 {
+        text-align: center;
+      padding: 10px;
         margin-top: 10%;
 
-        &:hover {
+        /* &:hover {
           transform: translateY(-6px);
           cursor: pointer;
 
-        }
+        } */
       }
+
+      .component-2:hover {
+        transform: translateY(-6px);
+        cursor: pointer;
     }
-  }
-}

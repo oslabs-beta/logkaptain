@@ -75,8 +75,9 @@ function Contact() {
           linkedin="https://www.linkedin.com/in/sharmarkeyoussouf/"
           github="https://github.com/sharmarkeGit"
         />
-
       </div>
+      </div>
+      
       
     </div>
   )
