@@ -8,7 +8,6 @@ function Splash() {
 
     <Container>
 
-
       <SplashLogo src="logo.png"></SplashLogo>
 
       <SplashNavBar>
@@ -24,26 +23,12 @@ function Splash() {
         <Blog>
           Blog
         </Blog>
-        
-
-        {/* <NavBarItem href='/features' className='navbar-item'>
-            Features
-          </NavBarItem> */}
-
-        {/* <NavBarItem href='/team' className='navbar-item'>
-            Team
-          </NavBarItem>
-
-          <NavBarItem href='/blog' className='navbar-item'>
-            Blog
-          </NavBarItem> */}
 
         <Button href='/github' classname='navbar-item'>
           Github
         </Button>
 
       </SplashNavBar>
-
 
     </Container>
 

@@ -28,14 +28,18 @@ padding: 1em;
 function Contact() {
 
   return (
+
     <div className="Contact-background">
+      
       <div>
       <DashButton as={Link} to="/dashboard">Return to Dashboard</DashButton>
       {/* <DashButton onClick={() => handleClick('/dashboard')}>Return to Dashboard</DashButton> */}
       </div>
+      
       <div className="Contact">
-       
-        <h1 className="header">Meet The Team</h1>
+
+       <h1 className="header">Meet The Team</h1>
+
         <ContactCard
           imgSource={Caro}
           imgAlt="Picture"
@@ -71,8 +75,8 @@ function Contact() {
           linkedin="https://www.linkedin.com/in/sharmarkeyoussouf/"
           github="https://github.com/sharmarkeGit"
         />
+
       </div>
-      
       
     </div>
   )

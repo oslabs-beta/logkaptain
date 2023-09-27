@@ -1,8 +1,10 @@
 import React from "react";
 import SplashNav from "./SplashNavBar";
 import Intro from "./Intro";
-import { SplashPage } from './SplashStyled.jsx';
+// import Feature from "./Features"
 // import Team from "./Team.jsx";
+import { SplashPage } from './SplashStyled.jsx';
+
 // import SplashStyled from './SplashStyled.jsx'
 
 

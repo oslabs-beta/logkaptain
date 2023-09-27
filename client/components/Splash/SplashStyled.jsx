@@ -29,6 +29,8 @@ export const Container = styled.div`
   height: 98px;
 `;
 
+
+
 export const SplashNavBar = styled.div` 
   display: flex;    
   margin-left: 550px;
@@ -94,6 +96,41 @@ export const Button = styled.button`
 export const IntroContainer = styled.div` 
 background-color: rgb(202, 243, 255);
 display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 height: 100%;
 width: 100%;
+padding-bottom: 2%;
+box-shadow: 0px 1px 2px 0px,
+    0px 2px 6px 2px;
 `;
+
+export const TitleIntro = styled.h1`
+  margin-top: 4%;
+  margin-bottom: 0%;
+  font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+`
+
+export const Introduction = styled.p`
+  margin-top: .5%;
+  font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+`;
+
+export const IntroButton = styled.button`
+margin-top: .25%;
+
+background-color: ${props => props.variant === "primary" ? "#279EFF" : "#9FC8EE"};
+border: #AFEDE7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+border-radius: 11px;
+color: #000030;
+cursor: pointer; 
+font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; 
+font-size: 16px;  
+height: 40px;
+width: 175px;
+&:hover {
+  background-color: ${props => props.variant === "primary" ? "#9FC8EE" : "#279EFF"};
+  }
+`;
+

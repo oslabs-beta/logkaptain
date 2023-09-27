@@ -1,18 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IntroContainer } from './SplashStyled.jsx';
+import { IntroContainer, Introduction, IntroButton, TitleIntro } from './SplashStyled.jsx';
+import signup from '../../assets/signup.mp4'
+// import { SignUp } from '../Auth/signUp.jsx';
 
 function Intro() {
   return (
-    <IntroContainer>
-    <div> 
-    <p id='feature-par'>
-      Feature 1
-    </p>
-    </div>
-    <div>
-    <img src="test.gif" id="feature-demo"></img> 
-    </div>
+    <IntroContainer > 
+
+      <TitleIntro>
+        Introducing LogKaptain
+      </TitleIntro>
+
+      <Introduction>
+        An open source product that provides developers an easy way to aggregate and filter logs from Kubernetes Pods.
+      </Introduction>
+
+      <IntroButton> Get Started </IntroButton>
+
     </IntroContainer>
   );
 }
