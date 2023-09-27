@@ -30,8 +30,7 @@ const LogCard = () => {
     setDescription(description.trim())
     if (summary === '' || description === '') alert('Summary and Descrition required')
     try {
-
-      const response = await fetch(`http://localhost:3000/api/issue`, {
+      const response = await fetch(`${apiUrl}api/issue`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json', 
@@ -55,24 +54,24 @@ const [logs, setLogs] = useState([]);
 const [searchInput, setSearchInput] = useState(""); 
 // GET ALL LOGS CURRENTLY IN THE DB //
 const gatherLogs = async () => { // NEED TO ADD USE EFFECT TO AVOID CONSTANT CALLS
-  console.log('gathering logs')
   setLogs([])
   const logTableComponents = []; // TRANSFER THIS TO STATE
+  let data; 
   try {
-    const response = await fetch(`http://localhost:3000/api/logs`, {
-    //const response = await fetch(`https://log-kaptain-d63e4fff3d60.herokuapp.com/api/logs`, {
-      headers: { 'Content-Type': 'application/json' },
-    });
+    if(k8Enabled==='true') {
+      const response = await fetch(`${apiUrl}api/logs`, {
+        headers: { 'Content-Type': 'application/json' },
+      });
+      data = await response.json();
+    } else {
+      // sample log data [{}, {}] key date name log
+      data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
+                    {date: Date.now()+1, message: "Micah was here"}, 
+                    {date: Date.now()+2, message: "Sharmarke was here"}], 
+                  pod2: [{date: Date.now()+3, message: "Gabby was here"},
+                    {date: Date.now()+4, message: "Caro was here"}]};
+    }
 
-    const data = await response.json();
-
-
-    // sample log data [{}, {}] key date name log
-    // const data = {pod1: [{date: Date.now(), message: "Chris was here"}, 
-    //                 {date: Date.now()+1, message: "Micah was here"}, 
-    //                 {date: Date.now()+2, message: "Sharmarke was here"}], 
-    //               pod2: [{date: Date.now()+3, message: "Gabby was here"},
-    //                 {date: Date.now()+4, message: "Caro was here"}]};
     for (const log of Object.keys(data)) {
       logTableComponents.push(...data[log].map(logObject=>{
         return < LogTable 
@@ -157,8 +156,7 @@ const filterLogs = () => {
         </div>
       )}
 
-      <ButtonCSV as="a" href="http://localhost:3000/api/download" id='downloadlogs'>Download Logs</ButtonCSV> 
-      
+      <ButtonCSV as="a" href={`${apiUrl}api/download`} id='downloadlogs'>Download .CSV</ButtonCSV> 
     </div>
   );
 };
