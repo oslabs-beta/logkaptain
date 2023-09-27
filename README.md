@@ -1,7 +1,7 @@
-![Logo](/assets-readme/logKaptain%20Logo.png)
 <p align="center">
   <img src="./assets-readme/logKaptain%20Logo.png" />
 </p>
+
 Locating errors in Kubernetes pods can be challenging, as developers are required to sift through extensive log data from all pods in the terminal, especially when an application is running on many pods.
 
 Now, developers can use LogKaptain, an open source web application, that offers a dashboard view of all logs from each pod, allowing developers to locate and handle pod errors in a timely manner. Developers can search for keywords to filter log messages, export the log data as a CSV, and connect to a Jira account to create tickets.
@@ -102,7 +102,9 @@ The app will run on `http://localhost:5173`
 ## Sign up
 For first-time users, a quick registration is required. Go to www.logkaptain.com and click the sign up button. If you’re already a user, proceed with logging in.
 
-![Sign up Page](/assets-readme/Sign%20up.gif)
+<p align="center">
+  <img src="./assets-readme/Sign%20up.gif" />
+</p>
 
 ## Connect Pods
 The "Connect Pod" button is currently inactive, but will be fully functional in future updates. When you log in for the first time, simply click the "Connect Pod" button to seamlessly link your Kubernetes pods with your LogKaptain account.
@@ -132,19 +134,28 @@ const issueData = {
 ## Using LogKaptain
 After completing the initial setup, you can access the latest logs from all your Kubernetes pods by clicking on "Retrieve Logs." 
 
-![Retrieving Logs](/assets-readme/Retrieve%20Logs.gif)
+<p align="center">
+  <img src="./assets-readme/Retrieve%20Logs.gif" />
+</p>
 
 Utilize the search bar to quickly and efficiently find specific log information you’re looking for.
 
-![Search Bar](/assets-readme/Search.gif)
+
+<p align="center">
+  <img src="./assets-readme/Search.gif" />
+</p>
 
 Obtain a portable version of your logs by clicking the Download Logs button to to export your logs as a CSV. 
 
-![Downloading Logs as CSV](/assets-readme/CSV.gif)
+<p align="center">
+  <img src="./assets-readme/CSV.gif" />
+</p>
 
 Create a Jira ticket from LogKaptain to streamline issue tracking, promote improved collaboration among development teams, and ensure that tasks are prioritized based on their importance and impact.
 
-![Creating Jira Tickets](/assets-readme/Jira.gif)
+<p align="center">
+  <img src="./assets-readme/Jira.gif" />
+</p>
 
 ## Team
 ECRI 42 OSP 1: [Carolina Bonitatis](https://www.linkedin.com/in/carolina-bonitatis), [Christopher Le](https://www.linkedin.com/in/chrisle96), [Gabriela Passentino](https://www.linkedin.com/in/gabriela-passentino/), [Micah Nelson](https://www.linkedin.com/in/micahanelson), [Sharmarke Youssouf](https://www.linkedin.com/in/sharmarkeyoussouf/)
