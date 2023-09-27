@@ -1,17 +1,7 @@
 body {
-  height: 100vh;
-}
-#splash-logo {
-  margin-top: 12px;
-  margin-left: 10px;
-  height: 80px;
-  width: 80px;
+  background-color: rgb(235, 235, 235);
 }
 
-#splash-page {
-  height: 100%;
-  width: 100%;
-}
 
 #feature-demo{
   display: flex;

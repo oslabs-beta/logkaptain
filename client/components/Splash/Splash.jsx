@@ -1,6 +1,7 @@
 import React from "react";
 import SplashNav from "./SplashNavBar";
 import Intro from "./Intro";
+import { SplashPage } from './SplashStyled.jsx';
 // import Team from "./Team.jsx";
 // import SplashStyled from './SplashStyled.jsx'
 
@@ -9,14 +10,14 @@ import Intro from "./Intro";
 const Splash = () => {
   
   return (
-    <>
-      <div className="splash-page">
+  
+      <SplashPage>
         <SplashNav />
         <Intro />
         {/* <Features /> */}
         {/* <Team /> */}
-      </div>
-    </>
+      </SplashPage>
+    
   )
 }
 
