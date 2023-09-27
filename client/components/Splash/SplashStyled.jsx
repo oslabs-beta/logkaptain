@@ -73,7 +73,7 @@ export const NavBarItem = styled.a`
 
 export const Button = styled.button`
   background-color: ${props => props.variant === "primary" ? "#337CCF" : "#279EFF"};
-  border: #000030 ${props => props.variant === "primary" ? "0" : "1"}px solid;
+  border: #64B0F7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
   border-radius: 11px;
   color: #000030;
   cursor: pointer;  
@@ -134,3 +134,22 @@ width: 175px;
   }
 `;
 
+export const FlexRow = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  margin-top: 1%;
+  box-shadow: 0px 1px 2px 0px,
+  border: 1px solid red;
+  background-color: pink;
+`;
+
+export const ContentFlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  border: 1px solid black;
+  background: radial-gradient(circle at 50.1% 40.8%,
+    rgb(159, 200, 238) 0%,
+    rgb(10, 74, 133) 99.4%);
+`;
