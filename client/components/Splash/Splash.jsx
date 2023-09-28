@@ -10,11 +10,11 @@ import Chris from '../../Images/Chris.png';
 import Gabby from '../../Images/Gabby.png';
 import Nelson from '../../Images/Nelson.png';
 import Sharmarke from '../../Images/Sharmarke.png';
-import '../../assets/Signup.gif';
-import '../../assets/CSV.gif';
-import '../../assets/RetrieveLogs.gif';
-import '../../assets/Search.gif';
-import '../../assets/Jira.gif';
+import Signup from '../../assets/Signup.gif';
+import CSV from '../../assets/CSV.gif';
+import RetrieveLogs from '../../assets/RetrieveLogs.gif';
+import Search from '../../assets/Search.gif';
+import Jira from '../../assets/Jira.gif';
 
 
 import { ContentFlexContainer, FlexRow, SplashPage } from './SplashStyled.jsx';
@@ -36,10 +36,10 @@ const Splash = () => {
           Your credentials will be safe with proper authentication.
           </p>
           </div>
-          <div className="gif"><img src="../client/assets/Signup.gif"></img></div>
+          <div className="gif"><img src={Signup}></img></div>
         </FlexRow>
         <FlexRow>
-          <div className="gif"><img src="../client/assets/RetrieveLogs.gif"></img></div>
+          <div className="gif"><img src={RetrieveLogs}></img></div>
             <div className="gif-text">
           <h2>Retrieve Logs</h2>
           <p>
@@ -56,11 +56,11 @@ const Splash = () => {
             information you're looking for.
           </p>
           </div>
-          <div className="gif"><img src="../client/assets/Search.gif"></img></div>
+          <div className="gif"><img src={Search}></img></div>
           
         </FlexRow>
         <FlexRow>
-          <div className="gif"><img src="../client/assets/Jira.gif"></img></div>
+          <div className="gif"><img src={Jira}></img></div>
             <div className="gif-text">
           <h2>Create Jira</h2>
           <p>
@@ -76,7 +76,7 @@ const Splash = () => {
           </p>
           </div>
           
-          <div className="gif"><img src="../client/assets/CSV.gif"></img></div>
+          <div className="gif"><img src={CSV}></img></div>
         </FlexRow>
       </ContentFlexContainer>
 
