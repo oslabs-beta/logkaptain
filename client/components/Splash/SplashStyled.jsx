@@ -113,14 +113,14 @@ justify-content: center;
 flex-direction: column;
 height: 100%;
 width: 100%;
-padding: 2%;
+padding: 6% 0%;
 box-shadow: 0px 1px 2px 0px,
     0px 2px 6px 2px;
 `;
 
 export const TitleIntro = styled.h1`
   margin-top: 4%;
-  margin-bottom: 0%;
+  margin-bottom: 2%;
   font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `
 
