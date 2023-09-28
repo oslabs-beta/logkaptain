@@ -35,6 +35,11 @@
 
 }
 
+.headerAlt{
+  color: rgb(243, 232, 232);
+  font-size: 40px;
+}
+
 .card-container {
   display: flex;
   flex-direction: column;
