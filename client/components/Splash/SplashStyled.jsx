@@ -21,12 +21,14 @@ export const SplashLogo = styled.img`
 
 // SPLASH PAGE NAV BAR
 export const Container = styled.div`
+  position: fixed;
   display: flex; 
   flex direction: row;
   background-color: rgb(31, 32, 33); 
   justify-content: flex-start; 
   width: 100%;
   height: 98px;
+
 `;
 
 
@@ -113,7 +115,7 @@ justify-content: center;
 flex-direction: column;
 height: 100%;
 width: 100%;
-padding: 6% 0%;
+padding: 8% 0%;
 box-shadow: 0px 1px 2px 0px,
     0px 2px 6px 2px;
 `;
