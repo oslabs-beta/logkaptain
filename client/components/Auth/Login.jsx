@@ -32,6 +32,7 @@ export const Login = () => {
   //function to handle submit for the post request
   const handleSubmit = async (e) => {
     e.preventDefault()    
+    // console.log(`${apiUrl}user/login`)
     const response = await fetch(`${apiUrl}user/login`, {
       method: 'POST',
       mode: 'cors',

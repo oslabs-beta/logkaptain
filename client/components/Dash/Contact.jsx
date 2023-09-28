@@ -35,7 +35,7 @@ function Contact() {
       </div>
 
       <div className='container'>
-        <div className="header"><h1 >Meet The Team</h1></div>
+        <div className="headerAlt"><h1 >Meet The Team</h1></div>
         
       
         <div className="Contact">

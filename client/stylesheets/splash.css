@@ -1,0 +1,67 @@
+#feature-demo {
+  display: flex;
+  margin-top: 35px;
+  margin-left: 520px;
+  height: 400px;
+  width: 600px;
+}
+
+#feature-par {
+  margin-left: 25px;
+  margin-top: 100px;
+  font-size: 35px;
+}
+
+
+
+.gif {
+  width:50%;
+}
+
+img{
+  width: 100%;
+  border-radius: 6px;
+  
+}
+
+p {
+
+  font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 35px;
+  color: aliceblue;
+}
+
+
+.gif-text{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamPics{
+  display: flex;
+  width: 100%;
+ 
+}
+
+#teamRow{
+  padding-top: 80px;
+}
+
+/* .content {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  padding-bottom: 2%;
+} */
