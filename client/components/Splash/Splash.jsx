@@ -29,7 +29,7 @@ const Splash = () => {
       <Intro />
       {/* <Features /> */}
       <ContentFlexContainer>
-      <FlexRow>
+      <FlexRow id="features2">
       <div className="gif-text">
           <h2>Secure Login</h2>
           <p>
@@ -80,7 +80,7 @@ const Splash = () => {
         </FlexRow>
       </ContentFlexContainer>
 
-      <ContentFlexContainer >
+      <ContentFlexContainer id="team2">
         <h2 id="teamRow" >The Team</h2>
         <div className="teamPics">
        
