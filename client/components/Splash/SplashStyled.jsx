@@ -113,7 +113,7 @@ justify-content: center;
 flex-direction: column;
 height: 100%;
 width: 100%;
-padding-bottom: 2%;
+padding: 2%;
 box-shadow: 0px 1px 2px 0px,
     0px 2px 6px 2px;
 `;
@@ -132,6 +132,7 @@ export const Introduction = styled.p`
 export const IntroButton = styled.a`
 margin-top: .25%;
 
+
 background-color: ${props => props.variant === "primary" ? "#9FC8EE" : "#279EFF"};
 border: #64B0F7 ${props => props.variant === "primary" ? "0" : "1"}px solid;
 border-radius: 11px;
@@ -144,6 +145,8 @@ width: 175px;
 &:hover {
   background-color: ${props => props.variant === "primary" ? "#9FC8EE" : "#279EFF"};
   }
+  text-align:center;
+  padding-top:1em
 `;
 
 export const FlexRow = styled.div`
