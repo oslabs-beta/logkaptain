@@ -12,15 +12,15 @@ function Splash() {
 
       <SplashNavBar>
 
-        <Features>
+        <Features href='#features2'>
           Features
         </Features>
 
-        <Team>
+        <Team href='#team2'>
           Team
         </Team>
 
-        <Blog>
+        <Blog href='https://medium.com/@logkaptain/charting-the-data-flow-visualizing-kubernetes-cluster-logs-53029b82bcdb' target="_blank">
           Blog
         </Blog>
 
