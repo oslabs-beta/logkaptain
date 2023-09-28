@@ -35,7 +35,7 @@ function Contact() {
       </div>
 
       <div className='container'>
-        <div className="header"><h1 >Meet The Team</h1></div>
+        <div className="headerAlt"><h1 >Meet The Team</h1></div>
         
       
         <div className="Contact">
@@ -65,7 +65,7 @@ function Contact() {
           imgAlt="Picture"
           name="Micah Nelson"
           linkedin="https://www.linkedin.com/in/micahanelson"
-          github="https://github.com/Mnelson98"
+          github="https://github.com/ericmrennie"
         />
         <ContactCard 
           imgSource={Sharmarke}
