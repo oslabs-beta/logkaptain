@@ -18,7 +18,7 @@ const NavBar = () => {
           <li className="dashnav"><a onClick={() => handleClick('/dashboard')}>Dashboard</a></li>
           <li className="teamnav"><a onClick={() => handleClick('/contact')}>Contact Us</a></li>
           <li className="settingnav"><a onClick={() => handleClick('/settings')}>Settings</a></li>
-          <li className="logoutnav"><a onClick={() => handleClick('/')}>Logout</a></li>
+          <li className="logoutnav"><a onClick={() => handleClick('/login')}>Logout</a></li>
         </ul>
       </div>
     </div>

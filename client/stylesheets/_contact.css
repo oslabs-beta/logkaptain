@@ -1,24 +1,43 @@
 .Contact {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  width: 95%;
+  margin: 0 auto;
+  /* height: 100vh; */
+  min-width: 750px;
 }
 
 .Contact-background {
   background: radial-gradient(circle at 50.1% 40.8%,
       rgb(159, 200, 238) 0%,
       rgb(10, 74, 133) 99.4%);
+      height: 100vh;
+      min-width: 750px;
+      
 }
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  min-width: 750px;
+}
+
 
 .header {
   color: rgb(243, 232, 232);
   font-size: 40px;
-  position: absolute;
-  top: 14%;
-  left: 50%;
-  transform: translateX(-50%);
+
+}
+
+.headerAlt{
+  color: rgb(243, 232, 232);
+  font-size: 40px;
 }
 
 .card-container {
@@ -30,9 +49,9 @@
   justify-content: flex-start;
 
   margin: 1rem;
-  max-width: 20rem;
-  min-width: 20rem;
-  width: 20rem;
+  /* max-width: 20%; */
+  min-width: 200px;
+  width: 80%;
   height: 32rem;
   min-height: 32rem;
   overflow: hidden;
@@ -63,7 +82,8 @@
     margin-bottom: 10px;
 
     min-height: 45%;
-    min-width: 45%;
+    /* min-width: 45%; */
+    min-width: 250px;
     padding: 5px;
     justify-content: center;
     align-items: flex-start;
