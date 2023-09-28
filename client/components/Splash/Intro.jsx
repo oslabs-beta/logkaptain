@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { IntroContainer, Introduction, IntroButton, TitleIntro } from './SplashStyled.jsx';
 // import { SignUp } from '../Auth/signUp.jsx';
 import { Link } from 'react-router-dom';
+import logKaptainLogo from '../../assets/logKaptainLogo.png'
 
 function Intro() {
   return (
     <IntroContainer > 
 
       <TitleIntro>
-        Introducing LogKaptain
+        <img className="splashLogo" src={logKaptainLogo}></img>
       </TitleIntro>
 
       <Introduction>
