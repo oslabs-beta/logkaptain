@@ -1,7 +1,7 @@
 <p align="center">
   <img src="./assets-readme/logKaptain%20Logo.png" />
 </p>
-
+.
 Locating errors in Kubernetes pods can be challenging, as developers are required to sift through extensive log data from all pods in the terminal, especially when an application is running on many pods.
 
 Now, developers can use LogKaptain, an open source web application, that offers a dashboard view of all logs from each pod, allowing developers to locate and handle pod errors in a timely manner. Developers can search for keywords to filter log messages, export the log data as a CSV, and connect to a Jira account to create tickets.
