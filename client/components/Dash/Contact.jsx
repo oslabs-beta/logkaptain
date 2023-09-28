@@ -65,7 +65,7 @@ function Contact() {
           imgAlt="Picture"
           name="Micah Nelson"
           linkedin="https://www.linkedin.com/in/micahanelson"
-          github="https://github.com/ericmrennie"
+          github="https://github.com/Mnelson98"
         />
         <ContactCard 
           imgSource={Sharmarke}
