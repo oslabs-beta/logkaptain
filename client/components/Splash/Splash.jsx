@@ -10,6 +10,12 @@ import Chris from '../../Images/Chris.png';
 import Gabby from '../../Images/Gabby.png';
 import Nelson from '../../Images/Nelson.png';
 import Sharmarke from '../../Images/Sharmarke.png';
+import '../../assets/Signup.gif';
+import '../../assets/CSV.gif';
+import '../../assets/RetrieveLogs.gif';
+import '../../assets/Search.gif';
+import '../../assets/Jira.gif';
+
 
 import { ContentFlexContainer, FlexRow, SplashPage } from './SplashStyled.jsx';
 
