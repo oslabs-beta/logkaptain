@@ -6,7 +6,7 @@ cookieController.setCookie = async (req, res, next) => {
   //extract the id from res.locals
   try {
     const { id } = res.locals;
-    console.log('this id is from setCookieController', id);
+  
     await res.cookie('ssid', id, { httpOnly: true });
     res.cookie('ssid', res.locals.id, { httpOnly: true });
     return next();
