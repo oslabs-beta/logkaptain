@@ -3,8 +3,6 @@ const config = require('../config')
 issueController.createIssue = async (req, res, next) => {
 
   const {summary, description} = req.body
-  console.log('issue creation',summary, description)
-  console.log('config', config)
 // Jira API endpoint and authentication credentials
 const jiraApiUrl = config.jiraApiUrl
 const jiraUsername = config.jiraUsername
@@ -25,25 +23,6 @@ const issueData = {
 };
 
 
-// // Jira API endpoint and authentication credentials
-// const jiraApiUrl = 'https://yourDomain.atlassian.net/rest/api/2/issue';
-// const jiraUsername = 'your atlassian email adress';
-// //Atlassian API token 
-// const jiraPassword = 'your api token'; // You can generate an API token in Jira
-
-// // Jira issue data (We can customize this based on our requirements)
-// const issueData = {
-//   fields: {
-//     project: {
-//       key: 'your project key on Jira', 
-//     },
-//     summary: summary,
-//     description: description,
-//     issuetype: {
-//       name: 'Bug',
-//     },
-//   },
-// };
 
 
   const requestOptions = {
