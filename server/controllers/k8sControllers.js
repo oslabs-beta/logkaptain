@@ -96,7 +96,6 @@ k8sControllers.downloadLogs = async (req, res, next) => {
 
 
   const fields = Object.keys(transformedLogs[0]);
-  console.log('fields', fields)
   // create an instance of the json2csv parser to convert the jsonLogs array into csv format
   const csvData = new json2csv({ fields }).parse(transformedLogs);
 
