@@ -9,7 +9,6 @@ router.post(
   userController.verifyUser,
   cookieController.setCookie,
   (req, res) => {
-    console.log(res.locals.successful);
     return res.status(200).json(res.locals.successful);
   }
 );
