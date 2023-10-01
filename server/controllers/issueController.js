@@ -3,14 +3,13 @@ const config = require('../config')
 issueController.createIssue = async (req, res, next) => {
 
   const {summary, description} = req.body
+  console.log('issue creation',summary, description)
+  console.log('config', config)
 // Jira API endpoint and authentication credentials
-//const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
 const jiraApiUrl = config.jiraApiUrl
-//const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
 const jiraUsername = config.jiraUsername
 //Atlassian API token 
-//const jiraPassword = 'ATATT3xFfGF0UDil9MbxEviI-1e-4oheaE-e8URSU5g81otq7SOzUzqDEK8_NgIACy9Fhdk02MSyA84zLBbXv33OzEflJ0ip8elqUpKTD8eNx_TvZEnmGdgLKpCwufBmjqj9hbQtb7OwJoz4hyseRP0TzhTlcUNMllvdVDswjznJjdqHnl3hLGQ=C449B612'; // You can generate an API token in Jira
-const jiraPassword = config.jiraPassword
+const jiraPassword = config.apiTokenJira
 // Jira issue data (We can customize this based on our requirements)
 const issueData = {
   fields: {
@@ -61,9 +60,21 @@ const issueData = {
     const response = await fetch(jiraApiUrl, requestOptions);
 
     const data = await response.json();
-    console.log('Jira bug ticket created successfully:', data.key); // "LOGKAPTAIN-#"
-    res.locals.key = {key: data.key}
-   return next();
+
+    if (data.key){ // 'Jira bug ticket created successfully => "LOGKAPTAIN-#" 
+      res.locals.key = {key: data.key}
+      return next();
+    }else {
+
+      return next({
+        log: `issueController.createIssue ERROR: Jira API response did not contain a key. Token possibly expired`,
+        message:
+          'Error occurred in issueController.createIssue. Check server logs for more details.',
+        status: 500,
+      });
+
+    }
+    
   } catch (err) {
     return next({
       log: `issueController.createIssue ERROR: ${err}`,
