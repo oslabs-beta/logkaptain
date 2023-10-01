@@ -59,16 +59,13 @@ userController.createUser = async (req, res, next) => {
 };
 
 userController.verifyUser = async (req, res, next) => {
-  console.log('entering the verifyUser middleware');
   const { username, password } = req.body;
 
   try {
     const userData = await getUserByUsername(username);
-    console.log(userData);
 
     // if username not in DB, return error
     if (userData === undefined) {
-      console.log('userData', userData);
       res.locals.successful = { verify: false, message: 'Failed to login' };
       return next();
     }
@@ -78,7 +75,7 @@ userController.verifyUser = async (req, res, next) => {
 
     // try catch to compare if user enters the correct password
     try {
-      //console.log(password, hashedPassword);
+      
       const isPasswordCorrect = await bcrypt.compare(password, hashedPassword);
       // if it doesnt match, return err
       if (!isPasswordCorrect) {
@@ -91,7 +88,7 @@ userController.verifyUser = async (req, res, next) => {
 
       // if passsword is correct, set the user id in res.locals
       res.locals.id = userData.id;
-      console.log('res.locals.id', res.locals.id);
+      
       res.locals.successful = {
         verify: true,
         message: 'user verify',
@@ -100,11 +97,11 @@ userController.verifyUser = async (req, res, next) => {
 
       return next();
     } catch (err) {
-      console.log('a');
+    
       return next({ log: 'bcrypt compare error' });
     }
   } catch (err) {
-    console.log('b');
+
     return next({ log: 'Error in verifyUser' });
   }
 };

@@ -3,8 +3,6 @@ const config = require('../config')
 issueController.createIssue = async (req, res, next) => {
 
   const {summary, description} = req.body
-  console.log('issue creation',summary, description)
-  console.log('config', config)
 // Jira API endpoint and authentication credentials
 const jiraApiUrl = config.jiraApiUrl
 const jiraUsername = config.jiraUsername
