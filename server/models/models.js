@@ -1,5 +1,4 @@
 const { Pool } = require('pg'); //Pool class is used to manage connections to the database
-// const { dbConnection } = require('../connections/db'); //Imports the db connection
 const config = require('../config')
 
 const pool = new Pool({
