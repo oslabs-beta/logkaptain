@@ -3,14 +3,16 @@ const config = require('../config')
 issueController.createIssue = async (req, res, next) => {
 
   const {summary, description} = req.body
+  console.log('issue creation',summary, description)
 // Jira API endpoint and authentication credentials
-//const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
-const jiraApiUrl = config.jiraApiUrl
-//const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
-const jiraUsername = config.jiraUsername
+const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
+// const jiraApiUrl = config.jiraApiUrl
+const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
+//const jiraUsername = config.jiraUsername
 //Atlassian API token 
 //const jiraPassword = 'ATATT3xFfGF0UDil9MbxEviI-1e-4oheaE-e8URSU5g81otq7SOzUzqDEK8_NgIACy9Fhdk02MSyA84zLBbXv33OzEflJ0ip8elqUpKTD8eNx_TvZEnmGdgLKpCwufBmjqj9hbQtb7OwJoz4hyseRP0TzhTlcUNMllvdVDswjznJjdqHnl3hLGQ=C449B612'; // You can generate an API token in Jira
-const jiraPassword = config.jiraPassword
+const jiraPassword = 'ATATT3xFfGF0FHzy6cP2L98LGaZJ554MSoOscNHHHb_7AblZjzQT7GrqeYgWO47sub2BF9q9PHQtltUhtYzmaBJ0QXXOYk51Ge7K3TwcYdejkwcTU2dnD9WUw20mUa_wm6W5bEu1XBbpG2tGxsTepPKuEc_FT_QS7aDFAkxsAFTTtYKLhwfSm-w=A98EA285'
+// const jiraPassword = config.jiraPassword
 // Jira issue data (We can customize this based on our requirements)
 const issueData = {
   fields: {
@@ -61,6 +63,7 @@ const issueData = {
     const response = await fetch(jiraApiUrl, requestOptions);
 
     const data = await response.json();
+    console.log('data', data)
     console.log('Jira bug ticket created successfully:', data.key); // "LOGKAPTAIN-#"
     res.locals.key = {key: data.key}
    return next();
