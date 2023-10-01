@@ -1,14 +1,16 @@
 const issueController = {};
-
+const config = require('../config')
 issueController.createIssue = async (req, res, next) => {
 
   const {summary, description} = req.body
 // Jira API endpoint and authentication credentials
-const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
-const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
+//const jiraApiUrl = 'https://sharmarke.atlassian.net/rest/api/2/issue';
+const jiraApiUrl = config.jiraApiUrl
+//const jiraUsername = 'sqk7b844ky@privaterelay.appleid.com';
+const jiraUsername = config.jiraUsername
 //Atlassian API token 
-const jiraPassword = 'ATATT3xFfGF0UDil9MbxEviI-1e-4oheaE-e8URSU5g81otq7SOzUzqDEK8_NgIACy9Fhdk02MSyA84zLBbXv33OzEflJ0ip8elqUpKTD8eNx_TvZEnmGdgLKpCwufBmjqj9hbQtb7OwJoz4hyseRP0TzhTlcUNMllvdVDswjznJjdqHnl3hLGQ=C449B612'; // You can generate an API token in Jira
-
+//const jiraPassword = 'ATATT3xFfGF0UDil9MbxEviI-1e-4oheaE-e8URSU5g81otq7SOzUzqDEK8_NgIACy9Fhdk02MSyA84zLBbXv33OzEflJ0ip8elqUpKTD8eNx_TvZEnmGdgLKpCwufBmjqj9hbQtb7OwJoz4hyseRP0TzhTlcUNMllvdVDswjznJjdqHnl3hLGQ=C449B612'; // You can generate an API token in Jira
+const jiraPassword = config.jiraPassword
 // Jira issue data (We can customize this based on our requirements)
 const issueData = {
   fields: {
