@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path'); 
 const request = require('supertest'); 
 
-const server = 'http://localhost:5173'; // double check the port
+const server = 'http://localhost:3000'; // double check the port
 
 describe('Testing Server', () => {
 
@@ -22,7 +22,7 @@ xdescribe('Testing Routers', () => {
   describe('Testing Signup', () => {
     it('respond with a 204 status', () => {
       return request(server)
-        .post('user/signup')
+        .post('/user/signup')
         .expect(204); 
     });
   });
@@ -30,7 +30,7 @@ xdescribe('Testing Routers', () => {
   describe('Testing Login', () => {
     it('respond with a 200 status', () => {
       return request(server)
-        .post('user/login')
+        .post('/user/login')
         .expect(200); 
     });
   });
@@ -55,7 +55,7 @@ describe('Testing Dashboard', () => {
     // get request? 
     it('retrieve logs from Kubernetes cluster', () => {
       return request(server)
-        .get('/logs')
+        .get('/api/logs')
         .expect(200);
     })
   });
@@ -73,7 +73,7 @@ describe('Testing Dashboard', () => {
   describe('Post Req logs', () => {
     it('perform a post request on logs(?)', () => {
       return request(server)
-      .post('/logs')
+      .post('/api/logs')
       .expect(200);
     })
   })
