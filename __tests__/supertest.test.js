@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path'); 
 const request = require('supertest'); 
 
-const server = 'http://localhost:3000'; // double check the port
+const server = 'http://localhost:5173'; // double check the port
 
 describe('Testing Server', () => {
 
