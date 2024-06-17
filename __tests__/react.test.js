@@ -64,8 +64,8 @@ describe('Testing React Components', () => {
         expect(screen.getByText('Dashboard')).toBeInTheDocument();
       });
 
-      it('should contain teamnav', () => {
-        expect(screen.getByText('Team')).toBeInTheDocument();
+      it('should contain contactNav', () => {
+        expect(screen.getByText('Contact Us')).toBeInTheDocument();
       });
 
       it('should contain settingnav', () => {
