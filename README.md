@@ -100,7 +100,7 @@ $ npm run dev
 The app will run on `http://localhost:5173`
 
 ## Sign Up
-For first-time users, a quick registration is required. Go to www.logkaptain.com and click the sign up button. If you’re already a user, proceed with logging in.
+For first-time users, a quick registration is required. If you’re already a user, proceed with logging in.
 
 <p align="center">
   <img src="./assets-readme/Sign%20up.gif" />
